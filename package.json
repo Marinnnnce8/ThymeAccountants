@@ -1,6 +1,6 @@
 {
   "name": "nb-pw-html-template",
-  "version": "1.1.2",
+  "version": "1.2.2",
   "main": "dist/home.html",
   "author": "NB Communication Ltd <info@nbcommunication.com>",
   "license": "MIT",
@@ -19,6 +19,10 @@
     "release": "gulp release",
     "reset": "gulp reset",
     "rf": "gulp rf"
+  },
+  "dependencies": {
+    "mmenu-js": "^8.5.22",
+    "uikit": "^3.6.19"
   },
   "devDependencies": {
     "esm": "^3.2.25",
@@ -40,8 +44,7 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-svg-sprite": "^1.5.0",
     "imagemin-pngquant": "^9.0.1",
-    "lodash": "^4.17.21",
-    "uikit": "^3.6.17"
+    "lodash": "^4.17.21"
   },
   "sasslintConfig": ".sass-lint.yml"
 }

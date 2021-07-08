@@ -7,6 +7,7 @@ import { config } from './package.json';
 // Build
 export const build = gulp.series(
 	tasks.uikitJs,
+	tasks.mmenuJs,
 	tasks.assets,
 	tasks.icons,
 	tasks.html,

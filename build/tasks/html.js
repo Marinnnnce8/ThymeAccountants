@@ -24,33 +24,6 @@ function base64(data) {
 	return Buffer.from(data).toString('base64');
 }
 
-// Equivalent of NbWire::jsonRender();
-function jsonRender(data) {
-
-	if (!(typeof data === 'object')) return '';
-
-	const items = {};
-	for (const key in data) {
-		if (data.hasOwnProperty(key)) {
-			if (Array.isArray(data[key])) {
-				items[key] = data[key];
-				delete data[key];
-			}
-		}
-	}
-	data.renderData = base64(items);
-
-	if (!('config' in data)) {
-		data.config = {};
-	}
-
-	if (!('cta' in data.config)) {
-		data.config.cta = 'Find out more';
-	}
-
-	return JSON.stringify(data);
-}
-
 // Compile Handlebars Templates
 export function compileHandlebars() {
 	return gulp.src(`${src}/*.hbs`)
@@ -94,7 +67,6 @@ export function compileHandlebars() {
 
 			// Helpers
 			obj.aws = 'https://aws.nbcommunication.com/template';
-			obj.blankPixel = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
 			obj.logo = './img/logo.png';
 			obj.year = (new Date()).getFullYear();
 
@@ -116,7 +88,6 @@ export function compileHandlebars() {
 				eq: (a, b) => a === b,
 				gte: (a, b) => (a ? parseInt(a) : 0) >= (b ? parseInt(b) : 0),
 				ida: (str) => String(str).toLowerCase().replace(/\s/g, ''),
-				jsonRender: jsonRender,
 				lte: (a, b) => (a ? parseInt(a) : 0) <= (b ? parseInt(b) : 0),
 				neq: (a, b) => a !== b,
 			}

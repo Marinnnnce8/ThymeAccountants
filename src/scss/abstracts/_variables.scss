@@ -51,7 +51,7 @@ $transition: $speed $timing;
 
 //
 // UIkit Global Variables
-// https://github.com/uikit/uikit/blob/develop/src/scss/components/variables.scss
+// https://github.com/uikit/uikit/blob/master/src/scss/components/variables.scss
 //
 // Imports UIkit variable overrides for the theme
 // These may be used by main.scss
@@ -59,3 +59,14 @@ $transition: $speed $timing;
 // ========================================================================
 
 @import 'uikit/variables';
+
+//
+// Mmenu Global Variables
+// https://github.com/FrDH/mmenu-js/blob/master/src/_variables.scss
+//
+// Imports Mmenu variable overrides for the theme
+// These may be used by main.scss
+//
+// ========================================================================
+
+@import 'mmenu/variables';

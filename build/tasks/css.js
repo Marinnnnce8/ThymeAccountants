@@ -43,13 +43,30 @@ function compileUIkit() {
 		.pipe(connect.reload());
 }
 
+// Compile Mmenu SCSS
+function compileMmenu() {
+	return gulp.src('build/tpl/mmenu-theme-scss.txt')
+		.pipe(consolidate('lodash', {
+			src: src,
+			mmenu: '../../node_modules/mmenu-js/src'
+		}))
+		.pipe(gulpif(!release, sourcemaps.init()))
+		.pipe(sass().on('error', sass.logError))
+		.pipe(csso())
+		.pipe(cssnano({zindex: false}))
+		.pipe(rename('mmenu-theme.min.css'))
+		.pipe(gulpif(!release, sourcemaps.write('.')))
+		.pipe(gulp.dest(dest))
+		.pipe(connect.reload());
+}
+
 // Copy any CSS files
 function cpCss() {
 	return cp(`${config.src}/css/**/*.css`, dest);
 }
 
 // tasks.css
-export const css = gulp.series(compileUIkit, compileMain, cpCss);
+export const css = gulp.series(compileUIkit, compileMmenu, compileMain, cpCss);
 
 // tasks.sasslint
 export function sasslint() {

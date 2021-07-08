@@ -14,3 +14,8 @@ export function js() {
 export function uikitJs() {
 	return gulp.src('node_modules/uikit/dist/js/uikit.min.js').pipe(gulp.dest(dest));
 }
+
+// tasks.mmenuJs
+export function mmenuJs() {
+	return gulp.src('node_modules/mmenu-js/dist/mmenu.js').pipe(gulp.dest(dest));
+}

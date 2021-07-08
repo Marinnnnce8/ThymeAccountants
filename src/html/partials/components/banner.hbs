@@ -1,4 +1,5 @@
-<div class="banner uk-background-cover uk-position-relative uk-light" data-src="{{#if page.banner.src}}{{page.banner.src}}{{else}}{{aws}}/img/placeholder-castle-banner.jpg{{/if}}" data-uk-img>
+<div class="banner uk-cover-container uk-position-relative uk-light">
+	<img src="{{#if page.banner.src}}{{page.banner.src}}{{else}}{{aws}}/img/placeholder-castle-banner.jpg{{/if}}" alt="" data-uk-cover>
 	<div class="uk-overlay uk-position-bottom">
 		{{#> ukContainer size=(default page.banner.size (default page.ukContainer ukContainer))}}
 			{{#*inline "out"}}
