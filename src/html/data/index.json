@@ -7,13 +7,69 @@
 	"cta": "Find out more",
 	"menu": [
 		{
-			"name": "home",
-			"title": "Home",
-			"url": "home.html"
+			"name": "sectors",
+			"title": "Sectors",
+			"url": "sectors.html",
+			"iconRight": true,
+			"icon": "chevron-down",
+			"children": [
+				{
+					"name": "smes",
+					"title": "SME's",
+					"url": "smes.html"
+				},
+				{
+					"name": "charities",
+					"title": "Charities",
+					"url": "charities.html"
+				},
+				{
+					"name": "startups",
+					"title": "Start-Ups",
+					"url": "Start-Ups.html"
+				},
+				{
+					"name": "salons",
+					"title": "Salons",
+					"url": "salons.html"
+				},
+				{
+					"name": "barbers",
+					"title": "Barbers",
+					"url": "barbers.html"
+				},
+				{
+					"name": "contractors",
+					"title": "Contractors",
+					"url": "contractors.html"
+				},
+				{
+					"name": "cofee-shops",
+					"title": "Cofee Shops",
+					"url": "cofee-shops.html"
+				},
+				{
+					"name": "hospitality",
+					"title": "Hospitality",
+					"url": "hospitality.html"
+				},
+				{
+					"name": "technology",
+					"title": "Technology",
+					"url": "technology.html"
+				},
+				{
+					"name": "engineering",
+					"title": "Engineering",
+					"url": "engineering.html"
+				}
+			]
 		},
 		{
 			"name": "about",
 			"title": "About",
+			"iconRight": true,
+			"icon": "chevron-down",
 			"children": [
 				{
 					"name": "child",
@@ -22,8 +78,30 @@
 			]
 		},
 		{
+			"name": "resources",
+			"title": "Resources",
+			"iconRight": true,
+			"icon": "chevron-down",
+			"children": [
+				{
+					"name": "child",
+					"title": "Child"
+				}
+			]
+		},
+		{
+			"name": "client-login",
+			"title": "Client login",
+			"iconLeft": true,
+			"icon": "login",
+			"class": "login"
+		},
+		{
 			"name": "contact",
-			"title": "Contact"
+			"title": "Contact",
+			"iconRight": true,
+			"icon": "arrow-right",
+			"class": "uk-button uk-button-primary"
 		}
 	],
 	"social": [

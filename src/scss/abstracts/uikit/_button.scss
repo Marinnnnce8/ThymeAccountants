@@ -1,0 +1,29 @@
+.uk-button {
+    text-transform: none;
+    border-radius: 50px;
+    font-weight: $medium;
+
+    &:not(.uk-button-small):not(.uk-button-large) {
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+}
+
+@mixin hook-button-small {
+    padding-top: 11px;
+    padding-bottom: 11px;
+}
+
+@mixin hook-button-large {
+    padding-top: 16px;
+    padding-bottom: 19px;
+}
+
+@mixin hook-button-default {
+    border: 2px solid $primary;
+}
+
+@mixin hook-button-primary {
+    background: linear-gradient(90deg, $orange 0%, $orange-2 100%);
+    box-shadow: 0 20px 30px rgba($orange, .2);
+}

@@ -1,8 +1,16 @@
 {{#*inline "nav"}}
 {{#each items}}
 	{{#with this}}
-	<li class="{{#if children}}uk-parent{{/if}}{{#if (eq ../active name)}} uk-active{{/if}}">
-		<a href="{{default url "#"}}">{{title}}</a>
+	<li class="{{#if children}}uk-parent{{/if}}{{#if (eq ../active name)}} uk-active{{/if}}{{#if class}} {{class}}{{/if}}">
+		<a href="{{default url "#"}}">
+			{{#if iconLeft}}
+				{{> renderIcon name=icon}}
+			{{/if}}
+			{{title}}
+			{{#if iconRight}}
+				{{> renderIcon name=icon}}
+			{{/if}}
+		</a>
 		{{#if children}}
 		{{> renderNavigation items=children mobile=../mobile active=../active level=1}}
 		{{/if}}

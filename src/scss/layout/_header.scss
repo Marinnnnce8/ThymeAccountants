@@ -1,9 +1,18 @@
 .header {
+	padding: 7px 20px 0;
 
 	.uk-logo {
 
 		img {
-			width: 228px;
+			width: 76px;
+		}
+	}
+
+	@media (min-width: $breakpoint-medium) {
+		padding: 10px 60px 0;
+
+		.uk-logo img {
+			width: 137px;
 		}
 	}
 }
