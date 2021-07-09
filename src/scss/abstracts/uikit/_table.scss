@@ -1,0 +1,23 @@
+@mixin hook-table {
+    tr {
+        border-bottom: 2px solid $blue-2;
+    }
+
+    tbody tr td:first-of-type {
+        color: $grey-dark;
+    }
+}
+
+@mixin hook-table-header-cell {
+    background-color: $blue-light;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    line-height: 1.5;
+}
+
+@mixin hook-table-cell {
+    font-size: 17px;
+    color: $grey;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}

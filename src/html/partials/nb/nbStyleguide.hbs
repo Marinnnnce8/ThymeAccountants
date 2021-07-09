@@ -6,7 +6,7 @@
 
 	<figure class="align_center hidpi">
 		<a href="{{aws}}/img/placeholder-castle-banner.jpg">
-			<img alt="This is a centre aligned image" src="{{aws}}/img/placeholder-castle-banner.jpg" width="960"/>
+			<img alt="This is a centre aligned image" src="./img/center-image.png" width="787" height="459" loading="lazy" />
 		</a>
 		<figcaption>This is a centred image</figcaption>
 	</figure>
@@ -15,7 +15,7 @@
 
 	<figure class="align_right hidpi">
 		<a href="{{aws}}/img/placeholder-columns.jpg">
-			<img alt="This is a right aligned image" src="{{aws}}/img/placeholder-columns.300x0-is-hidpi.jpg" width="300"/>
+			<img alt="This is a right aligned image" src="./img/right-image.png" width="374" height="249" loading="lazy" />
 		</a>
 		<figcaption>This is a right-aligned image</figcaption>
 	</figure>
@@ -26,7 +26,7 @@
 
 	<figure class="align_left hidpi">
 		<a href="{{aws}}/img/placeholder-city.jpg">
-			<img alt="This is a left aligned image" src="{{aws}}/img/placeholder-city.300x0-is-hidpi.jpg" width="300"/>
+			<img alt="This is a left aligned image" src="./img/left-image.png" width="374" height="250" loading="lazy" />
 		</a>
 		<figcaption>This is a left-aligned image</figcaption>
 	</figure>
@@ -42,7 +42,7 @@
 	<p>Aliquam at ligula elit gravida placerat. Nulla facilisi. In in turpis non eros vehicula adipiscing in feugiat ligula. Vivamus et nulla ultricies, auctor tellus ac, fringilla quam. Pellentesque ut sollicitudin ante. Donec vel adipiscing sapien, at euismod dui. Duis at eros magna example link. Pellentesque nec porttitor dui. Etiam sit amet venenatis enim. Praesent rutrum arcu eget tortor cursus rutrum.</p>
 
 	<blockquote>
-		<p>Aliquam at ligula elit gravida placerat. Nulla facilisi. In in turpis non eros vehicula adipiscing in feugiat ligula. Vivamus et nulla ultricies, auctor tellus ac, fringilla quam. Pellentesque ut sollicitudin ante. Donec vel adipiscing sapien, at euismod dui. Duis at eros magna <a href="#">example link</a>. Pellentesque nec porttitor dui. Etiam sit amet venenatis enim. Praesent rutrum arcu eget tortor cursus rutrum.</p>
+		<p>“Blockquote. Style to be good must be clear. Clearness is secured by using words that are current and ordinary.”</p>
 	</blockquote>
 
 	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ligula eleifend elit gravida placerat. Nulla facilisi. In in turpis non eros vehicula adipiscing in feugiat ligula. Vivamus et nulla ultricies, auctor tellus ac, fringilla quam. Pellentesque ut sollicitudin ante. Donec vel adipiscing sapien, at euismod dui.</p>
@@ -50,7 +50,7 @@
 	{{/inline}}
 {{/content}}
 
-{{> gallery items=items.gallery title="Gallery" caption="A Gallery Caption"}}
+{{> gallery items=items.gallery size="large" title="Gallery" caption="A Gallery Caption"}}
 
 {{#> content}}
 	{{#*inline "body"}}
@@ -97,7 +97,7 @@
 
 	<h2>Table</h2>
 
-	<table>
+	<table class="uk-margin-large-bottom">
 		<thead>
 			<tr>
 				<th>Column 1</th>
@@ -139,27 +139,21 @@
 		</tbody>
 	</table>
 
+	{{> accordions items=items.accordions title="FAQ"}}
+
 	<p class="uk-text-small">*This is some small text</p>
 
 	<h2>Messages</h2>
 
-	<p class="uk-alert uk-alert-primary"><strong>Primary Text.</strong> This text is a message to the website user</p>
+	<p class="uk-alert uk-flex uk-flex-middle uk-alert-primary">{{> renderIcon name="alert-primary"}} This text is a message to the website user</p>
 
-	<p class="uk-alert uk-alert-success"><strong>Success Text.</strong> This text is providing a positive message to the user</p>
+	<p class="uk-alert uk-flex uk-flex-middle uk-alert-success">{{> renderIcon name="alert-success"}} This text is providing a positive message to the user</p>
 
-	<p class="uk-alert uk-alert-warning"><strong>Warning Text.</strong> The text is providing a gentle warning to the user</p>
+	<p class="uk-alert uk-flex uk-flex-middle uk-alert-warning">{{> renderIcon name="alert-warning"}} The text is providing a gentle warning to the user</p>
 
-	<p class="uk-alert uk-alert-danger"><strong>Danger Text.</strong> The text is providing an error alert to the user</p>
+	<p class="uk-alert uk-flex uk-flex-middle uk-alert-danger">{{> renderIcon name="alert-danger"}} The text is providing an error alert to the user</p>
 
-	<h3>Embedded Videos</h3>
-
-	<div class="responsive yt">
-		<iframe width="1280" height="720" src="https://www.youtube-nocookie.com/embed/ScMzIvxBSi4?modestbranding=1&rel=0&feature=oembed" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	</div>
-
-	<div class="responsive vm">
-		<iframe src="https://player.vimeo.com/video/63655754?dnt=1&app_id=122963" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen" allowfullscreen title="Placeholder visual blip"></iframe>
-	</div>
+	{{> lightbox items=items.lightbox title="Embedded Videos"}}
 
 	{{/inline}}
 {{/content}}
@@ -167,7 +161,7 @@
 {{#> content}}
 	{{#*inline "body"}}
 
-	<h3>Buttons</h3>
+	<h2>Buttons</h2>
 
 	{{#> ukGrid class="uk-grid-medium uk-child-width-1-3@s"}}
 		{{#*inline "cells"}}
@@ -208,18 +202,13 @@
 		{{#*inline "cells"}}
 
 		<div>
-			<div class="uk-text-meta uk-form-label">Danger</div>
-			{{> ukButton label=cta style="danger"}}
-		</div>
-
-		<div>
 			<div class="uk-text-meta uk-form-label">Text Normal</div>
-			{{> ukButton label=cta style="text"}}
+			{{> ukButton label="Button link normal" style="text"}}
 		</div>
 
 		<div>
 			<div class="uk-text-meta uk-form-label">Text Large</div>
-			{{> ukButton label=cta style="text" class="uk-text-large"}}
+			{{> ukButton label="Button link normal" style="text" class="uk-text-large"}}
 		</div>
 
 		{{/inline}}
@@ -231,22 +220,52 @@
 {{#> nbForm}}
 	{{#*inline "form"}}
 
-	<form id="nb-form-{{page.name}}" class="uk-form-stacked uk-width-2-3@s uk-width-3-5@m InputfieldForm" method="post" data-uk-nb-form novalidate data-colspacing="1">
+	<form id="nb-form-{{page.name}}" class="uk-form-stacked InputfieldForm" method="post" data-uk-nb-form novalidate data-colspacing="1">
 
-		<h3>Form Styles</h3>
+		<h2>Form Styles</h2>
 
 		{{#> ukGrid class="uk-grid-small"}}
 			{{#*inline "cells"}}
 
-			{{> nbInput label="Your Name" name="name" title="Please enter your name"}}
+			{{> nbInput class="uk-width-2-3@m" label="Your Name" name="name" title="Please enter your name"}}
 
-			{{> nbInput label="Email Address" name="email" type="email" title="Please enter a valid email address"}}
+			{{> nbInput class="uk-width-1-2@m" label="Telephone" name="tel" type="tel" }}
 
-			{{> nbInput label="Telephone" name="tel" type="tel"}}
+			<div class="Inputfield uk-width-2-3@m nb-form-required uk-first-column" id="wrap_nb-form-styleguide_select">
 
-			{{> nbInput label="Your Enquiry" name="enquiry" type="textarea" title="Please enter your enquiry"}}
+				<label class="uk-form-label" for="nb-form-styleguide_select">Selector <span>*</span></label>
 
-			{{> nbInput name="submit" type="submit" value="Send"}}
+				<div class="nb-form-content">
+					<div role="alert"></div>
+
+					<div data-uk-form-custom="target: > * > span:first-child" class="uk-width-1-1">
+						<select class="uk-select" id="form-stacked-select">
+							<option value="">--- Select ---</option>
+							<option>Option 01</option>
+							<option>Option 02</option>
+						</select>
+						<button class="uk-flex uk-flex-middle uk-flex-between uk-width-1-1" type="button">
+							<span></span>
+							{{> renderIcon name="chevron-down"}}
+						</button>						
+					</div>
+
+				</div>
+			</div>
+
+			{{> nbInput class="uk-width-2-3@m" label="Inactive field" name="inactive" type="text" disabled="Jane" }}
+
+			{{> nbInput label="Your Enquiry" name="enquiry" type="textarea"}}
+
+			<div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+				<label class="uk-text-small uk-flex uk-flex-top uk-margin-bottom"><input class="uk-checkbox" type="checkbox" > By clicking confirm you agree to our Engagement Letter, Terms and Conditions and the Privacy Notice documents.</label>
+				<label class="uk-text-small uk-flex uk-flex-top"><input class="uk-checkbox" type="checkbox" checked> Confirmed state</label>
+			</div>
+
+			<div class="uk-flex uk-flex-middle">
+				{{> nbInput class="uk-margin-right" name="submit" type="submit" value="Send a Message"}}
+				{{> ukButton label="Cancel" style="default"}}
+			</div>
 
 			{{/inline}}
 		{{/ukGrid}}
@@ -255,6 +274,10 @@
 
 	{{/inline}}
 {{/nbForm}}
+
+{{>share class="uk-margin-large-bottom"}}
+
+{{>signup}}
 
 {{/inline}}
 

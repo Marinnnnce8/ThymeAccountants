@@ -1,5 +1,5 @@
 <div data-uk-slideshow="animation: fade; autoplay: true; autoplay-interval: 4096; ratio: 16:9" id="uk-slideshow-{{#if id}}{{ida id}}{{else}}{{page.name}}{{/if}}">
-	<div class="uk-position-relative uk-visible-toggle uk-light">
+	<div class="uk-position-relative uk-visible-toggle">
 		<ul class="uk-slideshow-items" data-uk-lightbox="animation: fade" data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
 		{{#each items}}
 			{{#with this}}
@@ -7,12 +7,12 @@
 				<a href="{{href}}" class="uk-position-center"{{#if alt}} data-alt="{{alt}}"{{/if}}{{#if caption}} data-caption="<div>{{{caption}}}</div>"{{/if}}>
 					<img src="{{src}}" alt="{{default alt ""}}" width="{{width}}" height="{{height}}" loading="lazy">
 				</a>
-				{{#if caption}}<div class="uk-overlay uk-overlay-primary uk-position-bottom uk-padding-small uk-text-center uk-transition-slide-bottom">{{{caption}}}</div>{{/if}}
+				{{#if caption}}<div class="uk-overlay uk-overlay-primary uk-position-bottom uk-padding-small uk-text-center uk-transition-slide-bottom"><p>{{{caption}}}</p></div>{{/if}}
 			</li>
 			{{/with}}
 		{{/each}}
 		</ul>
-		<a href="#" data-uk-slidenav-previous aria-label="previous" data-uk-slideshow-item="previous" class="uk-position-small uk-hidden-hover uk-position-center-left"></a>
-		<a href="#" data-uk-slidenav-next aria-label="next" data-uk-slideshow-item="next" class="uk-position-small uk-hidden-hover uk-position-center-right"></a>
+		<a href="#" data-uk-slidenav-previous aria-label="previous" data-uk-slideshow-item="previous" class="uk-position-small uk-position-center-left-out"></a>
+		<a href="#" data-uk-slidenav-next aria-label="next" data-uk-slideshow-item="next" class="uk-position-small uk-position-center-right-out"></a>		
 	</div>
 </div>

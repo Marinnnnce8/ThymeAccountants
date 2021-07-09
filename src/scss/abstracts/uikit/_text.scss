@@ -1,0 +1,9 @@
+@mixin hook-text-large {
+    letter-spacing: -.02em;
+    color: $grey-dark;
+    font-weight: $medium;
+}
+
+@mixin hook-text-small {
+    color: $grey-dark;
+}

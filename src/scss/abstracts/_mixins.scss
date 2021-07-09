@@ -21,7 +21,9 @@
 
 // Image caption
 @mixin image-caption {
-	font-size: 0.8rem;
+	font-size: 14px;
+	opacity: .7;
+	color: $grey-dark;
 	padding: $global-small-margin;
 	text-align: center;
 }
@@ -68,3 +70,19 @@
 
 // Utilities
 @import 'uikit/text';
+
+// List
+@import 'uikit/list';
+
+// Slideshow
+@import 'uikit/slideshow';
+
+// Overlay
+@import 'uikit/overlay';
+
+// Accordion
+@import 'uikit/accordion';
+
+// Alert
+@import 'uikit/alert';
+

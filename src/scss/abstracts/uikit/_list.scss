@@ -1,0 +1,7 @@
+ul li {
+    &::marker {
+        color: $secondary;
+        left: 7px;
+        position: relative;
+    }
+}

@@ -1,9 +1,11 @@
 .uk-button {
     text-transform: none;
     border-radius: 50px;
-    font-weight: $medium;
+    font-weight: $semi-bold;
+    min-height: 0;
+    position: relative;
 
-    &:not(.uk-button-small):not(.uk-button-large) {
+    &:not(.uk-button-small):not(.uk-button-large):not(.uk-button-text) {
         padding-top: 14px;
         padding-bottom: 14px;
     }
@@ -26,4 +28,50 @@
 @mixin hook-button-primary {
     background: linear-gradient(90deg, $orange 0%, $orange-2 100%);
     box-shadow: 0 20px 30px rgba($orange, .2);
+}
+
+@mixin hook-button-text {
+    &.uk-text-large {
+        font-size: 18px;
+        color: $primary;
+    }
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        background-color: $primary;
+        z-index: -1;
+        height: 2px;
+        bottom: -6px;
+        left: 0;
+    }
+
+    &::before {
+        width: 0%;
+        transition: ease .4s;
+    }
+
+    &::after {
+        width: 100%;
+        transition: ease .6s;
+    }
+
+    @include hover {
+
+        &::before,
+        &::after {
+            background-color: $grey-dark;
+        }
+
+        &::before {
+            width: 100%;
+        }
+
+        &::after {
+            left: 100%;
+            width: 0%;
+            transition: ease .2s;
+        }
+    }
 }

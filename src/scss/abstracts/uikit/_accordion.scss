@@ -1,0 +1,38 @@
+@mixin hook-accordion {
+    li {
+        box-shadow: 0 10px 40px rgba($black, .1);
+        padding: 22px 30px;
+        border-radius: 10px;
+
+        &.uk-open {
+            background-color: $blue-light;
+
+            .uk-svg {
+                transform: rotate(180deg);
+            }
+        }
+
+        p {
+            &:first-of-type {
+                margin-top: 10px;
+            }
+
+            &:last-of-type {
+                margin-bottom: 33px;
+            }
+        }
+
+        .uk-svg {
+            width: 17px;
+            height: 17px;
+            color: $secondary;
+            transition: $transition;
+            position: relative;
+        }
+    }
+}
+
+@mixin hook-accordion-title {
+    font-weight: $medium;
+    transition: $transition;
+}

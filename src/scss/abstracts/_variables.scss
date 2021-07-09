@@ -16,7 +16,8 @@ $font-size: 19px;
 // Weight
 $light: 300;
 $normal: 400;
-$medium: 600;
+$medium: 500;
+$semi-bold: 600;
 $bold: 700;
 
 // Line Height
@@ -29,14 +30,21 @@ $line-height: 1.7;
 $white: #fff;
 $black: #241d1e;
 $primary: #a33f11;
+$primary-light: #f9e5dc;
+$primary-light-2: #fcf2ee;
 $secondary: #327a8f;
-$success: #32d296;
-$warning: #faa05a;
-$danger: #f0506e;
+$blue-light: #ebf6fa;
+$blue-light-2: #b7dee6;
+$blue-darker: #0c3348;
+$blue-2: #d3dbe1;
+$success: #def2f8;
+$warning: #ffead3;
+$danger: #ffdee2;
 $grey: #727274;
+$grey-dark: #353638;
 $orange: #d26836;
 $orange-2: #bb582a;
-$light-grey: lighten($grey, 32%);
+$light-grey: #f0f0f0;
 $off-white: lighten($light-grey, 20%);
 
 

@@ -1,0 +1,16 @@
+<div class="share uk-text-center{{#if class}} {{class}}{{/if}}">
+	{{#if page.share.title}}
+        <p class="uk-text-lead">{{page.share.title}}</p>
+    {{/if}}
+    <ul class="uk-flex uk-flex-middle uk-flex-center uk-flex-wrap uk-list">
+        {{#each page.share.items}}
+            {{#with this}}    
+            <li class="uk-margin-remove-top{{#if @last}}{{else}} uk-margin-small-right{{/if}}">
+                <a class="uk-border-circle uk-flex uk-flex-middle uk-flex-center" href="{{this.src}}" target="_blank" rel="nooperner nooperner" aria-label="{{this.label}}">
+                    {{> renderIcon name=this.name class="uk-text-primary"}}
+                </a>
+            </li>
+            {{/with}}
+        {{/each}}
+    </ul>
+</div>

@@ -101,7 +101,7 @@
 			"title": "Contact",
 			"iconRight": true,
 			"icon": "arrow-right",
-			"class": "uk-button uk-button-primary"
+			"navClass": "uk-button uk-button-primary"
 		}
 	],
 	"social": [
@@ -232,6 +232,37 @@
 				"src": "https://aws.nbcommunication.com/template/img/placeholder-city.1200x675.jpg",
 				"width": "1200",
 				"height": "675"
+			}
+		],
+		"accordions": [
+			{
+				"opened": true,
+				"title": "Excepteur sint occaecat cupidatat non proident",
+				"text": "Sed ut perspiciatis unde omnis iste natus error sit volupt accusantium doloremque, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo, volupt accusantium doloremque, totam rem."
+			},
+			{
+				"title": "Duis aute irure dolor",
+				"text": "Sed ut perspiciatis unde omnis iste natus error sit volupt accusantium doloremque, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo, volupt accusantium doloremque, totam rem."
+			},
+			{
+				"title": "Sed ut perspiciatis unde omnis iste natus error sit accusantium",
+				"text": "Sed ut perspiciatis unde omnis iste natus error sit volupt accusantium doloremque, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo, volupt accusantium doloremque, totam rem."
+			},
+			{
+				"title": "Quis autem vel eum iure reprehenderit",
+				"text": "Sed ut perspiciatis unde omnis iste natus error sit volupt accusantium doloremque, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo, volupt accusantium doloremque, totam rem."
+			}
+		],
+		"lightbox": [
+			{
+				"src": "https://www.youtube.com/embed/jmOuxZAJifA",
+				"caption": "Video caption",
+				"img": "video-img.png",
+				"width": "868",
+				"height": "612",
+				"alt": "This is video",
+				"label": "Get to know our team",
+				"title": "Thyme Accountants Embeded Video"
 			}
 		]
 	}

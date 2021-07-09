@@ -4,3 +4,70 @@
         min-width: 100%;
     }
 }
+
+@mixin hook-form {
+    border: 2px solid rgba($grey, .4);
+    border-radius: 10px;
+    font-size: 17px;
+    padding: 7px 28px;
+
+    &::placeholder {
+        font-size: 16px;
+        opacity: .5;
+    }
+}
+
+@mixin hook-form-focus {
+    box-shadow: 0 0 0 5px rgba($blue-light-2, .5);
+}
+
+@mixin hook-form-label {
+    font-size: 16px;
+    color: $grey-dark;
+
+    >span {
+        position: relative;
+        color: $primary;
+        font-size: inherit;
+    }
+}
+
+@mixin hook-form-disabled {
+    background-color: $light-grey;
+    color: rgba($grey, .5);
+    cursor: not-allowed;
+}
+
+.uk-select {
+
+    ~button {
+        background-color: transparent;
+        border: 2px solid rgba($grey, .4);
+        border-radius: 10px;
+        font-size: 17px;
+        color: rgba($grey-dark, .5);
+        padding: 12px 28px;
+
+        .uk-svg {
+            width: 11px;
+            height: 11px;
+            color: $grey;
+        }
+    }
+}
+
+@mixin hook-form-radio {
+    border-radius: 4px;
+    width: 28px;
+    height: 28px;
+    border: 2px solid $grey;
+    margin-right: 20px;
+
+    &:checked {
+        background-size: 16px;
+    }
+}
+
+@mixin hook-form-radio-focus {
+    border-color: $secondary;
+}

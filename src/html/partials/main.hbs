@@ -47,6 +47,14 @@
 
 			{{#if page.banner}}
 				{{> banner}}
+			{{else if page.styleguide}}
+				{{#> ukContainer size=(default page.ukContainer ukContainer) class="uk-margin-top"}}
+					{{#*inline "out"}}			
+						<p class="uk-text-large">General internal page with Style guide</p>
+						{{> ukBreadcrumb}}
+						<h1>{{page.h1}}</h1>
+					{{/inline}}
+				{{/ukContainer}}					
 			{{else}}
 				{{#> ukContainer size=(default page.ukContainer ukContainer) class="uk-margin-top"}}
 					{{#*inline "out"}}

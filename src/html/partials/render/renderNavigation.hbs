@@ -1,8 +1,8 @@
 {{#*inline "nav"}}
 {{#each items}}
 	{{#with this}}
-	<li class="{{#if children}}uk-parent{{/if}}{{#if (eq ../active name)}} uk-active{{/if}}{{#if class}} {{class}}{{/if}}">
-		<a href="{{default url "#"}}">
+	<li class="{{#if children}}uk-parent{{/if}}{{#if (eq ../active name)}} uk-active{{/if}}">
+		<a href="{{default url "#"}}"{{#if navClass}} class="{{navClass}}"{{/if}}>
 			{{#if iconLeft}}
 				{{> renderIcon name=icon}}
 			{{/if}}
