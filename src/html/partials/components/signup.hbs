@@ -2,18 +2,18 @@
 	{{#> ukContainer size="large"}}
 		{{#*inline "out"}}
         <div class="signup-box uk-position-relative uk-border-rounded uk-overflow-hidden">
-		    <h2 class="uk-h1 uk-text-center">Switch to no fuss accountancy services</h2>
-            <div class="uk-flex uk-flex-center uk-flex-wrap">
-                <ul class="uk-list">
+		    <h2 class="uk-h1 uk-text-center">Switch to <strong class="uk-text-secondary underlined">no fuss</strong> accountancy services</h2>
+            <div class="uk-flex uk-flex-between uk-margin-auto uk-flex-wrap signup-lists uk-position-z-index uk-position-relative">
+                <ul class="uk-list uk-margin-remove-bottom">
                     <li>Low, fixed monthly fees</li>
                     <li>No hidden charges</li>
                 </ul>
-                <ul class="uk-list uk-margin-remove-top">
+                <ul class="uk-list uk-margin-remove-top uk-margin-remove-bottom">
                     <li>Secure and simple accountancy software</li>
                     <li>Friendly and experienced team</li>
                 </ul>
             </div>
-            <div class="uk-flex uk-flex-between uk-flex-wrap">
+            <div class="uk-flex uk-flex-center uk-margin-auto uk-flex-wrap signup-lists uk-position-z-index uk-position-relative">
                 <div>
                     {{> ukButton label="Get an instant quote" style="primary" size="large"}}
                 </div>
@@ -21,7 +21,7 @@
                     {{> ukButton label="Sign up to newsletter" size="large"}}
                 </div>
             </div>
-            {{> renderIcon name="signup-flower"}}
+            {{> renderIcon name="signup-flower" viewBox="803 413"}}
         </div>
 		{{/inline}}
 	{{/ukContainer}}

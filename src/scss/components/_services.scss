@@ -1,0 +1,15 @@
+.services {
+    margin: 105px 0 90px;
+
+    li:not(:last-of-type) {
+        margin-right: 2px;
+    }
+
+    @media (min-width: $breakpoint-medium) {
+        margin: 75px 0 65px;
+
+        li:not(:last-of-type) {
+            margin-right: 80px;
+        }
+    }
+}

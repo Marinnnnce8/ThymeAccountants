@@ -1,0 +1,17 @@
+<div class="services">
+	{{#> ukContainer size="large"}}
+		{{#*inline "out"}}
+        <ul class="uk-list uk-flex uk-flex-middle uk-flex-center uk-flex-wrap">
+            {{#each items}}
+                {{#with this}}
+                    <li>
+                        <a href="{{src}}" target="_blank" rel="noopener noreferrer" aria-label="{{label}}">
+                            <img src="./img/{{img}}" width="{{width}}" height="{{height}}" alt="{{alt}}" loading="lazy">
+                        </a>
+                    </li>
+                {{/with}}
+            {{/each}}
+        </ul>
+		{{/inline}}
+	{{/ukContainer}}
+</div>

@@ -264,6 +264,32 @@
 				"label": "Get to know our team",
 				"title": "Thyme Accountants Embeded Video"
 			}
+		],
+		"services": [
+			{
+				"src": "#",
+				"label": "Visit ACCA website",
+				"img": "acca-logo.png",
+				"width": "69",
+				"height": "69",
+				"alt": "ACCA"
+			},
+			{
+				"src": "#",
+				"label": "Visit free agent website",
+				"img": "free-agent-logo.png",
+				"width": "136",
+				"height": "28",
+				"alt": "Free Agent"
+			},
+			{
+				"src": "#",
+				"label": "Visit xero website",
+				"img": "xero-logo.png",
+				"width": "70",
+				"height": "70",
+				"alt": "xero"
+			}
 		]
 	}
 }
