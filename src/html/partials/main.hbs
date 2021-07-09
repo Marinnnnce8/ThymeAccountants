@@ -26,7 +26,7 @@
 
 				<div class="uk-navbar-left">
 					<a href="./" class="uk-navbar-item uk-logo">
-						<img src="{{logo}}" alt="{{nb.siteName}} Logo">
+						<img src="{{logo}}" alt="{{nb.siteName}} Logo" width="137" height="131" loading="lazy">
 					</a>
 				</div>
 
@@ -68,26 +68,92 @@
 
 		</main>
 
-		<footer class="footer uk-padding-large uk-padding-remove-horizontal">
-			<div class="uk-container uk-text-center">
+		<footer class="footer uk-padding-large uk-position-relative uk-padding-remove-horizontal">
+			<div class="uk-container">
+				<div class="footer-top">
+					{{#> ukGrid class="uk-grid-medium uk-child-width-1-4@m"}}
+						{{#*inline "cells"}}
 
-				<div class="legal uk-margin-small-bottom">
-					<ul>
-					{{#each legal}}
-						<li>
-							<a href="#">{{this}}</a>
-						</li>
-					{{/each}}
-					</ul>
+						<div>
+							<a href="./" class="uk-logo">
+								<img src="{{logo}}" alt="{{nb.siteName}} Logo" width="137" height="131" loading="lazy">
+							</a>						
+							{{>share footer=true}}
+						</div>
+
+						<div>
+							<span>Contact</span>
+							<ul class="uk-list">
+								<li><a href="mailto:info@thymeaccounting.co.uk">info@thymeaccounting.co.uk</a></li>
+								<li><a href="tel:+4407779621967">+44 (0) 7779621967</a></li>
+								<li class="uk-flex uk-flex-middle">{{> renderIcon name="whatsapp-green" class="uk-margin-small-right"}}<a class="whatsapp" href="#">Message us on WhatsApp</a></li>
+							</ul>
+							<ul class="uk-list">
+								<li class="uk-flex uk-flex-middle"><span>Aberdeen: </span><a href="tel:+4401224518825">+44 (0) 1224 518825</a></li>
+								<li class="uk-flex uk-flex-middle"><span>Edinburgh: </span><a href="tel:+4401313644010">+44 (0) 131 364 4010</a></li>
+								<li class="uk-flex uk-flex-middle"><span>Newcastle: </span><a href="tel:+4401915806131">+44 (0) 191 580 6131</a></li>
+								<li class="uk-flex uk-flex-middle"><span>Shetland: </span><a href="tel:+4401595922080">+44 (0) 1595 922080</a></li>
+							</ul>
+						</div>
+
+						<div>
+							<span>Sectors</span>
+							<ul class="uk-list">
+								<li><a href="#">Contractors</a></li>
+								<li><a href="#">Engineering</a></li>
+								<li><a href="#">Barbers</a></li>
+								<li><a href="#">Technology</a></li>
+								<li><a href="#">Salons</a></li>
+								<li><a href="#">Hospitality</a></li>
+								<li><a href="#">Charities</a></li>
+								<li><a href="#">Coffee Shops</a></li>
+								<li><a href="#">Start-Ups</a></li>
+								<li><a href="#">SME’s</a></li>
+							</ul>
+						</div>
+
+						<div>
+							<span>Quick Links</span>
+							<ul class="uk-list">
+								<li><a href="#">Sign into Client Area </a></li>
+								<li><a href="#">FAQ’s</a></li>
+								<li><a href="#">Fee Calculator</a></li>
+								<li><a href="#">Self-Assessment Checklist</a></li>
+								<li><a href="#">Standard Engagement Letters</a></li>
+							</ul>
+						</div>
+
+						{{/inline}}
+					{{/ukGrid}}
 				</div>
+			</div>
+			<div class="footer-bottom">
+				<div class="uk-container uk-text-center">
 
-				<div class="copyright uk-margin-small-bottom">Copyright &copy; {{year}} {{nb.clientName}}. All rights reserved.</div>
+					<div class="uk-flex uk-flex-between uk-flex-middle uk-flex-wrap">
 
-				<div class="watermark">
-					Website by <a title="NB Communication - Digital Marketing Agency" target="_blank" rel="noopener" href="https://www.nbcommunication.com/">NB <img src="https://brand.nbcommunication.com/logo/web/nb.png" alt="NB Communication Ltd Logo" loading="lazy"></a>
+						<div class="copyright">&copy; {{year}} {{nb.clientName}}. All rights reserved.</div>
+
+						<div class="uk-flex uk-flex-middle">
+							<div class="legal">
+								<ul>
+								{{#each legal}}
+									<li>
+										<a href="#">{{this}}</a>
+									</li>
+								{{/each}}
+								</ul>
+							</div>
+
+							<div class="watermark">
+								Website by <a title="NB Communication - Digital Marketing Agency" target="_blank" rel="noopener" href="https://www.nbcommunication.com/">NB <img src="./img/nb-logo.png" alt="NB Communication Ltd Logo" loading="lazy"></a>
+							</div>
+						</div>
+					</div>
 				</div>
 
 			</div>
+			{{> renderIcon name="footer-flower" class="uk-position-bottom-right"}}
 		</footer>
 	</div>
 
