@@ -6,13 +6,33 @@
 		height: 48px;
 	}
 
-	.uk-logo img {
-		width: 144px;
+	.uk-logo {
+		margin-bottom: 40px;
+
+		img {
+			width: 144px;
+		}
 	}
 
 	.icon-whatsapp-green {
 		width: 22px;
 		height: 22px;
+	}
+
+	&-contact {
+		.uk-list {
+			&:first-of-type {
+				margin-bottom: 50px;
+			}
+
+			>:nth-child(n+2) {
+				margin-top: 15px;
+			}
+
+			span {
+				margin-right: 5px;
+			}
+		}
 	}
 
 	&-top {
@@ -33,6 +53,10 @@
 				font-size: 16px;
 			}
 		}
+	}
+
+	.uk-list {
+		margin-top: 15px;
 	}
 
 	a:not([href^='mailto']):not([href^='tel']):not(.whatsapp) {
@@ -62,6 +86,8 @@
 
 	.icon-footer-flower {
 		max-width: 732px;
+		z-index: 0;
+		pointer-events: none;
 	}
 
 	@media (max-width: $breakpoint-mobile) {
@@ -79,7 +105,14 @@
 				display: inline-block;
 				list-style: none;
 				margin: 0;
-				padding: 0 $global-small-margin;
+
+				&:not(:first-of-type) {
+					padding: 0 $global-small-margin;
+				}
+
+				&:first-of-type {
+					padding-right: $global-small-margin;
+				}
 
 				&:last-of-type {
 					padding-right: 2 * $global-small-margin;
@@ -100,7 +133,6 @@
 	.watermark {
 
 		a {
-
 			@include hover {
 				color: #e11e2f;
 				text-decoration: none;
@@ -117,8 +149,42 @@
 	@media (min-width: $breakpoint-medium) {
 		padding-bottom: 70px;
 
+		.uk-logo {
+			margin-bottom: 190px;
+		}
+
 		&-top {
-			padding: 45px 0;
+			padding: 90px 0 45px;
+		}
+	}
+
+	@media (max-width: $breakpoint-xsmall-max) {
+		&-social {
+			align-items: center;
+			display: flex;
+			flex-direction: column;
+		}
+
+		&-bottom>.uk-container>.uk-flex,
+		.copyright~.uk-flex {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		.copyright {
+			margin-bottom: 24px;
+		}
+
+		.legal ul li {
+			display: block;
+			text-align: left;
+			margin-bottom: 10px;
+
+			&:not(:first-of-type),
+			&:first-of-type,
+			&:last-of-type {
+				padding: 0;
+			}
 		}
 	}
 }
