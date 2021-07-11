@@ -122,22 +122,36 @@
 	"items": {
 		"children": [
 			{
-				"title": "About",
+				"title": "Contractors",
 				"url": "#",
-				"getImage": "https://aws.nbcommunication.com/template/img/placeholder-beach.jpg",
-				"getSummary": "To best optimise the page and provide the visitor with useful and informative text, it would be good to have a sentence or two included here."
+				"getImage": "./img/card-1.png",
+				"width": "293",
+				"height": "246",
+				"getSummary": "A short description text should gently catch the user's eye, initiating the reading of the page content."
 			},
 			{
-				"title": "Contact",
+				"title": "Barbers",
 				"url": "#",
-				"getImage": "https://aws.nbcommunication.com/template/img/placeholder-bridge.jpg",
-				"getSummary": "To best optimise the page and provide the visitor with useful and informative text, it would be good to have a sentence or two included here."
+				"getImage": "./img/card-2.png",
+				"width": "287",
+				"height": "218",
+				"getSummary": "A short description text should gently catch the user's eye, initiating the reading of the page content."
 			},
 			{
-				"title": "Styleguide",
+				"title": "Salons",
 				"url": "styleguide.html",
-				"getImage": "https://aws.nbcommunication.com/template/img/placeholder-city.jpg",
-				"getSummary": "To best optimise the page and provide the visitor with useful and informative text, it would be good to have a sentence or two included here."
+				"getImage": "./img/card-3.png",
+				"width": "286",
+				"height": "189",
+				"getSummary": "A short description text should gently catch the user's eye, initiating the reading of the page content."
+			},
+			{
+				"title": "Coffee Shops",
+				"url": "styleguide.html",
+				"getImage": "./img/card-4.png",
+				"width": "281",
+				"height": "245",
+				"getSummary": "A short description text should gently catch the user's eye, initiating the reading of the page content."
 			}
 		],
 		"posts": [

@@ -1,0 +1,60 @@
+.find-out-more {
+    background-color: $primary-light-2;
+
+    .icon-find-out-more {
+        width: 242px;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    h2 {
+        >span {
+            color: $primary;
+            @include ellipse($blue: true);
+
+            &::before {
+                bottom: -13px;
+                width: 121px;
+            }
+        }
+    }
+
+    &.left {
+        padding: 98px 22px 77px 32px;
+
+        img {
+            width: 91px;
+            top: -22px;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+        }
+    }
+
+    @media (min-width: $breakpoint-medium) {
+
+        h2>span {
+            &::before {
+                width: 157px;
+            }
+        }
+
+        &.left {
+            padding: 50px 50px 50px 345px;
+
+            img {
+                width: 170px;
+                height: auto;
+                left: 120px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    @media (max-width: $breakpoint-small-max) {
+        h2 {
+            font-size: 26px;
+        }
+    }
+}
