@@ -1,3 +1,54 @@
+@mixin hook-slideshow {
+    border-radius: 10px;
+
+    .uk-slidenav-previous,
+    .uk-slidenav-next {
+        width: 48px;
+        height: 48px;
+
+        svg {
+            color: $grey-dark;
+            width: 20px;
+            height: 20px;
+            transition: $transition;
+
+            * {
+                stroke-width: 4px;
+            }
+        }
+
+        @include hover {
+            svg {
+                color: $primary;
+            }
+        }
+    }
+
+    .uk-overlay em {
+        color: $grey-dark;
+    }
+
+    @media (max-width: $breakpoint-large) {
+        .uk-slidenav-previous {
+            right: auto;
+        }
+
+        .uk-slidenav-next {
+            left: auto;
+            right: 0;
+        }
+
+        .uk-slidenav-previous,
+        .uk-slidenav-next {
+            margin: 15px 0px;
+
+            svg {
+                color: $white;
+            }
+        }
+    }
+}
+
 .uk-slideshow-items {
     border-radius: 10px;
     overflow: hidden;

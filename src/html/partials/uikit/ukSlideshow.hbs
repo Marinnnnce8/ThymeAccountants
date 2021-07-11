@@ -1,6 +1,6 @@
 <div data-uk-slideshow="animation: fade; autoplay: true; autoplay-interval: 4096; ratio: 16:9" id="uk-slideshow-{{#if id}}{{ida id}}{{else}}{{page.name}}{{/if}}">
 	<div class="uk-position-relative uk-visible-toggle">
-		<ul class="uk-slideshow-items" data-uk-lightbox="animation: fade" data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
+		<ul class="uk-slideshow-items uk-box-shadow-medium" data-uk-lightbox="animation: fade" data-uk-scrollspy="cls: uk-animation-slide-bottom-small">
 		{{#each items}}
 			{{#with this}}
 			<li>
@@ -12,7 +12,7 @@
 			{{/with}}
 		{{/each}}
 		</ul>
-		<a href="#" data-uk-slidenav-previous aria-label="previous" data-uk-slideshow-item="previous" class="uk-position-small uk-position-center-left-out"></a>
-		<a href="#" data-uk-slidenav-next aria-label="next" data-uk-slideshow-item="next" class="uk-position-small uk-position-center-right-out"></a>		
+		<a href="#" data-uk-slidenav-previous aria-label="previous" data-uk-slideshow-item="previous" class="uk-position-small uk-border-circle uk-flex uk-flex-center uk-flex-middle uk-position-center-left-out"></a>
+		<a href="#" data-uk-slidenav-next aria-label="next" data-uk-slideshow-item="next" class="uk-position-small uk-border-circle uk-flex uk-flex-center uk-flex-middle uk-position-center-right-out"></a>		
 	</div>
 </div>

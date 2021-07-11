@@ -1,26 +1,26 @@
-.slideshow {
+// .slideshow {
 
-    .uk-slidenav-next,
-    .uk-slidenav-previous {
-        svg {
-            color: $grey-dark;
-            width: 20px;
-            height: 20px;
-            transition: $transition;
+//     .uk-slidenav-next,
+//     .uk-slidenav-previous {
+//         svg {
+//             color: $grey-dark;
+//             width: 20px;
+//             height: 20px;
+//             transition: $transition;
 
-            * {
-                stroke-width: 4px;
-            }
-        }
+//             * {
+//                 stroke-width: 4px;
+//             }
+//         }
 
-        @include hover {
-            svg {
-                color: $primary;
-            }
-        }
-    }
+//         @include hover {
+//             svg {
+//                 color: $primary;
+//             }
+//         }
+//     }
 
-    .uk-overlay em {
-        color: $grey-dark;
-    }
-}
+//     .uk-overlay em {
+//         color: $grey-dark;
+//     }
+// }
