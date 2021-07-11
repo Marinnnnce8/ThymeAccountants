@@ -19,9 +19,9 @@
 </head>
 <body>
 
-	<div>
+	<div class="uk-position-relative">
 
-		<header class="header" data-uk-sticky="media: 960; animation: uk-animation-slide-top; show-on-up: true;">
+		<header class="header" id="scroll-up" data-uk-sticky="media: 960; animation: uk-animation-slide-top; show-on-up: true;">
 			<nav class="uk-navbar-container uk-navbar uk-navbar-transparent" data-uk-navbar>
 
 				<div class="uk-navbar-left">
@@ -53,6 +53,18 @@
 						<p class="uk-text-large">General internal page with Style guide</p>
 						{{> ukBreadcrumb}}
 						<h1>{{page.h1}}</h1>
+					{{/inline}}
+				{{/ukContainer}}					
+			{{else if page.headerBanner}}
+				{{> headerBanner}}
+				{{#> ukContainer size=(default page.ukContainer ukContainer) class="uk-margin-top"}}
+					{{#*inline "out"}}			
+						{{> ukBreadcrumb}}
+					{{/inline}}
+				{{/ukContainer}}	
+				{{#> ukContainer size=(default page.ukContainer ukContainer) class="uk-margin-top"}}
+					{{#*inline "out"}}	
+						<h2 class="uk-h1">{{page.h2}}</h2>
 					{{/inline}}
 				{{/ukContainer}}					
 			{{else}}
@@ -132,7 +144,7 @@
 
 					<div class="uk-flex uk-flex-between uk-flex-middle uk-flex-wrap">
 
-						<div class="copyright uk-text-left uk-margin-right">&copy; {{year}} {{nb.clientName}}. All rights reserved.</div>
+						<div class="copyright uk-text-left">&copy; {{year}} {{nb.clientName}}. All rights reserved.</div>
 
 						<div class="uk-flex uk-flex-middle">
 							<div class="legal">
@@ -155,6 +167,9 @@
 			</div>
 			{{> renderIcon name="footer-flower" class="uk-position-bottom-right"}}
 		</footer>
+		<a class="uk-button uk-border-circle circle-button scroll-up uk-flex uk-flex-center uk-flex-middle" href="#scroll-up" data-uk-scroll aria-label="Scroll Up">
+			{{> renderIcon name="chevron-up"}}
+		</a>
 	</div>
 
 	<div id="mmenu" class="uk-hidden">

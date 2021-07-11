@@ -1,0 +1,15 @@
+.header-banner {
+
+    &-inner {
+        min-height: 327px;
+    }
+
+    h1 {
+        letter-spacing: -.02em;
+        color: $white;
+
+        >span {
+            color: $blue-light-2;
+        }
+    }
+}

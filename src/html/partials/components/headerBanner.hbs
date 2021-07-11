@@ -1,0 +1,15 @@
+<div class="header-banner uk-cover-container uk-text-center">
+    {{#> ukContainer size=(default page.headerBanner.size (default page.ukContainer ukContainer))}}
+        {{#*inline "out"}}
+        <div class="uk-position-relative uk-border-rounded uk-overflow-hidden header-banner-inner uk-flex uk-flex-middle uk-flex-center uk-padding">
+            <img src="{{#if page.headerBanner.src}}./img/{{page.headerBanner.src}}{{else}}{{aws}}/img/placeholder-castle-banner.jpg{{/if}}" alt="" data-uk-cover>
+            <h1 class="uk-position-relative">
+                {{page.h1}}
+                {{#if page.headerBanner.titleBlue}}
+                    <span>{{page.headerBanner.titleBlue}}</span>
+                {{/if}}
+            </h1>
+        </div>
+        {{/inline}}
+    {{/ukContainer}}
+</div>

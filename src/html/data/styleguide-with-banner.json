@@ -2,9 +2,13 @@
 	"template": {
 		"name": "nb-styleguide"
 	},
-	"h1": "This is the Styleguide h1",
-	"banner": {
-		"src": "https://aws.nbcommunication.com/template/img/placeholder-beach.jpg"
+	"h1": "Header ",
+	"h2": "Heading 1",
+	"headerBanner": {
+		"headerBanner": true,
+		"size": "large",
+		"titleBlue": "Banner",
+		"src": "styleguide-background.png"
 	},
 	"breadcrumbs": [
 		{

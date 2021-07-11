@@ -15,6 +15,36 @@ body {
 	}
 }
 
+.circle-button,
+.share a {
+	background-color: $primary-light-2;
+	transition: $transition;
+	width: 50px;
+	height: 50px;
+	padding: 0;
+
+	.uk-svg {
+		color: $primary;
+		width: 18px;
+		height: 18px;
+	}
+
+	@include hover {
+		background-color: $primary;
+
+		svg {
+			color: $white;
+		}
+	}
+
+	&.scroll-up {
+		box-shadow: 0 20px 30px rgba($orange, .2);
+		position: absolute;
+		bottom: 56px;
+		right: 34px;
+	}
+}
+
 // p a,
 // li a:not(.uk-accordion-title) {
 // 	position: relative;
