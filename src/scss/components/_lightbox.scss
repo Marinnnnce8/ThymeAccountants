@@ -1,11 +1,10 @@
 .lightbox {
-
-    img,
-    &-strap {
-        border-radius: 40px;
+    &-box {
+        min-height: 320px;
+        box-shadow: 0 10px 40px rgba($secondary, .1);
     }
 
-    >a {
+    &-box>a {
 
         &::before,
         &::after {
@@ -19,8 +18,8 @@
         &::before {
             background-color: $primary;
             border-radius: 50%;
-            width: 96px;
-            height: 96px;
+            width: 48px;
+            height: 48px;
             transform: translate(-50%, -50%);
         }
 
@@ -28,7 +27,7 @@
             width: 0;
             height: 0;
             border-style: solid;
-            border-width: 19.5px 0 19.5px 36px;
+            border-width: 9.5px 0 9.5px 14px;
             border-color: transparent transparent transparent $white;
             transform: translate(-40%, -50%);
         }
@@ -36,8 +35,8 @@
 
     &-strap {
         background-image: linear-gradient(to top, $blue-light 55%, rgba($blue-light, .9), rgba($blue-light, .8), rgba($blue-light, .7), rgba($blue-light, .5), rgba($blue-light, .3), transparent);
-        min-height: 250px;
-        padding: 50px 50px 30px;
+        min-height: 150px;
+        padding: 20px 20px 10px;
         z-index: 0;
     }
 
@@ -50,6 +49,39 @@
             &::after {
                 border-color: transparent transparent transparent $primary;
             }
+        }
+    }
+
+    @media (min-width: $breakpoint-medium) {
+        &-box {
+            min-height: 620px;
+
+            >a {
+                &::before {
+                    width: 96px;
+                    height: 96px;
+                }
+
+                &::after {
+                    border-width: 19.5px 0 19.5px 36px;
+                }
+            }
+        }
+
+        &-strap {
+            min-height: 250px;
+            padding: 50px 50px 30px;
+        }
+    }
+
+    @media (max-width: $breakpoint-small-max) {
+        .uk-h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .uk-text-lead {
+            font-size: 18px;
         }
     }
 }

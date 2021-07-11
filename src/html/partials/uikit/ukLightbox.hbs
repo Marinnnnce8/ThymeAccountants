@@ -1,12 +1,12 @@
 {{#each items}}
     {{#with this}} 
-    <div class="uk-position-relative uk-overflow-hidden lightbox" data-uk-lightbox="video-autoplay: true">
+    <div class="lightbox-box uk-position-relative lightbox-inner uk-overflow-hidden uk-border-rounded" data-uk-lightbox="video-autoplay: true">
+        <img src="./img/{{img}}" alt="{{alt}}" width="{{width}}" height="{{height}}" loading="lazy" data-uk-cover> 
         <a class="uk-position-cover uk-position-z-index" href="{{src}}" data-caption="{{caption}}"></a>
         <span class="uk-flex uk-flex-column uk-flex-right uk-text-center lightbox-strap uk-position-bottom">
                 <span class="uk-text-lead uk-text-secondary">{{label}}</span>
                 <span class="uk-h2 uk-margin-small-top">{{title}}</span>
         </span>
-        <img class="uk-width-1-1" src="./img/{{img}}" alt="{{alt}}" width="{{width}}" height="{{height}}" loading="lazy">
     </div>
     {{/with}}
 {{/each}}    
