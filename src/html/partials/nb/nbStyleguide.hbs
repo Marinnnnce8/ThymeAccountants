@@ -169,30 +169,30 @@
 		{{#*inline "cells"}}
 
 		<div>
-			<div class="uk-text-meta uk-form-label">Primary</div>
-			{{> ukButton label="Button Normal" style="primary"}}
-			<div class="uk-text-meta uk-form-label uk-margin-top">Primary Small</div>
-			{{> ukButton label="Button Small" style="primary" size="small"}}
-			<div class="uk-text-meta uk-form-label uk-margin-top">Primary Large</div>
-			{{> ukButton label="Button Large" style="primary" size="large"}}
+			<div class="uk-text-meta uk-margin-small-bottom uk-form-label">Primary</div>
+			{{> ukButton icon="arrow-right" label="Button Normal" style="primary"}}
+			<div class="uk-text-meta uk-margin-small-bottom uk-form-label uk-margin-top">Primary Small</div>
+			{{> ukButton icon="arrow-right" label="Button Small" style="primary" size="small"}}
+			<div class="uk-text-meta uk-margin-small-bottom uk-form-label uk-margin-top">Primary Large</div>
+			{{> ukButton icon="arrow-right" label="Button Large" style="primary" size="large"}}
 		</div>
 
 		<div>
-			<div class="uk-text-meta uk-form-label">Default</div>
-			{{> ukButton label="Button Normal"}}
-			<div class="uk-text-meta uk-form-label uk-margin-top">Default Small</div>
-			{{> ukButton label="Button Small" size="small"}}
-			<div class="uk-text-meta uk-form-label uk-margin-top">Default Large</div>
-			{{> ukButton label="Button Large" size="large"}}
+			<div class="uk-text-meta uk-margin-small-bottom uk-form-label">Default</div>
+			{{> ukButton icon="arrow-right" label="Button Normal"}}
+			<div class="uk-text-meta uk-margin-small-bottom uk-form-label uk-margin-top">Default Small</div>
+			{{> ukButton icon="arrow-right" label="Button Small" size="small"}}
+			<div class="uk-text-meta uk-margin-small-bottom uk-form-label uk-margin-top">Default Large</div>
+			{{> ukButton icon="arrow-right" label="Button Large" size="large"}}
 		</div>
 
 		<div>
-			<div class="uk-text-meta uk-form-label">Secondary</div>
-			{{> ukButton label="Button Normal" style="secondary"}}
-			<div class="uk-text-meta uk-form-label uk-margin-top">Secondary Small</div>
-			{{> ukButton label="Button Small" style="secondary" size="small"}}
-			<div class="uk-text-meta uk-form-label uk-margin-top">Secondary Large</div>
-			{{> ukButton label="Button Large" style="secondary" size="large"}}
+			<div class="uk-text-meta uk-margin-small-bottom uk-form-label">Secondary</div>
+			{{> ukButton icon="arrow-right" label="Button Normal" style="secondary"}}
+			<div class="uk-text-meta uk-margin-small-bottom uk-form-label uk-margin-top">Secondary Small</div>
+			{{> ukButton icon="arrow-right" label="Button Small" style="secondary" size="small"}}
+			<div class="uk-text-meta uk-margin-small-bottom uk-form-label uk-margin-top">Secondary Large</div>
+			{{> ukButton icon="arrow-right" label="Button Large" style="secondary" size="large"}}
 		</div>
 
 		{{/inline}}
@@ -205,12 +205,12 @@
 
 		<div>
 			<div class="uk-text-meta uk-form-label">Text Normal</div>
-			{{> ukButton label="Button link normal" style="text"}}
+			{{> ukButton icon="arrow-right" label="Button link normal" style="text"}}
 		</div>
 
 		<div>
 			<div class="uk-text-meta uk-form-label">Text Large</div>
-			{{> ukButton label="Button link normal" style="text" class="uk-text-large"}}
+			{{> ukButton icon="arrow-right" label="Button link normal" style="text" class="uk-text-large"}}
 		</div>
 
 		{{/inline}}
@@ -264,9 +264,9 @@
 				<label class="uk-text-small uk-flex uk-flex-top"><input class="uk-checkbox" type="checkbox" checked> Confirmed state</label>
 			</div>
 
-			<div class="uk-flex uk-flex-middle">
-				{{> nbInput class="uk-margin-right" name="submit" type="submit" value="Send a Message"}}
-				{{> ukButton label="Cancel" style="default"}}
+			<div class="uk-flex uk-flex-middle uk-flex-wrap">
+				{{> nbInput inputClass="uk-button-large" class="uk-width-auto uk-margin-small-right uk-margin-small-top" icon="arrow-right" name="submit" type="submit" value="Send a Message"}}
+				{{> ukButton label="Cancel" style="default" class="uk-button-large uk-margin-small-top"}}
 			</div>
 
 			{{/inline}}

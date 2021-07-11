@@ -1,7 +1,17 @@
 .nb-form {
 
-	+ .nb-form {
+	+.nb-form {
 		margin-top: $global-gutter;
+	}
+
+	.uk-button-default {
+		border-color: $grey;
+		color: $grey;
+
+		@include hover {
+			border-color: $primary;
+			color: $white;
+		}
 	}
 
 	&-content {
@@ -33,7 +43,7 @@
 
 	.uk-checkbox {
 
-		+ span {
+		+span {
 			display: inline-block;
 			margin-left: $global-small-margin;
 		}
@@ -41,7 +51,7 @@
 
 	.uk-radio {
 
-		+ span {
+		+span {
 			display: inline-block;
 			margin-left: $global-small-margin;
 		}

@@ -7,9 +7,19 @@
         }
     }
 
+    .icon-newsletter {
+        width: 20px;
+        height: 20px;
+        margin-left: 10px;
+    }
+
+    .uk-button {
+        margin-bottom: 30px;
+    }
+
     &-box {
         background-color: $blue-light;
-        padding: 50px 20px 65px;
+        padding: 50px 20px 35px;
 
         .icon-signup-flower {
             max-width: calc(100% - 80px);
@@ -45,6 +55,16 @@
     &-lists {
         max-width: 720px;
         width: 100%;
+
+        &:first-of-type {
+            margin-bottom: 40px;
+        }
+    }
+
+    @media (min-width: $breakpoint-small) {
+        &-lists>div {
+            margin-right: 40px;
+        }
     }
 
     @media (min-width: $breakpoint-medium) {
@@ -53,7 +73,7 @@
         }
 
         &-box {
-            padding: 80px 50px 97px;
+            padding: 80px 50px 67px;
 
             .icon-signup-flower {
                 max-width: 802px;
@@ -67,10 +87,6 @@
         &-lists {
             &:first-of-type {
                 margin-bottom: 47px;
-            }
-
-            >div {
-                margin-right: 40px;
             }
         }
     }
@@ -87,11 +103,17 @@
         .uk-h1 {
             font-size: 34px;
         }
+    }
 
+    @media (max-width: $breakpoint-xsmall-max) {
         &-lists {
+            &:last-of-type>div {
+                width: 100%;
+            }
 
-            &:last-of-type {
-                margin-bottom: 40px;
+            .uk-button {
+                display: flex;
+                margin: 0 auto 30px;
             }
         }
     }

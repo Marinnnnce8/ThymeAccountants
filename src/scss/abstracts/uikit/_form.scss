@@ -59,6 +59,7 @@
 @mixin hook-form-radio {
     border-radius: 4px;
     width: 28px;
+    min-width: 28px;
     height: 28px;
     border: 2px solid $grey;
     margin-right: 20px;

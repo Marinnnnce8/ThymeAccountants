@@ -4,16 +4,34 @@
     font-weight: $semi-bold;
     min-height: 0;
     position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    &:not(.uk-button-small) .icon-arrow-right {
+        width: 16px;
+        height: 16px;
+        color: inherit;
+    }
 
     &:not(.uk-button-small):not(.uk-button-large):not(.uk-button-text) {
         padding-top: 14px;
         padding-bottom: 14px;
+    }
+
+    .icon-arrow-right {
+        margin-left: 10px;
     }
 }
 
 @mixin hook-button-small {
     padding-top: 11px;
     padding-bottom: 11px;
+
+    .icon-arrow-right {
+        width: 13px;
+        height: 13px;
+    }
 }
 
 @mixin hook-button-large {
@@ -23,11 +41,26 @@
 
 @mixin hook-button-default {
     border: 2px solid $primary;
+    @include button-hover($primary);
+    transition-delay: .2s;
+}
+
+@mixin hook-button-default-active {
+    border-color: $primary;
+}
+
+@mixin hook-button-default-hover {
+    border-color: $primary;
 }
 
 @mixin hook-button-primary {
     background: linear-gradient(90deg, $orange 0%, $orange-2 100%);
     box-shadow: 0 20px 30px rgba($orange, .2);
+    @include button-hover($primary);
+}
+
+@mixin hook-button-secondary {
+    @include button-hover($grey-dark);
 }
 
 @mixin hook-button-text {
