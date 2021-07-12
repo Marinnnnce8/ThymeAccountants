@@ -1,15 +1,9 @@
 <div class="slider">
-	{{#> ukContainer size=(default size (default page.ukContainer ukContainer))}}
-		{{#*inline "out"}}
+	{{#if title}}
+		<h3>{{title}}</h3>
+	{{/if}}
 
-		{{#if title}}
-			<h3>{{title}}</h3>
-		{{/if}}
+	{{> ukSlider}}
 
-		{{> ukSlider}}
-
-		{{#if caption}}<div class="gallery-caption uk-text-center uk-margin-small-top">{{caption}}</div>{{/if}}
-
-		{{/inline}}
-	{{/ukContainer}}
+	{{#if caption}}<div class="gallery-caption uk-text-center uk-margin-small-top">{{caption}}</div>{{/if}}
 </div>

@@ -12,4 +12,11 @@
             margin-bottom: 60px;
         }
     }
+
+    @media (max-width: $breakpoint-small-max) {
+        .uk-grid>div {
+            display: flex;
+            justify-content: center;
+        }
+    }
 }

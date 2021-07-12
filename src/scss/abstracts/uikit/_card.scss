@@ -44,16 +44,18 @@
 
 @mixin hook-card-media-right {
     font-weight: $medium;
-
-    @include light-circle(348px);
+    @include light-circle(calc(100vw - 105px));
 
     &::before {
         top: 54%;
-        transform: translate(-50%, -50%);
     }
 
-    @media (min-width: $breakpoint-xsmall-max) and (max-width: $breakpoint-small-max) {
-        @include light-circle(250px);
+    @media (min-width: $breakpoint-small) {
+        @include light-circle(360px);
+    }
+
+    @media (min-width: $breakpoint-medium) {
+        @include light-circle(348px);
     }
 
     @media (max-width: $breakpoint-small-max) {

@@ -19,6 +19,11 @@
     .uk-card-body {
         padding: 0 10px 0 0;
     }
+
+    .uk-card-media-right::before {
+        transform: translate(-50%, -50%);
+    }
+
     @media (min-width: $breakpoint-medium) {
 
         .uk-card {

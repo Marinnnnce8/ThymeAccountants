@@ -108,17 +108,10 @@
 		border-radius: 50%;
 		z-index: 0;
 		display: block;
-		width: calc(100vw - 105px);
-		height: calc(100vw - 105px);
+		width: $size;
+		height: $size;
 		max-width: 360px;
 		max-height: 360px;
-	}
-
-	@media (min-width: $breakpoint-small) {
-		&::before {
-			width: $size;
-			height: $size;
-		}
 	}
 }
 

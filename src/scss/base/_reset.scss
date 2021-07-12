@@ -42,8 +42,15 @@ body {
 	&.scroll-up {
 		box-shadow: 0 20px 30px rgba($orange, .2);
 		position: absolute;
-		bottom: 56px;
-		right: 34px;
+		bottom: 23px;
+		right: 20px;
+	}
+
+	@media (min-width: $breakpoint-medium) {
+		&.scroll-up {
+			bottom: 56px;
+			right: 34px;
+		}
 	}
 }
 
