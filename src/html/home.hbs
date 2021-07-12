@@ -6,13 +6,6 @@
 		{{> nbItems items=items.children}}
 		{{/inline}}
 	{{/ukSection}}
-
-	{{#> ukSection heading="Latest News" size="large"}}
-		{{#*inline "out"}}
-		{{> nbItems items=items.posts}}
-		{{/inline}}
-	{{/ukSection}}
-
 	
 	{{#> ukContainer}}
 		{{#*inline "out"}}
@@ -24,6 +17,8 @@
 			</div>
 		{{/inline}}
 	{{/ukContainer}}
+
+	{{>notification}}
 
 	{{/inline}}
 {{/main}}

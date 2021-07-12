@@ -4,6 +4,10 @@
         padding: 22px 30px;
         border-radius: 10px;
 
+        &:not(.uk-open) {
+            background-color: $white;
+        }
+
         &.uk-open {
             background-color: $blue-light;
 

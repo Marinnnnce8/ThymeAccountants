@@ -2,10 +2,10 @@
 	{{#with this}}
 	<div>
 		<div>
-			<div class="uk-card uk-card-default uk-position-relative uk-overflow-hidden">
+			<div class="uk-card uk-card-default uk-overflow-hidden">
 				{{!-- <a href="{{url}}" aria-label="Find out more about {{title}}" class="uk-position-cover uk-position-z-index"></a>			 --}}
-				<div class="uk-card-media-top uk-flex uk-flex-middle uk-flex-center uk-position-relative">
-					<img src="{{getImage}}" alt="{{title}}" width="{{width}}" height="{{height}}" loading="lazy">
+				<div class="uk-card-media-top uk-position-relative uk-flex">
+					<img src="{{getImage}}" alt="{{title}}" width="{{width}}" height="{{height}}" loading="lazy" class="uk-position-relative">
 				</div>
 				<div class="uk-card-header">
 					<div class="uk-card-title">
@@ -21,7 +21,7 @@
 					<div class="uk-text-meta">{{location}}</div>
 					{{/if}}
 				</div>
-				<div class="uk-card-body uk-position-absolute">
+				<div class="uk-card-body">
 					<p>{{getSummary}}</p>
 				</div>
 				<div class="uk-card-footer">

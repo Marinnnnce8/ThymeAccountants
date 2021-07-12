@@ -1,5 +1,7 @@
 body {
 	overflow-x: hidden;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
 }
 
 [data-uk-lightbox] a {
@@ -44,7 +46,6 @@ body {
 		right: 34px;
 	}
 }
-
 // p a,
 // li a:not(.uk-accordion-title) {
 // 	position: relative;

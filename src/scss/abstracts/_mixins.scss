@@ -53,11 +53,13 @@
 	&::before {
 		position: absolute;
 		z-index: -1;
+
 		@if $blue {
 			background-image: url('data:image/svg+xml,%3Csvg width="158" height="11" viewBox="0 0 158 11" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M152.8 2.20537C152.8 -0.057806 115.121 -0.924284 72.1043 3.79842C29.0878 8.52112 1.22891 -1.74874 0.19043 3.79842C0.19043 6.0616 7.5178 10.0317 42.985 10.1886C71.7679 10.316 123.024 3.6224 145.306 5.867C167.588 8.1116 152.8 2.91116 152.8 2.20537Z" fill="%23B7DEE6"/%3E%3C/svg%3E%0A');
 		}@else {
 			background-image: url('data:image/svg+xml,%3Csvg width="168" height="24" viewBox="0 0 168 24" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M167.485 6.72266C167.485 -0.790735 118.787 1.1538 78.8396 1.1538C38.8923 1.1538 0.798828 -0.790735 0.798828 6.72266C0.798828 14.2361 6.15892 24 46.1062 24C95.7144 20.2971 167.485 26.8777 167.485 6.72266Z" fill="%23FBE7DF"/%3E%3C/svg%3E%0A');
 		}
+
 		background-repeat: no-repeat;
 		display: block;
 		content: '';
@@ -76,8 +78,8 @@
 	&::before {
 		position: absolute;
 		content: '';
-		width: 300px;
-		height: 300px;
+		width: 360px;
+		height: 360px;
 		pointer-events: none;
 		left: 50%;
 		transform: scale(0) translate(-50%, -50%);
@@ -92,6 +94,30 @@
 	@include hover {
 		&::before {
 			transform: scale(1) translate(-50%, -50%);
+		}
+	}
+}
+
+@mixin light-circle($size) {
+	&::before {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: $primary-light-2;
+		content: '';
+		border-radius: 50%;
+		z-index: 0;
+		display: block;
+		width: calc(100vw - 105px);
+		height: calc(100vw - 105px);
+		max-width: 360px;
+		max-height: 360px;
+	}
+
+	@media (min-width: $breakpoint-small) {
+		&::before {
+			width: $size;
+			height: $size;
 		}
 	}
 }

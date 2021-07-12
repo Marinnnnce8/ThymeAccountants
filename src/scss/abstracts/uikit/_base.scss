@@ -1,3 +1,9 @@
+@mixin hook-base-h3 {
+    @media (max-width: $breakpoint-xsmall-max) {
+        font-size: 20px;
+    }
+}
+
 @mixin hook-base-h6 {
     letter-spacing: .2em;
     text-transform: uppercase;

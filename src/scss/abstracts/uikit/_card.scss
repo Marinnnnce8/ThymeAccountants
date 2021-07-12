@@ -3,7 +3,7 @@
     padding-bottom: 85px;
     filter: drop-shadow(0 10px 40px rgba($secondary, .1));
 
-    .uk-button {
+    .uk-button-text {
 
         &::before,
         &::after {
@@ -11,28 +11,64 @@
         }
     }
 
-    &::before {
-        position: absolute;
-        left: 50%;
-        top: 24px;
-        transform: translateX(-50%);
-        background-color: $primary-light-2;
-        content: '';
-        border-radius: 50%;
-        z-index: 0;
-        display: block;
-        width: 260px;
-        height: 260px;
+    p {
+        color: $grey;
     }
 
-    @include hover {
-        height: 570px;
+    .uk-text-small {
+        background-color: $primary-light-2;
+        border-radius: 4px;
+        font-size: 12px;
+        line-height: 1.5;
+        letter-spacing: .1em;
+        font-weight: $medium;
+        padding: 6px 10px;
+        margin-bottom: 22px;
+    }
+
+    // @include hover {
+    //     height: 570px;
+    // }
+
+    @media (max-width: $breakpoint-small-max) {
+        p {
+            font-size: 16px;
+        }
     }
 }
 
 @mixin hook-card-media-top {
     padding: 28px 23px 60px;
     min-height: 290px;
+
+    @include light-circle(260px);
+
+    &::before {
+        top: 24px;
+    }
+}
+
+@mixin hook-card-media-right {
+    font-weight: $medium;
+
+    @include light-circle(348px);
+
+    &::before {
+        top: 54%;
+        transform: translate(-50%, -50%);
+    }
+
+    @media (min-width: $breakpoint-xsmall-max) and (max-width: $breakpoint-small-max) {
+        @include light-circle(250px);
+    }
+
+    @media (max-width: $breakpoint-small-max) {
+        margin: 43px 0 15px;
+
+        &::before {
+            top: 50%;
+        }
+    }
 }
 
 @mixin hook-card-default-header {
@@ -46,9 +82,8 @@
 
 @mixin hook-card-default-footer {
     padding: 5px 33px 40px;
-    position: absolute;
-    background-color: $white;
-    bottom: 0;
-    width: 100%;
-    min-height: 85px;
+}
+
+@mixin hook-card-title {
+    font-weight: $medium;
 }

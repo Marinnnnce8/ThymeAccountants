@@ -1,0 +1,23 @@
+<div class="notification">
+    {{#> ukContainer}}
+    {{#*inline "out"}}
+    <div class="uk-card uk-overflow-hidden uk-border-rounded uk-card-default">
+        <div class="uk-hidden@m">
+            <span class="uk-text-small uk-text-uppercase uk-text-primary">Notification</span>
+        </div>
+        <div class="uk-flex-last@m uk-card-media-right uk-position-relative uk-width-auto@m uk-flex uk-flex-center uk-flex-middle">
+            <img class="uk-position-relative" src="./img/tax-return.png" alt="tax-return" width="402" height="289"
+                loading="lazy">
+        </div>
+        <div class="uk-card-body uk-width-expand@m">
+            <div class="uk-visible@m">
+                <span class="uk-text-small uk-text-uppercase uk-text-primary">Notification</span>
+            </div>
+            <h3>Not completed your 2021 tax return yet?</h3>
+            <p>Fill out this checklist before October 31st to guarantee completion before the end of January 2022.</p>
+            {{> ukButton icon="arrow-right" label="Complete my tax return now" size="large" class="uk-text-left"}}
+        </div>
+    </div>
+    {{/inline}}
+    {{/ukContainer}}
+</div>

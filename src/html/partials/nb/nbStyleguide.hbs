@@ -265,8 +265,12 @@
 			</div>
 
 			<div class="uk-flex uk-flex-middle uk-flex-wrap">
-				{{> nbInput inputClass="uk-button-large" class="uk-width-auto uk-margin-small-right uk-margin-small-top" icon="arrow-right" name="submit" type="submit" value="Send a Message"}}
-				{{> ukButton label="Cancel" style="default" class="uk-button-large uk-margin-small-top"}}
+				<div class="uk-margin-small-right uk-margin-small-top">
+					{{> nbInput inputClass="uk-button-large" class="uk-width-auto" icon="arrow-right" name="submit" type="submit" value="Send a Message"}}
+				</div>
+				<div class="uk-margin-small-top">
+					{{> ukButton label="Cancel" style="default" class="uk-button-large"}}
+				</div>
 			</div>
 
 			{{/inline}}
