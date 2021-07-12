@@ -1,3 +1,9 @@
+@mixin hook-text-lead {
+    @media (max-width: $breakpoint-xsmall-max) {
+        font-size: 20px;
+    }
+}
+
 @mixin hook-text-large {
     letter-spacing: -.02em;
     color: $grey-dark;

@@ -1,0 +1,17 @@
+{{#> ukSection sectionClass="updates uk-text-left@m uk-text-center"}}
+    {{#*inline "out"}}
+	{{#> ukGrid class=(default class "uk-child-width-1-2@m uk-grid-large")}}
+		{{#*inline "cells"}}
+        <div>
+            <h2 class="uk-h1">Keep up to date</h2>
+            <img class="uk-hidden@m uk-margin-medium-bottom uk-margin-medium-top" src="./img/keep-up-to-date.png" alt="Newsletters" loading="lazy" width="520" height="339">
+            <p class="uk-text-lead uk-margin-medium-bottom">For regular updates on our news and services, sign up to our newsletter.</p>
+            {{> ukButton icon="arrow-right" label="Sign up now" size="large" class="uk-text-left"}}
+        </div>        
+		<div class="uk-visible@m">
+            <img src="./img/keep-up-to-date.png" alt="Newsletters" loading="lazy" width="520" height="339">
+        </div>
+		{{/inline}}
+	{{/ukGrid}}    
+    {{/inline}}
+{{/ukSection}}
