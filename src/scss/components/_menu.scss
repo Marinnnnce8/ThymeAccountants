@@ -1,16 +1,36 @@
 .menu {
-    &-item {
+    // ul {
+    //     @include on-circle($item-count: 10, $circle-size: 590px, $item-size: 6em);
+    // }
+
+    a {
         background-color: $white;
         color: $grey-dark;
         font-weight: $semi-bold;
         text-align: center;
-        padding: 5px 20px 3px 3px;
+        padding: 5px 20px 3px 5px;
         border-radius: 50px;
+        font-size: 12px;
+        line-height: 1.5;
+        display: inline-flex;
+        align-items: center;
+
+        span {
+            width: 35px;
+            height: 35px;
+            background-color: $blue-light-2;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
 
         .uk-svg {
             color: $black;
             width: 20px;
             height: 20px;
+        }
+
+        @include hover {
+            text-decoration: none;
         }
     }
 }

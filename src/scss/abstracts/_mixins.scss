@@ -143,6 +143,35 @@
 	}
 }
 
+@mixin on-circle($item-count, $circle-size, $item-size) {
+	position: relative;
+	width: $circle-size;
+	height: $circle-size;
+	padding: 0;
+	border-radius: 50%;
+	list-style: none;
+
+	>* {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		margin: -($item-size / 2);
+
+		$angle: (360 / $item-count);
+		$rot: 0;
+
+		@for $i from 1 through $item-count {
+			&:nth-of-type(#{$i}) {
+				transform:
+					rotate($rot * 1deg) translate($circle-size / 2) rotate($rot * -1deg);
+			}
+
+			$rot: $rot + $angle;
+		}
+	}
+}
+
 
 //
 // UIkit

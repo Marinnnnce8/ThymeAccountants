@@ -17,7 +17,7 @@ let y = 0
 Lerp
 --------------------*/
 const lerp = (v0, v1, t) => {
-  return v0 * ( 1 - t ) + v1 * t
+  return v0 * (1 - t) + v1 * t
 }
 
 
@@ -36,7 +36,7 @@ const dispose = (scroll) => {
       }
     }
   })
-} 
+}
 dispose(0)
 
 
@@ -44,7 +44,7 @@ dispose(0)
 Wheel
 --------------------*/
 const handleMouseWheel = (e) => {
-  scrollY -= e.deltaY  
+  scrollY -= e.deltaY
 }
 
 
@@ -105,12 +105,12 @@ const render = () => {
   requestAnimationFrame(render)
   y = lerp(y, scrollY, .1)
   dispose(y)
-  
+
   scrollSpeed = y - oldScrollY
   oldScrollY = y
-  
+
   gsap.to($items, {
-    scale: 1 -  Math.min(100, Math.abs(scrollSpeed)) * .005,
+    scale: 1 - Math.min(100, Math.abs(scrollSpeed)) * .005,
     rotate: scrollSpeed * 0.2
   })
 }

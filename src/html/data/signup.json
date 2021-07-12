@@ -1,0 +1,16 @@
+{
+    "h1": "Sign",
+    "underlined": "&nbspUp",
+    "banner": {
+        "size": "large",
+        "textLead": "A short description text should gently catch the user's eye, initiating the reading of the page content.",
+        "texts": [
+            {
+                "text": "To best optimise the page and provide the visitor with useful and informative text, it would be good to have a sentence or two included here."
+            },
+            {
+                "text": "These words are here to provide the reader with a basic impression of how actual text will appear in its final presentation."
+            }
+        ]
+    }
+}
