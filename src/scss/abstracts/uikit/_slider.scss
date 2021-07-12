@@ -1,0 +1,78 @@
+@mixin hook-slider {
+    max-width: 470px;
+
+    blockquote {
+        background-color: transparent;
+        border-radius: 0;
+        filter: none;
+
+        &::before {
+            display: none;
+        }
+
+        cite {
+            font-style: normal;
+            font-size: 17px;
+            color: $grey;
+            line-height: 1.5;
+        }
+    }
+
+    p {
+        color: $grey-dark;
+
+        &:last-of-type {
+            margin-bottom: 40px;
+        }
+    }
+
+    .uk-h4 {
+        margin-bottom: 4px;
+    }
+
+    .uk-slidenav {
+        border: 2px solid $secondary;
+        width: 54px;
+        height: 54px;
+        transition: $transition;
+        margin: 0;
+
+        &:first-of-type {
+            margin-right: 15px;
+        }
+
+        svg {
+            width: 18px;
+            height: 18px;
+
+            polyline {
+                stroke-width: 4px;
+            }
+        }
+
+        @include hover {
+            background-color: $secondary;
+
+            svg {
+                color: $white;
+            }
+        }
+    }
+
+    @media (max-width: $breakpoint-small-max) {
+        blockquote {
+            text-align: center;
+        }
+    }
+}
+
+.uk-slider-container {
+    @media (max-width: $breakpoint-small-max) {
+        >.uk-position-relative {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}

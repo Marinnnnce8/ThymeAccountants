@@ -14,7 +14,7 @@
     h2 {
         >span {
             color: $primary;
-            @include ellipse($blue: true);
+            @include underlined($blue: true);
 
             &::before {
                 bottom: -13px;

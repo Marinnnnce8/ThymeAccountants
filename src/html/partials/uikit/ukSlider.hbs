@@ -1,0 +1,24 @@
+<div data-uk-slider="autoplay: false; autoplay-interval: 4096;"
+    id="uk-slider-{{#if id}}{{ida id}}{{else}}{{page.name}}{{/if}}">
+    <div class="uk-position-relative">
+        <ul class="uk-slider-items">
+            {{#each items}}
+            {{#with this}}
+            <li>
+                <blockquote class="uk-padding-remove">
+                    <p>{{{text}}}</p>
+                    <span class="uk-h4 uk-text-secondary uk-display-block">{{name}}</span>
+                    <cite>{{cite}}</cite>
+                </blockquote>
+            </li>
+            {{/with}}
+            {{/each}}
+        </ul>
+        <div>
+            <a class="uk-position-small uk-border-circle uk-text-secondary uk-flex-inline uk-flex-middle uk-flex-center" href="#" data-uk-slidenav-previous
+                uk-slider-item="previous"></a>
+            <a class="uk-position-small uk-border-circle uk-text-secondary uk-flex-inline uk-flex-middle uk-flex-center" href="#" data-uk-slidenav-next uk-slider-item="next"></a>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,16 @@
+{{#> ukSection sectionClass="reviews"}}
+    {{#*inline "out"}}
+    <h2 class="uk-h1 uk-text-center uk-hidden@m">What our <strong class="underlined uk-text-secondary">clients say...</strong></h2>
+	{{#> ukGrid class=(default class "uk-child-width-1-2@m uk-grid-large")}}
+		{{#*inline "cells"}}
+		<div>
+            <img src="./img/what-clients-say.png" alt="Clients reviews" loading="lazy" width="492" height="504">
+        </div>
+        <div>
+            <h2 class="uk-h1 uk-visible@m">What our <strong class="underlined uk-text-secondary">clients say...</strong></h2>
+            {{> slider items=items.slider}}
+        </div>
+		{{/inline}}
+	{{/ukGrid}}    
+    {{/inline}}
+{{/ukSection}}

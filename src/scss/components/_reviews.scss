@@ -1,0 +1,15 @@
+.reviews {
+    .underlined {
+        font-weight: $semi-bold;
+    }
+
+    .uk-h1 {
+        margin-bottom: 40px;
+    }
+
+    @media (min-width: $breakpoint-medium) {
+        .uk-h1 {
+            margin-bottom: 60px;
+        }
+    }
+}

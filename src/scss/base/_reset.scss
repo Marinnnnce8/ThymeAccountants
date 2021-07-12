@@ -46,6 +46,11 @@ body {
 		right: 34px;
 	}
 }
+
+.underlined {
+	@include underlined;
+}
+
 // p a,
 // li a:not(.uk-accordion-title) {
 // 	position: relative;

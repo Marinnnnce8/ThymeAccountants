@@ -44,8 +44,8 @@
 	white-space: nowrap;
 }
 
-// Ellipse
-@mixin ellipse($blue: false) {
+// Underlined
+@mixin underlined($blue: false) {
 	position: relative;
 	display: inline-block;
 	z-index: 1;
@@ -67,7 +67,7 @@
 		height: 23px;
 		bottom: 0;
 		background-position: center;
-		background-size: contain;
+		background-size: 100% auto;
 	}
 }
 
@@ -164,3 +164,6 @@
 
 // Alert
 @import 'uikit/alert';
+
+// Slider
+@import 'uikit/slider';

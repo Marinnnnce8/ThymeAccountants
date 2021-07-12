@@ -248,6 +248,23 @@
 				"height": "675"
 			}
 		],
+		"slider": [
+			{
+				"text": "&quot;Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore dolor magna aliqua.&quot;",
+				"name": "Michael Thomas",
+				"cite": "Plumbing and Heating"
+			},
+			{
+				"text": "&quot;Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore dolor magna aliqua. Sed do eiusmod tempor incididunt ut labore et dolore dolor magna aliqua.&quot;",
+				"name": "Michael Thomas",
+				"cite": "Plumbing"
+			},
+			{
+				"text": "&quot;Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore dolor magna aliqua. Sed do eiusmod tempor incididunt ut labore et.&quot;",
+				"name": "Michael Thomas",
+				"cite": "Heating"
+			}
+		],
 		"accordions": [
 			{
 				"opened": true,
