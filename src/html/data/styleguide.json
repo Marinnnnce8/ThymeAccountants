@@ -4,6 +4,7 @@
 	},
 	"styleguide": true,
 	"h1": "Heading 1",
+	"ukContainer": "small",
 	"intro": "This is some lead text to introduce the styleguide. It should gently catch the user's eye, initiating the reading of the main page content.",
 	"share": {
 		"title": "Share page on:",

@@ -4,6 +4,7 @@
 	},
 	"h1": "Header ",
 	"h2": "Heading 1",
+	"ukContainer": "small",
 	"headerBanner": {
 		"headerBanner": true,
 		"size": "large",

@@ -1,5 +1,4 @@
 .find-out-more {
-    margin-bottom: 100px;
     background-color: $primary-light-2;
 
     >a {
@@ -37,7 +36,6 @@
     }
 
     @media (min-width: $breakpoint-medium) {
-        margin-bottom: 115px;
 
         h2>span {
             &::before {
@@ -47,7 +45,6 @@
 
         &.left {
             padding: 50px 50px 50px 345px;
-            margin-bottom: 140px;
 
             img {
                 width: 170px;

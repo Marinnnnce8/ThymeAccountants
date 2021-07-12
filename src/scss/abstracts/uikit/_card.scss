@@ -40,12 +40,6 @@
 @mixin hook-card-media-top {
     padding: 28px 23px 60px;
     min-height: 290px;
-
-    @include light-circle(260px);
-
-    &::before {
-        top: 24px;
-    }
 }
 
 @mixin hook-card-media-right {
