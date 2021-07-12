@@ -1,0 +1,16 @@
+.menu {
+    &-item {
+        background-color: $white;
+        color: $grey-dark;
+        font-weight: $semi-bold;
+        text-align: center;
+        padding: 5px 20px 3px 3px;
+        border-radius: 50px;
+
+        .uk-svg {
+            color: $black;
+            width: 20px;
+            height: 20px;
+        }
+    }
+}

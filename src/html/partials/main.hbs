@@ -71,8 +71,7 @@
 					{{#*inline "out"}}	
 						<h2 class="uk-h1">{{page.h2}}</h2>
 					{{/inline}}
-				{{/ukContainer}}					
-			{{else}}
+				{{/ukContainer}}
 				{{#> ukContainer size=(default page.ukContainer ukContainer) class="uk-margin-top"}}
 					{{#*inline "out"}}
 						<h1>{{page.h1}}</h1>
@@ -185,5 +184,11 @@
 	<script src="./js/nbkit.min.js"></script>
 	<script src="./js/mmenu.js"></script>
 	<script src="./js/main.js"></script>
+	{{#if (eq page.name "home")}}
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.3/mobile-detect.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+	<script src="./js/mouse-scroller.js"></script>
+	{{!-- <script src="./js/infinite-scroller.js"></script> --}}
+	{{/if}}
 </body>
 </html>

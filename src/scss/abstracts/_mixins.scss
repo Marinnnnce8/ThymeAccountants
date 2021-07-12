@@ -44,6 +44,34 @@
 	white-space: nowrap;
 }
 
+// Checked list items 
+@mixin checked-list-items {
+	li {
+		font-size: 15px;
+		position: relative;
+		display: flex;
+		align-items: center;
+
+		&::before {
+			position: relative;
+			background-image: url('data:image/svg+xml,%3Csvg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M6.40186 15.4143L0.443523 8.91429C0.0855575 8.52378 0.0855575 7.89061 0.443523 7.50007L1.73985 6.08585C2.09782 5.6953 2.67826 5.6953 3.03622 6.08585L7.05004 10.4645L15.6472 1.08585C16.0052 0.695342 16.5856 0.695342 16.9436 1.08585L18.2399 2.50007C18.5979 2.89058 18.5979 3.52374 18.2399 3.91429L7.69822 15.4143C7.34022 15.8048 6.75982 15.8048 6.40186 15.4143Z" fill="%23BB582A"/%3E%3C/svg%3E%0A');
+			width: 18px;
+			height: 18px;
+			background-repeat: no-repeat;
+			background-position: center;
+			margin-right: 10px;
+			margin-bottom: 0;
+			left: auto;
+		}
+	}
+
+	@media (min-width: $breakpoint-medium) {
+		li {
+			font-size: 17px;
+		}
+	}
+}
+
 // Underlined
 @mixin underlined($blue: false) {
 	position: relative;

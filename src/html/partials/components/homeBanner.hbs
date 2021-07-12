@@ -1,0 +1,129 @@
+<div class="banner-home uk-cover-container uk-position-relative">
+    {{#> ukContainer size=(default page.banner.size (default page.ukContainer ukContainer))}}
+    {{#*inline "out"}}
+        {{#> ukGrid class=(default class "uk-child-width-1-2@m uk-grid-large")}}
+        {{#*inline "cells"}}
+        <div>
+            <h1><span class="underlined uk-text-secondary">No fuss</span> accountancy and taxation services</h1>
+            <p>We know your lives are busy. We are a firm of dedicated small business advisers who can lighten your load with affordable and professional online business services.</p>
+            <ul class="uk-list checked-list uk-margin-remove-top uk-margin-remove-bottom uk-visible@m">
+                <li>Low, fixed monthly fees</li>
+                <li>No hidden charges</li>
+                <li>Secure and simple accountancy software</li>
+                <li>Friendly and experienced team</li>
+                <li>Live tax calculation – no surprises!</li>
+            </ul>
+            <div class="uk-visible@m uk-margin-medium-top">
+                {{> ukButton icon="arrow-right" label="Get an instant quote" style="primary" size="large"}}
+            </div>
+        </div>
+        <div>
+            <div class="banner-slider uk-position-relative">
+                <div class="responsive-scroll-box uk-text-secondary">
+                    <div class="responsive-scroll">
+                        <span class="scroll"></span>
+                    </div>
+                    {{> renderIcon name="chevron-down" class="uk-position-bottom-center"}}
+                </div>
+                <img src="./img/banner-slider.png" loading="lazy" width="582" height="579" alt="Accountancy Services" class="uk-position-cover">
+                <div class="menu uk-position-z-index uk-position-relative">
+                    <ul class="menu-wrapper uk-list">
+                        <li class="menu-item">
+                            <a href="#">
+                                <span>
+                                    {{>renderIcon name="team-leader"}}
+                                </span>
+                            SME’s
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">
+                                <span>
+                                    {{>renderIcon name="heart"}}
+                                </span>
+                                Charities
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">
+                                <span>
+                                    {{>renderIcon name="shuttle"}}
+                                </span>
+                            Start-Ups
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">
+                                <span>
+                                    {{>renderIcon name="haircut"}}
+                                </span>
+                            Salons
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">
+                                <span>
+                                    {{>renderIcon name="clipper"}}
+                                </span>
+                            Barbers
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">
+                                <span>
+                                    {{>renderIcon name="contractors"}}
+                                </span>
+                            Contractors
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">
+                                <span>
+                                    {{>renderIcon name="coffee-cup"}}
+                                </span>
+                            Coffee Shops
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">
+                                <span>
+                                    {{>renderIcon name="food"}}
+                                </span>
+                            Hospitality
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">
+                                <span>
+                                    {{>renderIcon name="cctv"}}
+                                </span>
+                            Technology
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">
+                                <span>
+                                    {{>renderIcon name="labor"}}
+                                </span>
+                            Engineering, and more...
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="uk-list checked-list uk-margin-remove-top uk-margin-remove-bottom uk-hidden@m">
+                    <li>Low, fixed monthly fees</li>
+                    <li>No hidden charges</li>
+                    <li>Secure and simple accountancy software</li>
+                    <li>Friendly and experienced team</li>
+                    <li>Live tax calculation – no surprises!</li>
+                </ul>
+                <div class="uk-hidden@m uk-margin-medium-top">
+                    {{> ukButton icon="arrow-right" label="Get an instant quote" style="primary" size="large"}}
+                </div>
+            </div>
+        </div>
+        {{/inline}}
+        {{/ukGrid}}
+    {{/inline}}
+    {{/ukContainer}}
+</div>

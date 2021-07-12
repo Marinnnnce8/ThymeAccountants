@@ -19,6 +19,7 @@
 
     h2 {
         >span {
+            font-weight: inherit;
             color: $primary;
             @include underlined($blue: true);
 

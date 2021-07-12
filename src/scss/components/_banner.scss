@@ -1,0 +1,19 @@
+.banner {
+    &-home {
+        padding: 25px 0 100px;
+
+        h1>span {
+            font-weight: $semi-bold;
+        }
+    }
+
+    @media (min-width: $breakpoint-medium) {
+        &-home {
+            padding: 100px 0 115px;
+
+            .checked-list {
+                margin-left: 10px;
+            }
+        }
+    }
+}

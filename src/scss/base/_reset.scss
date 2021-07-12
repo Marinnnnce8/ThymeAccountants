@@ -55,7 +55,12 @@ body {
 }
 
 .underlined {
+	font-weight: $semi-bold;
 	@include underlined;
+}
+
+.checked-list {
+	@include checked-list-items;
 }
 
 // p a,
