@@ -1,5 +1,11 @@
 .find-out-more {
     background-color: $primary-light-2;
+    padding: 95px 20px 75px;
+
+    img {
+        transform: translateX(-50%);
+        position: absolute;
+    }
 
     >a {
         z-index: 2;
@@ -17,46 +23,52 @@
             @include underlined($blue: true);
 
             &::before {
-                bottom: -13px;
-                width: 121px;
+                bottom: -10px;
+                width: 100%;
             }
         }
     }
 
-    &.left {
-        padding: 98px 22px 77px 32px;
+    &.left img {
+        top: -22px;
+        width: 91px;
+    }
 
-        img {
-            width: 91px;
-            top: -22px;
-            left: 50%;
-            transform: translateX(-50%);
-            position: absolute;
-        }
+    &.right img {
+        top: -30px;
+        width: 120px;
     }
 
     @media (min-width: $breakpoint-medium) {
-
-        h2>span {
-            &::before {
-                width: 157px;
-            }
-        }
 
         &.left {
             padding: 50px 50px 50px 345px;
 
             img {
                 width: 170px;
-                height: auto;
                 left: 120px;
-                top: 50%;
                 transform: translateY(-50%);
+                top: 50%;
+            }
+        }
+
+        &.right {
+            padding: 55px 260px 55px 55px;
+
+            img {
+                width: 225px;
+                right: 32px;
+                transform: translateY(-50%);
+                top: 50%;
             }
         }
     }
 
     @media (max-width: $breakpoint-small-max) {
+        img {
+            left: 50%;
+        }
+
         h2 {
             font-size: 26px;
         }
