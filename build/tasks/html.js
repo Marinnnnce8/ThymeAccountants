@@ -83,6 +83,7 @@ export function compileHandlebars() {
 				`${srcPartials}/uikit`,
 			],
 			helpers: {
+				useGrid: (a) => Array.isArray(a) ? a.length > 2 : false,
 				base64: base64,
 				default: (a, b) => a ? a : b,
 				eq: (a, b) => a === b,
@@ -90,6 +91,7 @@ export function compileHandlebars() {
 				ida: (str) => String(str).toLowerCase().replace(/\s/g, ''),
 				lte: (a, b) => (a ? parseInt(a) : 0) <= (b ? parseInt(b) : 0),
 				neq: (a, b) => a !== b,
+				step: (n) => parseInt(n) + 1
 			}
 		}))
 		.pipe(rename({
