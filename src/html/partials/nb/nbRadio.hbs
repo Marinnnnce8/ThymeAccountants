@@ -1,0 +1,11 @@
+<div class="Inputfield {{default class "uk-width-1-1"}}{{#if title}} nb-form-required{{/if}}" id="wrap_nb-form-{{page.name}}_{{name}}">
+
+    <span class="uk-form-label">{{titleLabel}}{{#if titleLabel}}<span>*</span>{{/if}}</span>
+	<div class="nb-form-content">
+        <div role="alert"></div>
+        <div class="radio-group">
+            <input id="nb-form-{{page.name}}_{{name}}" class="uk-input" name="{{name}}" type="radio">
+            <label class="uk-form-label uk-margin-remove-top" for="nb-form-{{page.name}}_{{name}}">{{label}}</label>
+        </div>
+	</div>
+</div>

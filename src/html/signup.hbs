@@ -8,38 +8,49 @@
 
                 {{#each page.questions}}
                     {{#with this}}
-                    <div class="page uk-box-shadow-medium uk-border-rounded uk-overflow-hidden uk-margin-medium-bottom{{#if @first}} page-active{{/if}}">
+                    <div class="page uk-overflow-hidden uk-margin-medium-bottom{{#if @first}} page-active{{/if}}">
                         <div class="page-content">
 							<div class="page-info">
-								<div class="calc-steps uk-text-center">
-									<ul class="uk-list uk-flex uk-flex-middle uk-flex-between uk-margin-remove-bottom">
-										<li class="uk-border-circle uk-position-relative" role="presentation"></li>
-										<li class="uk-border-circle uk-position-relative" role="presentation"></li>
-										<li class="uk-border-circle uk-position-relative" role="presentation"></li>
-										<li class="uk-border-circle uk-position-relative" role="presentation"></li>
-										<li class="uk-border-circle uk-position-relative" role="presentation"></li>
-										<li class="uk-border-circle uk-position-relative" role="presentation"></li>
-										<li class="uk-border-circle uk-position-relative" role="presentation"></li>
+								<div class="signup-steps">
+									<ul class="uk-list uk-flex uk-flex-middle uk-flex-between uk-flex-wrap uk-margin-remove-bottom">
+										<li class="uk-border-rounded uk-text-uppercase uk-position-relative uk-margin-small-top signup-step-active" role="presentation">
+											<span class="tick uk-flex-inline uk-flex-center uk-flex-middle uk-border-circle uk-margin-small-right">{{>renderIcon name="tick-signup"}}</span>Basic Info
+										</li>
+										<li class="uk-border-rounded uk-text-uppercase uk-position-relative signup-step-completed" role="presentation">
+											<span class="tick uk-flex-inline uk-flex-center uk-flex-middle uk-border-circle uk-margin-small-right">{{>renderIcon name="tick-signup"}}</span>Business info
+										</li>
+										<li class="uk-border-rounded uk-text-uppercase uk-position-relative" role="presentation">
+											<span class="tick uk-flex-inline uk-flex-center uk-flex-middle uk-border-circle uk-margin-small-right">{{>renderIcon name="tick-signup"}}</span>Owner info
+										</li>
+										<li class="uk-border-rounded uk-text-uppercase uk-position-relative" role="presentation">
+											<span class="tick uk-flex-inline uk-flex-center uk-flex-middle uk-border-circle uk-margin-small-right">{{>renderIcon name="tick-signup"}}</span>Confirmation
+										</li>
+										<li class="uk-border-rounded uk-text-uppercase uk-position-relative" role="presentation">
+											<span class="tick uk-flex-inline uk-flex-center uk-flex-middle uk-border-circle uk-margin-small-right">{{>renderIcon name="tick-signup"}}</span>Payment
+											<span> Optional</span>
+										</li>
+										<li class="uk-border-rounded uk-text-uppercase uk-position-relative" role="presentation">
+											<span class="tick uk-flex-inline uk-flex-center uk-flex-middle uk-border-circle uk-margin-small-right">{{>renderIcon name="tick-signup"}}</span>Set Up Account
+											<span> Optional</span>
+										</li>
 									</ul>
-									<span class="uk-text-small">{{step @index}}/17</span>
+									{{!-- <span class="uk-text-small">{{step @index}}/17</span> --}}
 								</div>
-								<div class="info-title uk-flex uk-flex-column uk-flex-center">
-									<div class="uk-h1 uk-margin-bottom">{{title}}</div>
-								</div>
+								<div class="uk-h1 uk-margin-bottom">{{title}}</div>
 							</div>
 
-							<div class="uk-width-expand page-enquiry">
+							<div class="page-enquiry">
 							{{#each questions}}
 								{{#with this}}
-								<div class="uk-h3">{{label}}{{#if tooltip}} {{> tooltip}}{{/if}}</div>
+								{{!-- <div class="uk-h3">{{label}}{{#if tooltip}} {{> tooltip}}{{/if}}</div>
 
-								{{#if description}}<p>{{description}}</p>{{/if}}
+								{{#if description}}<p>{{description}}</p>{{/if}} --}}
 
-								{{#if (eq type "basic")}}
+								{{#if (eq type "basic-info")}}
 									{{#> ukGrid class=(default class "uk-child-width-1-2@m")}}
 										{{#*inline "cells"}}
 											<div>
-												{{> nbInput label="Full Name" name="full_name" title="Please enter your full name"}}
+												{{> nbInput label="Full Name" name="full-name" title="Please enter your full name"}}
 											</div>
 											<div>
 												{{> nbInput label="Email Address" name="name" title="Please enter email address" type="email"}}
@@ -52,7 +63,7 @@
 									{{#> ukGrid class=(default class "uk-child-width-1-2@m")}}
 										{{#*inline "cells"}}
 											<div>
-												{{> nbInput label="Business Name" name="business_name" title="Please enter your business name"}}
+												{{> nbInput label="Business Name" name="business-name" title="Please enter your business name"}}
 											</div>
 											<div>
 												{{> nbInput label="Email Address" name="name" title="Please enter email address"}}
@@ -60,49 +71,54 @@
 										{{/inline}}
 									{{/ukGrid}}	
 
-									{{> nbInput label="About the business" name="about_the_business" type="textarea" title="Please enter your business"}}
+									{{> nbInput label="About the business" name="about-the-business" type="textarea" title="Please enter your business"}}
 
 									<h3>Details about existing accountant</h3>
 
 									{{#> ukGrid class=(default class "uk-child-width-1-2@m")}}
 										{{#*inline "cells"}}
 											<div>
-												{{> nbInput label="Accountant Company Name" name="accountant_company_name" title="Please enter accountant company name"}}
+												{{> nbInput label="Accountant Company Name" name="accountant-company-name" title="Please enter accountant company name"}}
 											</div>
 											<div>
-												{{> nbInput label="Accountant Full Name" name="accountant_full_name" title="Please enter accountant full name"}}
+												{{> nbInput label="Accountant Full Name" name="accountant-full-name" title="Please enter accountant full name"}}
 											</div>
 											<div>
-												{{> nbInput label="Accountant Email" name="accountant_email" title="Please enter accountant email" type="email"}}
+												{{> nbInput label="Accountant Email" name="accountant-email" title="Please enter accountant email" type="email"}}
 											</div>
 											<div>
-												{{> nbInput label="Accountant Telephone" name="accountant_telephone" title="Please enter accountant telephone" type="tel"}}
+												{{> nbInput label="Accountant Telephone" name="accountant-telephone" title="Please enter accountant telephone" type="tel"}}
 											</div>
 										{{/inline}}
 									{{/ukGrid}}
-									{{> nbInput label="Accountant Address" name="accountant_address" title="Please enter accountant address"}}										
+									{{> nbInput label="Accountant Address" name="accountant-address" title="Please enter accountant address"}}										
 								{{/if}}															
 
 								{{#if (eq type "owners-info")}}
-
-									{{#> ukGrid class=(default class "uk-child-width-1-2@m")}}
+									{{#> ukGrid class=(default class "uk-child-width-1-2@m uk-flex-bottom")}}
 										{{#*inline "cells"}}
 											<div>
-												{{> nbInput label="Owner Full Name" name="owner_full_name" title="Please enter owner full name"}}
+												{{> nbRadio titleLabel="Is there more than one owner" label="Yes" name="more-owners" title="Please enter is there more than one owner"}}
 											</div>
 											<div>
-												{{> nbInput label="Owner Email Address" name="owner_email_address" title="Please enter owner email address" type="email"}}
+												{{> nbRadio label="No" name="one-owner" title="Please enter is there more than one owner"}}
 											</div>
 											<div>
-												{{> nbInput label="Date of Birth (dd/mm/yyyy)" name="date_of_birth" title="Please enter date of birth (dd/mm/yyyy)" type="date"}}
+												{{> nbInput label="Owner Full Name" name="owner-full-name" title="Please enter owner full name"}}
 											</div>
 											<div>
-												{{> nbInput label="National Insurance number" name="national_insurance_number" title="Please enter national insurance number"}}
+												{{> nbInput label="Owner Email Address" name="owner-email-address" title="Please enter owner email address" type="email"}}
+											</div>
+											<div>
+												{{> nbInput label="Date of Birth (dd/mm/yyyy)" name="date-of-birth" title="Please enter date of birth (dd/mm/yyyy)" type="date" tooltip="Style of the information message"}}
+											</div>
+											<div>
+												{{> nbInput label="National Insurance number" name="national-insurance-number" title="Please enter national insurance number"}}
 											</div>
 										{{/inline}}
 									{{/ukGrid}}
-									{{> nbInput label="Accountant Address" name="accountant_address" title="Please enter accountant address"}}										
-								{{/if}}															
+									{{> nbInput label="Tax reference" name="tax-reference" title="Please enter tax reference" tooltip="Style of the information message"}}										
+								{{/if}}													
 
 								{{#with input}}
 
@@ -347,11 +363,16 @@
 								{{else}}
 									{{> ukButton icon="arrow-left" pull="left" label="Back" size="large" class="calc-button-back"}}
 								{{/if}}
-                                {{#if (eq page "last")}}
-									{{> ukButton icon="arrow-right" label="View results" size="large" style="primary"}}
-                                {{else}}
-									{{> ukButton icon="arrow-right" label="Next" size="large" style="primary" class="calc-button"}}
-                                {{/if}}
+								<div>
+									{{#if saveDetails}}
+									{{> ukButton icon="save" pull="left" label="Save your details for later" size="large" style="text"}}
+									{{/if}}
+									{{#if (eq page "last")}}
+										{{> ukButton icon="arrow-right" label="Save your details for later" size="large" style="primary"}}
+									{{else}}
+										{{> ukButton icon="arrow-right" label="Continue" size="large" style="primary" class="calc-button"}}
+									{{/if}}
+								</div>
                             </div>
                         </div>
                     </div>

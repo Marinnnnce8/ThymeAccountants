@@ -1,4 +1,9 @@
 .banner {
+    p:not(.uk-text-lead) {
+        font-size: 17px;
+        color: $black;
+    }
+
     &-home {
         padding: 25px 0 100px;
 
@@ -8,6 +13,16 @@
     }
 
     @media (min-width: $breakpoint-medium) {
+        &-text {
+            >div:first-of-type {
+                padding-right: 90px;
+            }
+        }
+
+        &-image {
+            left: 60px;
+        }
+
         &-home {
             padding: 100px 0 115px;
 

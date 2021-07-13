@@ -2,7 +2,6 @@
     "h1": "Sign",
     "underlined": "&nbspUp",
     "banner": {
-        "size": "large",
         "textLead": "A short description text should gently catch the user's eye, initiating the reading of the page content.",
         "texts": [
             {
@@ -18,9 +17,10 @@
             "title": "Let’s start with basic information",
             "questions": [
                 {
-                    "type": "basic"
+                    "type": "basic-info"
                 }
-            ]
+            ],
+            "saveDetails": true
         },
         {
             "title": "Next, tell us about your business",

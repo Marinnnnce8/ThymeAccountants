@@ -1,0 +1,8 @@
+@mixin hook-tooltip {
+    background-color: $secondary;
+    box-shadow: 0 10px 40px rgba($secondary, .1);
+    border-radius: 5px;
+    padding: 5px 10px 7px 13px;
+    font-size: 14px;
+    line-height: 1.5;
+}

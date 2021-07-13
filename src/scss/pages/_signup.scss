@@ -1,38 +1,65 @@
 .calculator-page {
-	// &-active {
-	// 	position: relative;
-	// 	min-height: 100vh;
+	// position: relative;
+	// min-height: 100vh;
 
-	// 	.banner {
-	// 		display: none;
-
-	// 		.uk-button-primary {
-	// 			pointer-events: none;
-	// 		}
-	// 	}
-	// }
-
-	.font-info {
-		position: relative;
-		bottom: -2px;
-		right: auto;
-
-		&::before {
-			color: $secondary;
-			font-size: 20px;
+	.tooltip {
+		.uk-svg {
+			width: 18px;
+			height: 18px;
 		}
 	}
 
+	.uk-button-default {
+		color: $grey;
+		border-color: $grey;
+
+		svg {
+			transition: $transition;
+		}
+
+		@include hover {
+			border-color: $primary;
+			color: $white;
+
+			svg {
+				color: $white;
+			}
+		}
+	}
+
+	.uk-button-text {
+		margin-right: 20px;
+
+		&::before,
+		&::after {
+			display: none;
+		}
+
+		svg {
+			width: 20px;
+			height: 20px;
+		}
+
+		@include hover {
+			color: $grey-dark;
+
+			svg {
+				color: $grey-dark;
+			}
+		}
+	}
+
+	h3 {
+		margin: 30px 0 0;
+	}
+
 	.page {
-		left: 50%;
-		transform: translateX(-50%);
-		position: absolute;
-		top: 20px;
+		filter: drop-shadow(0 10px 40px rgba($secondary, .1));
 		background-color: $white;
-		width: 100%;
-		max-width: calc(100% - 40px);
 		padding: 20px 15px 80px;
+		margin-top: 15px;
 		z-index: 1;
+		border-radius: 10px;
 
 		&:not(.page-active) {
 			display: none;
@@ -43,45 +70,12 @@
 		}
 
 		>.uk-position-bottom {
+			box-shadow: 0 10px 40px rgba($secondary, .1);
 			padding: 8px 10px 7px;
-
-			.uk-button:last-of-type {
-				margin-left: 5px;
-			}
 		}
 
 		.uk-text-meta {
 			color: $secondary;
-		}
-	}
-
-	.uk-button-secondary.calc-button-back {
-		padding: 7px 33px 10px 43px;
-	}
-
-	@for $i from 1 through 7 {
-		.page:nth-child(#{$i}) {
-			z-index: #{$i+1};
-		}
-	}
-
-	.calc-steps {
-		li {
-			width: 13px;
-			height: 13px;
-			// background-color: $blue-lightest-6;
-			margin: 0;
-
-			&:not(:last-child)::before {
-				content: '';
-				position: absolute;
-				left: 100%;
-				width: 13px;
-				top: 50%;
-				transform: translateY(-50%);
-				background-color: inherit;
-				height: 1px;
-			}
 		}
 	}
 
@@ -108,12 +102,27 @@
 		user-select: none;
 	}
 
+	*+.uk-grid-margin,
+	.uk-grid+.uk-grid,
+	.uk-grid>.uk-grid-margin {
+		margin-top: 0;
+	}
+
+	.uk-form-label {
+		margin-top: 15px;
+		margin-bottom: 10px;
+		display: block;
+	}
+
 	@media (min-width: $breakpoint-medium) {
+		.uk-button-text {
+			margin-right: 50px;
+		}
 
 		.page {
 			top: 50px;
-			min-height: 650px;
-			padding: 60px 60px 70px;
+			min-height: 570px;
+			padding: 40px 60px 167px;
 
 			&-content {
 				padding-bottom: 50px;
@@ -123,26 +132,9 @@
 				}
 			}
 
-			.page-enquiry {
-				padding-right: 70px;
+			>.uk-position-bottom {
+				padding: 45px 60px;
 			}
-
-			// .uk-button-secondary:not(.calc-button-back) {
-			// 	max-width: 335px;
-			// 	width: 100%;
-			// }
-		}
-
-		// .uk-button-secondary.calc-button-back {
-		// 	padding: 7px 35px 10px 70px;
-
-		// 	&::before {
-		// 		left: 30px;
-		// 	}
-		// }
-
-		.calc-steps {
-			margin-bottom: 40px;
 		}
 	}
 
@@ -152,17 +144,17 @@
 		}
 	}
 
-	@media (max-width: $breakpoint-small-max) {
+	// @media (max-width: $breakpoint-small-max) {
 
-		.page {
-			&-content {
-				>.uk-flex {
-					flex-direction: column;
-					align-items: center;
-				}
-			}
-		}
-	}
+	// 	.page {
+	// 		&-content {
+	// 			>.uk-flex {
+	// 				flex-direction: column;
+	// 				align-items: center;
+	// 			}
+	// 		}
+	// 	}
+	// }
 
 	@media (max-width: $breakpoint-xsmall-max) {
 		.page {
@@ -172,19 +164,7 @@
 
 			&.page-last {
 				padding-bottom: 150px;
-
-				>.uk-position-bottom {
-					padding-bottom: 0;
-
-					.uk-button {
-						margin-bottom: 10px;
-					}
-				}
 			}
-		}
-
-		.uk-button-secondary.calc-button {
-			padding: 7px 44px 10px 35px;
 		}
 	}
 }
