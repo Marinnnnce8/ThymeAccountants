@@ -34,7 +34,7 @@
 						{{#each questions}}
 							{{#with this}}
 
-							{{#if (eq type "basic-info")}}
+							{{!-- {{#if (eq type "basic-info")}}
 								{{#> ukGrid class=(default class "uk-child-width-1-2@m")}}
 									{{#*inline "cells"}}
 										<div>
@@ -82,7 +82,7 @@
 								{{> nbInput label="Accountant Address" name="accountant-address" title="Please enter accountant address"}}										
 							{{/if}}															
 
-							{{#if (eq type "owners-info")}}
+							{{#if (eq type "owner-info")}}
 								{{#> ukGrid class=(default class "uk-child-width-1-2@m uk-flex-bottom")}}
 									{{#*inline "cells"}}
 										<div>
@@ -109,18 +109,22 @@
 							{{/if}}
 
 							{{#if (eq type "signup-confirm")}}
-								{{>signupConfirm}}										
+								{{>signupConfirm}}			
 							{{/if}}
 
 							{{#if (eq type "confirmation-progress")}}
 								<p>By clicking confirm button we sent you a copy of the documents via email with details on how to complete the sign-up process with Direct Debit payment system.</p>
-								{{>confirmProgress}}										
+								{{>confirmProgress}}								
 							{{/if}}
 
 							{{#if (eq type "signup-payment")}}
 								<p class="uk-alert uk-flex uk-flex-middle uk-alert-success uk-margin-medium-top uk-margin-remove-bottom">{{> renderIcon name="alert-success"}} This text is providing a positive message to the user</p>
 								<div class="uk-h1 uk-margin-bottom">How do you want to complete the sign-up?</div>
 								<p>You can complete the sign-up with the Direct Debit now, or you can complete it later via the link we sent to your email.</p>
+							{{/if}} --}}
+
+							{{#if (eq type "direct-debit")}}
+								{{>directDebit}}
 							{{/if}}
 
 							{{#if (eq type "setup-account")}}
@@ -133,6 +137,7 @@
 						</div>
 
 					</div>
+					{{#if (neq type "direct-debit")}}
 					<div class="uk-position-bottom">
 						<div class="uk-flex uk-flex-middle uk-flex-between uk-flex-wrap">
 							{{#if @first}}
@@ -141,17 +146,26 @@
 								{{> ukButton icon="arrow-left" pull="left" label="Back" size="large" class="signup-button-back"}}
 							{{/if}}
 							<div>
-								{{#if saveDetails}}
-								{{> ukButton icon="save" pull="left" label="Save your details for later" size="large" style="text"}}
-								{{/if}}
-								{{#if @last}}
-									{{> ukButton icon="arrow-right" label="Save your details for later" size="large" style="primary"}}
+								{{#if signupPayment}}
+									{{> ukButton icon="arrow-right" label="Direct Debit Now" size="large" style="primary" class="signup-button"}}
 								{{else}}
-									{{> ukButton icon="arrow-right" label="Continue" size="large" style="primary" class="signup-button"}}
+									{{#if saveDetails}}
+									{{> ukButton icon="save" pull="left" label="Save your details for later" size="large" style="text"}}
+									{{/if}}
+									{{#if @last}}
+										{{> ukButton icon="arrow-right" label="Save your details for later" size="large" style="primary"}}
+									{{else}}
+										{{#if confirmButton}}
+											{{> ukButton icon="arrow-right" label="Confirm" size="large" style="primary" class="signup-button"}}
+										{{else}}
+											{{> ukButton icon="arrow-right" label="Continue" size="large" style="primary" class="signup-button"}}
+										{{/if}}
+									{{/if}}
 								{{/if}}
 							</div>
 						</div>
 					</div>
+					{{/if}}
 				</div>
 				{{/with}}
 			{{/each}}

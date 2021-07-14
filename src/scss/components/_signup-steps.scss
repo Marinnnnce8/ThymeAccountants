@@ -42,6 +42,10 @@
         &.signup-step-active {
             background-color: $secondary;
             color: $white;
+
+            span {
+                color: $white;
+            }
         }
 
         &.signup-step-completed {

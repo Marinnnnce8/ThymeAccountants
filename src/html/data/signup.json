@@ -14,141 +14,10 @@
     },
     "questions": [
         {
-            "title": "Let’s start with basic information",
+            "title": "Direct Debit Payment",
             "questions": [
                 {
-                    "type": "basic-info"
-                }
-            ],
-            "saveDetails": true,
-            "steps": [
-                {
-                    "title": "Basic Info",
-                    "active": true
-                },
-                {
-                    "title": "Business info"
-                },
-                {
-                    "title": "Owner info"
-                },
-                {
-                    "title": "Confirmation"
-                },
-                {
-                    "title": "Payment",
-                    "optional": true
-                },
-                {
-                    "title": "Set Up Account",
-                    "optional": true
-                }
-            ]
-        },
-        {
-            "title": "Next, tell us about your business",
-            "questions": [
-                {
-                    "type": "business-info"
-                }
-            ],
-            "steps": [
-                {
-                    "title": "Basic Info",
-                    "completed": true
-                },
-                {
-                    "title": "Business info",
-                    "active": true
-                },
-                {
-                    "title": "Owner info"
-                },
-                {
-                    "title": "Confirmation"
-                },
-                {
-                    "title": "Payment",
-                    "optional": true
-                },
-                {
-                    "title": "Set Up Account",
-                    "optional": true
-                }
-            ]
-        },
-        {
-            "title": "A few information about the owner(s)",
-            "questions": [
-                {
-                    "type": "owners-info"
-                }
-            ],
-            "steps": [
-                {
-                    "title": "Basic Info",
-                    "completed": true
-                },
-                {
-                    "title": "Business info",
-                    "completed": true
-                },
-                {
-                    "title": "Owner info",
-                    "active": true
-                },
-                {
-                    "title": "Confirmation"
-                },
-                {
-                    "title": "Payment",
-                    "optional": true
-                },
-                {
-                    "title": "Set Up Account",
-                    "optional": true
-                }
-            ]
-        },
-        {
-            "title": "Just to confirm your initial set up...",
-            "questions": [
-                {
-                    "type": "signup-confirm"
-                }
-            ],
-            "steps": [
-                {
-                    "title": "Basic Info",
-                    "completed": true
-                },
-                {
-                    "title": "Business info",
-                    "completed": true
-                },
-                {
-                    "title": "Owner info",
-                    "completed": true
-                },
-                {
-                    "title": "Confirmation",
-                    "active": true
-                },
-                {
-                    "title": "Payment",
-                    "optional": true
-                },
-                {
-                    "title": "Set Up Account",
-                    "optional": true
-                }
-            ]
-        },
-        {
-            "title": "Confirmation in progress...",
-            "questions": [
-                {
-                    "type": "confirmation-progress"
+                    "type": "direct-debit"
                 }
             ],
             "steps": [
@@ -176,41 +45,6 @@
                 {
                     "title": "Set Up Account",
                     "optional": true
-                }
-            ]
-        },
-        {
-            "questions": [
-                {
-                    "type": "signup-payment"
-                }
-            ],
-            "steps": [
-                {
-                    "title": "Basic Info",
-                    "completed": true
-                },
-                {
-                    "title": "Business info",
-                    "completed": true
-                },
-                {
-                    "title": "Owner info",
-                    "completed": true
-                },
-                {
-                    "title": "Confirmation",
-                    "completed": true
-                },
-                {
-                    "title": "Payment",
-                    "optional": true,
-                    "completed": true
-                },
-                {
-                    "title": "Set Up Account",
-                    "optional": true,
-                    "active": true
                 }
             ]
         },
@@ -246,7 +80,7 @@
                 {
                     "title": "Set Up Account",
                     "optional": true,
-                    "completed": true
+                    "active": true
                 }
             ]
         }

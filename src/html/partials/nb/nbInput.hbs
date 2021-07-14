@@ -31,7 +31,7 @@
 
 		{{else}}
 
-		<input id="nb-form-{{page.name}}_{{name}}" class="uk-input" name="{{name}}" type="{{default type "text"}}" {{#if title}}title="{{title}}" required {{else if disabled}} placeholder="{{disabled}}" disabled {{else}}placeholder="Optional"{{/if}}>
+		<input id="nb-form-{{page.name}}_{{name}}" class="uk-input" name="{{name}}" type="{{default type "text"}}" {{#if title}}title="{{title}}" required{{/if}} {{#if disabled}} placeholder="{{disabled}}" disabled{{/if}}{{#if placeholder}} placeholder="{{placeholder}}"{{/if}}>
 
 		{{/if}}
 		{{/if}}
