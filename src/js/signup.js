@@ -4,12 +4,8 @@ var signup = {
 
 		// var inputTexts = document.querySelectorAll('input[type="text"]');
 		// var isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0);
-		var btnNext = document.querySelectorAll('.calc-button');
-		var btnPrev = document.querySelectorAll('.calc-button-back');
-		var ctx1 = document.getElementById('doughnutChart');
-		var ctx2 = document.getElementById('rectChart');
-		var addVehicleButton = document.querySelectorAll('.add-vehicle-button');
-		var resultNum = document.querySelectorAll('.result-number')[0];
+		var btnNext = document.querySelectorAll('.signup-button');
+		var btnPrev = document.querySelectorAll('.signup-button-back');
 
 		// if (isTouchDevice && inputTexts.length) {
 		// 	for (var i = 0; i < inputTexts.length; i++) {
@@ -30,29 +26,11 @@ var signup = {
 				btnPrev[i].addEventListener('click', this.goToPrevPage, false);
 			}
 		}
-
-		if (ctx1) {
-			this.doughnutChartFunc();
-		}
-
-		if (ctx2) {
-			this.rectChartFunc();
-		}
-
-		if (addVehicleButton) {
-			for (var i = 0; i < addVehicleButton.length; i++) {
-				addVehicleButton[i].addEventListener('click', this.addVehicle, false);
-			}
-		}
-
-		if (resultNum) {
-			this.animateValue();
-		}
 	},
 
 	goToNextPage: function () {
 		var pages = document.querySelectorAll('.page');
-		var btnNext = document.querySelectorAll('.calc-button');
+		var btnNext = document.querySelectorAll('.signup-button');
 		var btnIndex = [...btnNext].indexOf(this);
 
 		var pageParent = this.closest('.page');
@@ -64,16 +42,16 @@ var signup = {
 		// window.scrollTo(0, 0);
 		// window.scrollTo({ top: 0, behavior: 'smooth' });
 
-		var pageContainer = document.querySelectorAll('.calculator-container')[0];
+		var pageContainer = document.querySelectorAll('.signup-container')[0];
 		var pageActiveHeight = document.querySelectorAll('.page-active')[0].offsetHeight;
 		pageContainer.style.minHeight = pageActiveHeight + 'px';
 	},
 
 	goToPrevPage: function() {
 		var pages = document.querySelectorAll('.page');
-		var btnPrev = document.querySelectorAll('.calc-button-back');
+		var btnPrev = document.querySelectorAll('.signup-button-back');
 		// var btnIndex = [...btnPrev].indexOf(this);
-		var pageContainer = document.querySelectorAll('.calculator-container')[0];
+		var pageContainer = document.querySelectorAll('.signup-container')[0];
 
 		var pageParent = this.closest('.page');
 		var pageParentIndex = [...pages].indexOf(pageParent);
@@ -85,7 +63,7 @@ var signup = {
 		pageContainer.style.minHeight = pageActiveHeight + 'px';
 		// }
 		// if (btnIndex === 0) {
-		// 	templateCalc.classList.remove('calculator-page-active');
+		// 	templatesignup.classList.remove('signup-page-active');
 		// 	pageContainer.style.minHeight = '';
 		// }
 

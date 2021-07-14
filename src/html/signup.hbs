@@ -1,10 +1,10 @@
 {{#> main}}
 	{{#*inline "main"}}
 
- 	 <div class="carbon-calculator">
-        <div class="calculator-page">
+ 	 <div class="carbon-signup">
+        <div class="signup-page">
 
-            <div class="uk-container uk-position-relative calculator-container">
+            <div class="uk-container uk-position-relative signup-container">
 
                 {{#each page.questions}}
                     {{#with this}}
@@ -365,7 +365,7 @@
 								{{#if @first}}
 									{{> ukButton icon="arrow-left" pull="left" label="Back" size="large" link="#"}}
 								{{else}}
-									{{> ukButton icon="arrow-left" pull="left" label="Back" size="large" class="calc-button-back"}}
+									{{> ukButton icon="arrow-left" pull="left" label="Back" size="large" class="signup-button-back"}}
 								{{/if}}
 								<div>
 									{{#if saveDetails}}
@@ -374,7 +374,7 @@
 									{{#if (eq page "last")}}
 										{{> ukButton icon="arrow-right" label="Save your details for later" size="large" style="primary"}}
 									{{else}}
-										{{> ukButton icon="arrow-right" label="Continue" size="large" style="primary" class="calc-button"}}
+										{{> ukButton icon="arrow-right" label="Continue" size="large" style="primary" class="signup-button"}}
 									{{/if}}
 								</div>
                             </div>
