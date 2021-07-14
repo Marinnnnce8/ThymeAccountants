@@ -1,405 +1,164 @@
 {{#> main}}
 	{{#*inline "main"}}
 
- 	 <div class="carbon-signup">
-        <div class="signup-page">
+	<div class="signup">
 
-            <div class="uk-container uk-position-relative signup-container">
+		<div class="uk-container uk-position-relative signup-container">
 
-                {{#each page.questions}}
-                    {{#with this}}
-                    <div class="page uk-overflow-hidden uk-margin-medium-bottom{{#if @first}} page-active{{/if}}">
-                        <div class="page-content">
-							<div class="page-info">
-								<div class="signup-steps">
-									<ul class="uk-list uk-flex uk-flex-middle uk-flex-between uk-flex-wrap uk-margin-remove-bottom">
-										<li class="uk-border-rounded uk-text-uppercase uk-position-relative uk-margin-small-top signup-step-active" role="presentation">
-											<span class="tick uk-flex-inline uk-flex-center uk-flex-middle uk-border-circle uk-margin-small-right">{{>renderIcon name="tick-signup"}}</span>Basic Info
-										</li>
-										<li class="uk-border-rounded uk-text-uppercase uk-position-relative signup-step-completed" role="presentation">
-											<span class="tick uk-flex-inline uk-flex-center uk-flex-middle uk-border-circle uk-margin-small-right">{{>renderIcon name="tick-signup"}}</span>Business info
-										</li>
-										<li class="uk-border-rounded uk-text-uppercase uk-position-relative" role="presentation">
-											<span class="tick uk-flex-inline uk-flex-center uk-flex-middle uk-border-circle uk-margin-small-right">{{>renderIcon name="tick-signup"}}</span>Owner info
-										</li>
-										<li class="uk-border-rounded uk-text-uppercase uk-position-relative" role="presentation">
-											<span class="tick uk-flex-inline uk-flex-center uk-flex-middle uk-border-circle uk-margin-small-right">{{>renderIcon name="tick-signup"}}</span>Confirmation
-										</li>
-										<li class="uk-border-rounded uk-text-uppercase uk-position-relative" role="presentation">
-											<span class="tick uk-flex-inline uk-flex-center uk-flex-middle uk-border-circle uk-margin-small-right">{{>renderIcon name="tick-signup"}}</span>Payment
-											<span> Optional</span>
-										</li>
-										<li class="uk-border-rounded uk-text-uppercase uk-position-relative" role="presentation">
-											<span class="tick uk-flex-inline uk-flex-center uk-flex-middle uk-border-circle uk-margin-small-right">{{>renderIcon name="tick-signup"}}</span>Set Up Account
-											<span> Optional</span>
-										</li>
-									</ul>
-									{{!-- <span class="uk-text-small">{{step @index}}/17</span> --}}
-								</div>
-								{{#if title}}
-									<div class="uk-h1 uk-margin-bottom">{{title}}</div>
-								{{/if}}
-							</div>
-
-							<div class="page-enquiry">
-							{{#each questions}}
-								{{#with this}}
-								{{!-- <div class="uk-h3">{{label}}{{#if tooltip}} {{> tooltip}}{{/if}}</div>
-
-								{{#if description}}<p>{{description}}</p>{{/if}} --}}
-
-								{{#if (eq type "basic-info")}}
-									{{#> ukGrid class=(default class "uk-child-width-1-2@m")}}
-										{{#*inline "cells"}}
-											<div>
-												{{> nbInput label="Full Name" name="full-name" title="Please enter your full name"}}
-											</div>
-											<div>
-												{{> nbInput label="Email Address" name="name" title="Please enter email address" type="email"}}
-											</div>
-										{{/inline}}
-									{{/ukGrid}}									
-								{{/if}}		
-
-								{{#if (eq type "business-info")}}
-									{{#> ukGrid class=(default class "uk-child-width-1-2@m")}}
-										{{#*inline "cells"}}
-											<div>
-												{{> nbInput label="Business Name" name="business-name" title="Please enter your business name"}}
-											</div>
-											<div>
-												{{> nbInput label="Email Address" name="name" title="Please enter email address"}}
-											</div>
-										{{/inline}}
-									{{/ukGrid}}	
-
-									{{> nbInput label="About the business" name="about-the-business" type="textarea" title="Please enter your business"}}
-
-									<h3>Details about existing accountant</h3>
-
-									{{#> ukGrid class=(default class "uk-child-width-1-2@m")}}
-										{{#*inline "cells"}}
-											<div>
-												{{> nbInput label="Accountant Company Name" name="accountant-company-name" title="Please enter accountant company name"}}
-											</div>
-											<div>
-												{{> nbInput label="Accountant Full Name" name="accountant-full-name" title="Please enter accountant full name"}}
-											</div>
-											<div>
-												{{> nbInput label="Accountant Email" name="accountant-email" title="Please enter accountant email" type="email"}}
-											</div>
-											<div>
-												{{> nbInput label="Accountant Telephone" name="accountant-telephone" title="Please enter accountant telephone" type="tel"}}
-											</div>
-										{{/inline}}
-									{{/ukGrid}}
-									{{> nbInput label="Accountant Address" name="accountant-address" title="Please enter accountant address"}}										
-								{{/if}}															
-
-								{{#if (eq type "owners-info")}}
-									{{#> ukGrid class=(default class "uk-child-width-1-2@m uk-flex-bottom")}}
-										{{#*inline "cells"}}
-											<div>
-												{{> nbRadio titleLabel="Is there more than one owner" label="Yes" name="more-owners" title="Please enter is there more than one owner"}}
-											</div>
-											<div>
-												{{> nbRadio label="No" name="one-owner" title="Please enter is there more than one owner"}}
-											</div>
-											<div>
-												{{> nbInput label="Owner Full Name" name="owner-full-name" title="Please enter owner full name"}}
-											</div>
-											<div>
-												{{> nbInput label="Owner Email Address" name="owner-email-address" title="Please enter owner email address" type="email"}}
-											</div>
-											<div>
-												{{> nbInput label="Date of Birth (dd/mm/yyyy)" name="date-of-birth" title="Please enter date of birth (dd/mm/yyyy)" type="date" tooltip="Style of the information message"}}
-											</div>
-											<div>
-												{{> nbInput label="National Insurance number" name="national-insurance-number" title="Please enter national insurance number"}}
-											</div>
-										{{/inline}}
-									{{/ukGrid}}
-									{{> nbInput label="Tax reference" name="tax-reference" title="Please enter tax reference" tooltip="Style of the information message"}}										
-								{{/if}}
-
-								{{#if (eq type "signup-confirm")}}
-									{{>signupConfirm}}										
-								{{/if}}
-
-								{{#if (eq type "confirmation-progress")}}
-									<p>By clicking confirm button we sent you a copy of the documents via email with details on how to complete the sign-up process with Direct Debit payment system.</p>
-									{{>confirmProgress}}										
-								{{/if}}
-
-								{{#if (eq type "signup-payment")}}
-									<p class="uk-alert uk-flex uk-flex-middle uk-alert-success uk-margin-medium-top uk-margin-remove-bottom">{{> renderIcon name="alert-success"}} This text is providing a positive message to the user</p>
-									<div class="uk-h1 uk-margin-bottom">How do you want to complete the sign-up?</div>
-									<p>You can complete the sign-up with the Direct Debit now, or you can complete it later via the link we sent to your email.</p>
-								{{/if}}
-								
-								{{#with input}}
-
-								{{#if (eq type "text")}}
-									{{#if (eq @../index 1)}}
-										{{#> ukGrid class=(default class "uk-child-width-1-2@m uk-grid-large")}}
-											{{#*inline "cells"}}
-												<div>
-													{{> nbInput label="Full Name" name="full_name" title="Please enter your full name"}}
-												</div>
-												<div>
-													{{> nbInput label="Email Address" name="name" title="Please enter email address" type="email"}}
-												</div>
-											{{/inline}}
-										{{/ukGrid}}									
-									{{/if}}
-								{{/if}}
-
-								{{#if (eq type "numbers")}}
-									{{#if (eq @../index 4)}}
-									<div class="numbers-wrap">
-									{{else}}
-									<div class="numbers-wrap large">
-									{{/if}}
-										{{#each items}}
-											{{#with this}}
-											{{> numbers}}
-											{{/with}}
-										{{/each}}
-									</div>
-								{{/if}}
-
-								{{#if (eq type "custom")}}
-									{{#if (eq @../index 8)}}
-									<div class="numbers-wrap diet large">
-										<div class="uk-flex uk-flex-right groups uk-margin-small-bottom uk-visible@s">
-											<div class="uk-flex-middle uk-flex-wrap uk-child-width-1-2 uk-grid-small" data-uk-grid>
-												{{#if groups}}
-													{{#each groups}}
-														{{#with this}}
-															<div>
-																<span class="uk-text-bold">{{{group}}}{{#if tooltip}}{{> tooltip}}{{/if}}</span>
-															</div>
-														{{/with}}
-													{{/each}}
+			{{#each page.questions}}
+				{{#with this}}
+				<div class="page uk-overflow-hidden uk-margin-medium-bottom{{#if @first}} page-active{{/if}}">
+					<div class="page-content">
+						<div class="page-info">
+							<div class="signup-steps">
+								<ul class="uk-list uk-flex uk-flex-middle uk-flex-between uk-flex-wrap uk-margin-remove-bottom">
+									{{#each steps}}
+										{{#with this}}
+												<li class="uk-border-rounded uk-text-uppercase uk-position-relative{{#if active}} signup-step-active{{else if completed}} signup-step-completed{{/if}}{{#if @first}} uk-margin-small-top{{/if}}" role="presentation">
+												<span class="tick uk-flex-inline uk-flex-center uk-flex-middle uk-border-circle uk-margin-small-right">{{>renderIcon name="tick-signup"}}</span>{{title}}
+												{{#if optional}}
+													<span> Optional</span>
 												{{/if}}
-											</div>
-										</div>
-										{{#each items}}
-											{{#with this}}
-											<div class="uk-flex uk-flex-middle uk-flex-between uk-flex-wrap uk-margin-small-bottom">
-												<label class="uk-margin-right uk-text-bold">{{{label}}}{{#if tooltip}}{{> tooltip}}{{/if}}</label>
-												<div class="uk-flex-middle uk-flex-wrap uk-child-width-1-2@s uk-grid-small" data-uk-grid>
-													{{#each select}}
-														{{#with this}}
-															<div class="uk-hidden@s uk-margin-small-left uk-text-left">
-																<span class="uk-text-bold">{{{group}}}{{#if tooltip}}{{> tooltip}}{{/if}}</span>
-															</div>
-															<div>
-																<div class="uk-flex uk-flex-middle">
-																	<div class="uk-select" data-uk-form-custom="target: > * > span:first-child">
-																		<select>
-																			{{#each options}}
-																				{{#with this}}
-																					<option value="{{value}}">{{option}}</option>
-																				{{/with}}
-																			{{/each}}
-																		</select>
-																		<button class="uk-button uk-button-default" type="button">
-																			<span></span>
-																			<span class="font-chevron-down"></span>
-																		</button>
-																	</div>
-																</div>
-															</div>
-														{{/with}}
-													{{/each}}
-												</div>
-											</div>
-											{{/with}}
-										{{/each}}
-									</div>
-									{{/if}}
-
-									{{#if (eq @../index 9)}}
-									<div class="numbers-wrap transport large">
-										<div class="uk-child-width-1-3@l uk-flex-bottom uk-flex-wrap uk-grid-small vehicle-inputs" data-uk-grid>
-											{{#each items}}
-												{{#with this}}
-													{{#if (eq type "select")}}
-														<div>
-															<label class="uk-margin-small-bottom uk-display-block uk-text-bold">{{{label}}}{{#if tooltip}}{{> tooltip}}{{/if}}</label>
-															<div class="uk-flex uk-flex-middle">
-																<div class="uk-select" data-uk-form-custom="target: > * > span:first-child">
-																	<select>
-																		{{#each options}}
-																			{{#with this}}
-																				<option value="{{value}}">{{option}}</option>
-																			{{/with}}
-																		{{/each}}
-																	</select>
-																	<button class="uk-button uk-button-default" type="button">
-																		<span></span>
-																		<span class="font-chevron-down"></span>
-																	</button>
-																</div>
-															</div>
-														</div>
-													{{else}}
-														<div>
-															<div class="uk-form-controls">
-																<label class="uk-margin-small-bottom uk-display-block uk-text-bold">{{{label}}}{{#if tooltip}}{{> tooltip}}{{/if}}</label>
-																<div class="uk-position-relative">
-																	<select class="uk-select">
-																		{{#each options}}
-																			{{#with this}}
-																				<option value="{{value}}">{{option}}</option>
-																			{{/with}}
-																		{{/each}}
-																	</select>
-																	<span class="font-chevron-down"></span>
-																</div>
-															</div>
-														</div>
-													{{/if}}
-												{{/with}}
-											{{/each}}
-										</div>
-										<div class="uk-flex uk-flex-right add-button-wrap">
-											<button class="uk-flex uk-flex-middle add-vehicle-button">Add another vehicle</button>
-										</div>
-									</div>
-									<div class="numbers-wrap diet large">
-										<div class="uk-flex uk-flex-middle uk-flex-between uk-flex-wrap">
-											<label class="uk-margin-right uk-margin-small-bottom"><span class="uk-text-bold">Car</span> - Average annual milage</label>
-											<div class="uk-flex uk-flex-middle uk-flex-between uk-flex-wrap">
-												<div class="uk-flex uk-flex-middle">
-													<span class="uk-display-inline-block uk-margin-right uk-margin-small-bottom">Miles per year</span>
-													<input class="uk-input small uk-margin-small-bottom" type="text" name="inputName" placeholder="0">
-												</div>
-											</div>
-										</div>
-									</div>
-									{{/if}}
-
-									{{#if (eq @../index 10)}}
-									<div class="numbers-wrap diet large uk-margin-medium-bottom">
-										<div class="uk-flex uk-margin-bottom uk-flex-middle uk-flex-between uk-flex-wrap">
-											<label class="uk-margin-right uk-margin-small-bottom"><span class="uk-text-bold">Car</span></label>
-											<div data-uk-grid>
-												<div class="uk-flex uk-flex-middle">
-													<span class="uk-display-inline-block uk-margin-small-right uk-margin-small-bottom">Miles per year</span>
-													<div class="uk-position-relative">
-														<input class="uk-input small uk-margin-small-bottom" type="text" name="inputName" placeholder="0">
-														<span class="uk-text-small emission">in km: 0</span>
-													</div>
-												</div>
-												<div class="uk-flex uk-flex-middle">
-													<span class="uk-display-inline-block uk-margin-small-right uk-margin-small-bottom">CO<sub>2</sub> g/km</span>
-													<input class="uk-input small uk-margin-small-bottom" type="text" name="inputName" placeholder="0">
-												</div>
-											</div>
-										</div>
-									</div>
-									{{/if}}
-
-									{{#if (eq @../index 12)}}
-										{{#if @index}}
-										<div class="numbers-wrap transport large uk-margin-bottom">
-											<ul class="custom-radios uk-flex uk-flex-wrap uk-margin-small-bottom uk-padding-remove">
-												<li>
-													<input class="uk-input" type="radio" id="radioMonthly3" name="radioBtn3" value="monthly3" checked />
-													<label class="custom uk-margin-remove-left" for="radioMonthly3">Miles spent</label>
-												<li>
-													<input class="uk-input" type="radio" id="radioAnnually3" name="radioBtn3" value="annually3" />
-													<label class="custom uk-margin-remove-left" for="radioAnnually3">Time spent</label>
-												</li>
-											</ul>
-											<ul class="uk-padding-remove">
-												<li class="uk-flex uk-flex-middle uk-flex-between uk-flex-wrap uk-margin-small-bottom">
-													<span class="uk-margin-right uk-margin-small-bottom uk-text-bold">Bus</span>
-													<div class="uk-flex uk-flex-wrap uk-flex-middle">
-														<ul class="uk-flex uk-flex-middle uk-flex-wrap radio-buttons uk-padding-remove">
-															<li>
-																<label class="radio-button uk-margin-remove-left">Yearly
-																	<input type="radio" checked="checked" name="radio">
-																	<span class="checkmark"></span>
-																</label>
-															</li>
-															<li>
-																<label class="radio-button uk-margin-remove-left">Monthly
-																	<input type="radio" name="radio">
-																	<span class="checkmark"></span>
-																</label>
-															</li>
-															<li>
-																<label class="radio-button uk-margin-remove-left">Weekly
-																	<input type="radio" name="radio">
-																	<span class="checkmark"></span>
-																</label>
-															</li>
-														</ul>
-														<input class="uk-input large uk-margin-small-bottom" type="text" name="bus" placeholder="0">
-													</div>
-												</li>
-											</ul>
-										</div>
-										{{else}}
-										<div class="numbers-wrap transport">
-											<div class="uk-form-controls vehicle-inputs uk-margin-bottom">
-												<label class="uk-margin-small-bottom uk-display-block uk-text-bold">Type</label>
-												<div class="uk-position-relative">
-													<select class="uk-select">
-														<option value="1">Bus</option>
-														<option value="2">Car</option>
-														<option value="3">Train</option>
-													</select>
-													<span class="font-chevron-down"></span>
-												</div>
-											</div>
-											<div class="uk-flex uk-flex-right add-button-wrap uk-margin-medium-top">
-												<button class="uk-flex uk-flex-middle add-vehicle-button">Add another vehicle</button>
-											</div>
-										</div>
-										{{/if}}
-									{{/if}}
-
-								{{/if}}
-								{{/with}}
-
-								{{#if notes}}<p class="uk-text-meta">{{notes}}</p>{{/if}}
-
-								{{/with}}
-							{{/each}}
+											</li>
+										{{/with}}
+									{{/each}}										
+								</ul>
+								{{!-- <span class="uk-text-small">{{step @index}}/17</span> --}}
 							</div>
+							{{#if title}}
+								<div class="uk-h1 uk-margin-bottom">{{title}}</div>
+							{{/if}}
+						</div>
 
-                        </div>
-                        <div class="uk-position-bottom">
-                            <div class="uk-flex uk-flex-middle uk-flex-between uk-flex-wrap">
-								{{#if @first}}
-									{{> ukButton icon="arrow-left" pull="left" label="Back" size="large" link="#"}}
-								{{else}}
-									{{> ukButton icon="arrow-left" pull="left" label="Back" size="large" class="signup-button-back"}}
+						<div class="page-enquiry">
+						{{#each questions}}
+							{{#with this}}
+
+							{{#if (eq type "basic-info")}}
+								{{#> ukGrid class=(default class "uk-child-width-1-2@m")}}
+									{{#*inline "cells"}}
+										<div>
+											{{> nbInput label="Full Name" name="full-name" title="Please enter your full name"}}
+										</div>
+										<div>
+											{{> nbInput label="Email Address" name="name" title="Please enter email address" type="email"}}
+										</div>
+									{{/inline}}
+								{{/ukGrid}}									
+							{{/if}}		
+
+							{{#if (eq type "business-info")}}
+								{{#> ukGrid class=(default class "uk-child-width-1-2@m")}}
+									{{#*inline "cells"}}
+										<div>
+											{{> nbInput label="Business Name" name="business-name" title="Please enter your business name"}}
+										</div>
+										<div>
+											{{> nbInput label="Email Address" name="name" title="Please enter email address"}}
+										</div>
+									{{/inline}}
+								{{/ukGrid}}	
+
+								{{> nbInput label="About the business" name="about-the-business" type="textarea" title="Please enter your business"}}
+
+								<h3>Details about existing accountant</h3>
+
+								{{#> ukGrid class=(default class "uk-child-width-1-2@m")}}
+									{{#*inline "cells"}}
+										<div>
+											{{> nbInput label="Accountant Company Name" name="accountant-company-name" title="Please enter accountant company name"}}
+										</div>
+										<div>
+											{{> nbInput label="Accountant Full Name" name="accountant-full-name" title="Please enter accountant full name"}}
+										</div>
+										<div>
+											{{> nbInput label="Accountant Email" name="accountant-email" title="Please enter accountant email" type="email"}}
+										</div>
+										<div>
+											{{> nbInput label="Accountant Telephone" name="accountant-telephone" title="Please enter accountant telephone" type="tel"}}
+										</div>
+									{{/inline}}
+								{{/ukGrid}}
+								{{> nbInput label="Accountant Address" name="accountant-address" title="Please enter accountant address"}}										
+							{{/if}}															
+
+							{{#if (eq type "owners-info")}}
+								{{#> ukGrid class=(default class "uk-child-width-1-2@m uk-flex-bottom")}}
+									{{#*inline "cells"}}
+										<div>
+											{{> nbRadio titleLabel="Is there more than one owner" label="Yes" name="more-owners" title="Please enter is there more than one owner"}}
+										</div>
+										<div>
+											{{> nbRadio label="No" name="one-owner" title="Please enter is there more than one owner"}}
+										</div>
+										<div>
+											{{> nbInput label="Owner Full Name" name="owner-full-name" title="Please enter owner full name"}}
+										</div>
+										<div>
+											{{> nbInput label="Owner Email Address" name="owner-email-address" title="Please enter owner email address" type="email"}}
+										</div>
+										<div>
+											{{> nbInput label="Date of Birth (dd/mm/yyyy)" name="date-of-birth" title="Please enter date of birth (dd/mm/yyyy)" type="date" tooltip="Style of the information message"}}
+										</div>
+										<div>
+											{{> nbInput label="National Insurance number" name="national-insurance-number" title="Please enter national insurance number"}}
+										</div>
+									{{/inline}}
+								{{/ukGrid}}
+								{{> nbInput label="Tax reference" name="tax-reference" title="Please enter tax reference" tooltip="Style of the information message"}}										
+							{{/if}}
+
+							{{#if (eq type "signup-confirm")}}
+								{{>signupConfirm}}										
+							{{/if}}
+
+							{{#if (eq type "confirmation-progress")}}
+								<p>By clicking confirm button we sent you a copy of the documents via email with details on how to complete the sign-up process with Direct Debit payment system.</p>
+								{{>confirmProgress}}										
+							{{/if}}
+
+							{{#if (eq type "signup-payment")}}
+								<p class="uk-alert uk-flex uk-flex-middle uk-alert-success uk-margin-medium-top uk-margin-remove-bottom">{{> renderIcon name="alert-success"}} This text is providing a positive message to the user</p>
+								<div class="uk-h1 uk-margin-bottom">How do you want to complete the sign-up?</div>
+								<p>You can complete the sign-up with the Direct Debit now, or you can complete it later via the link we sent to your email.</p>
+							{{/if}}
+
+							{{#if (eq type "setup-account")}}
+								<p>Informative page to tell the customer about the client area that they will have with Thyme.</p>
+								<p>On screen they will also be told that they will have received an email with details to set up their client account.</p>
+							{{/if}}
+
+							{{/with}}
+						{{/each}}
+						</div>
+
+					</div>
+					<div class="uk-position-bottom">
+						<div class="uk-flex uk-flex-middle uk-flex-between uk-flex-wrap">
+							{{#if @first}}
+								{{> ukButton icon="arrow-left" pull="left" label="Back" size="large" link="#"}}
+							{{else}}
+								{{> ukButton icon="arrow-left" pull="left" label="Back" size="large" class="signup-button-back"}}
+							{{/if}}
+							<div>
+								{{#if saveDetails}}
+								{{> ukButton icon="save" pull="left" label="Save your details for later" size="large" style="text"}}
 								{{/if}}
-								<div>
-									{{#if saveDetails}}
-									{{> ukButton icon="save" pull="left" label="Save your details for later" size="large" style="text"}}
-									{{/if}}
-									{{#if (eq page "last")}}
-										{{> ukButton icon="arrow-right" label="Save your details for later" size="large" style="primary"}}
-									{{else}}
-										{{> ukButton icon="arrow-right" label="Continue" size="large" style="primary" class="signup-button"}}
-									{{/if}}
-								</div>
-                            </div>
-                        </div>
-                    </div>
-                    {{/with}}
-                {{/each}}
-            </div>
-        </div>
-    </div>
+								{{#if @last}}
+									{{> ukButton icon="arrow-right" label="Save your details for later" size="large" style="primary"}}
+								{{else}}
+									{{> ukButton icon="arrow-right" label="Continue" size="large" style="primary" class="signup-button"}}
+								{{/if}}
+							</div>
+						</div>
+					</div>
+				</div>
+				{{/with}}
+			{{/each}}
+		</div>
+	</div>
 
-	{{>signup}}
+	{{>signupBanner}}
 
 	{{>services items=items.services}}
 

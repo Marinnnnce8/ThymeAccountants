@@ -20,13 +20,60 @@
                     "type": "basic-info"
                 }
             ],
-            "saveDetails": true
+            "saveDetails": true,
+            "steps": [
+                {
+                    "title": "Basic Info",
+                    "active": true
+                },
+                {
+                    "title": "Business info"
+                },
+                {
+                    "title": "Owner info"
+                },
+                {
+                    "title": "Confirmation"
+                },
+                {
+                    "title": "Payment",
+                    "optional": true
+                },
+                {
+                    "title": "Set Up Account",
+                    "optional": true
+                }
+            ]
         },
         {
             "title": "Next, tell us about your business",
             "questions": [
                 {
                     "type": "business-info"
+                }
+            ],
+            "steps": [
+                {
+                    "title": "Basic Info",
+                    "completed": true
+                },
+                {
+                    "title": "Business info",
+                    "active": true
+                },
+                {
+                    "title": "Owner info"
+                },
+                {
+                    "title": "Confirmation"
+                },
+                {
+                    "title": "Payment",
+                    "optional": true
+                },
+                {
+                    "title": "Set Up Account",
+                    "optional": true
                 }
             ]
         },
@@ -36,6 +83,31 @@
                 {
                     "type": "owners-info"
                 }
+            ],
+            "steps": [
+                {
+                    "title": "Basic Info",
+                    "completed": true
+                },
+                {
+                    "title": "Business info",
+                    "completed": true
+                },
+                {
+                    "title": "Owner info",
+                    "active": true
+                },
+                {
+                    "title": "Confirmation"
+                },
+                {
+                    "title": "Payment",
+                    "optional": true
+                },
+                {
+                    "title": "Set Up Account",
+                    "optional": true
+                }
             ]
         },
         {
@@ -43,6 +115,32 @@
             "questions": [
                 {
                     "type": "signup-confirm"
+                }
+            ],
+            "steps": [
+                {
+                    "title": "Basic Info",
+                    "completed": true
+                },
+                {
+                    "title": "Business info",
+                    "completed": true
+                },
+                {
+                    "title": "Owner info",
+                    "completed": true
+                },
+                {
+                    "title": "Confirmation",
+                    "active": true
+                },
+                {
+                    "title": "Payment",
+                    "optional": true
+                },
+                {
+                    "title": "Set Up Account",
+                    "optional": true
                 }
             ]
         },
@@ -52,6 +150,33 @@
                 {
                     "type": "confirmation-progress"
                 }
+            ],
+            "steps": [
+                {
+                    "title": "Basic Info",
+                    "completed": true
+                },
+                {
+                    "title": "Business info",
+                    "completed": true
+                },
+                {
+                    "title": "Owner info",
+                    "completed": true
+                },
+                {
+                    "title": "Confirmation",
+                    "completed": true
+                },
+                {
+                    "title": "Payment",
+                    "optional": true,
+                    "active": true
+                },
+                {
+                    "title": "Set Up Account",
+                    "optional": true
+                }
             ]
         },
         {
@@ -59,417 +184,69 @@
                 {
                     "type": "signup-payment"
                 }
-            ]
-        },
-        {
-            "title": "Household energy",
-            "questions": [
+            ],
+            "steps": [
                 {
-                    "label": "For each of the fuels that your household uses, add the total amount that you use per year.",
-                    "input": {
-                        "type": "numbers",
-                        "items": [
-                            {
-                                "label": "Peat",
-                                "name": "peat",
-                                "type": "kg"
-                            },
-                            {
-                                "label": "Coal",
-                                "name": "coal",
-                                "type": "kg"
-                            },
-                            {
-                                "label": "Wood logs",
-                                "name": "woodLogs",
-                                "type": "kg"
-                            },
-                            {
-                                "label": "Wood pellets",
-                                "name": "wooPpellets",
-                                "type": "kg"
-                            },
-                            {
-                                "label": "Bottled gas",
-                                "name": "bottledGas",
-                                "type": "kg"
-                            },
-                            {
-                                "label": "LPG",
-                                "name": "lpg",
-                                "type": "litres"
-                            },
-                            {
-                                "label": "Heating oil",
-                                "name": "heatingOil",
-                                "type": "litres"
-                            },
-                            {
-                                "label": "Electricity",
-                                "name": "electricity",
-                                "type": "KWh"
-                            }
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "title": "Emission factors",
-            "questions": [
-                {
-                    "label": "Do you have a 100% renewable electricity tariff?"
+                    "title": "Basic Info",
+                    "completed": true
                 },
                 {
-                    "label": "If you know the emission factor for your electricity supply then you can enter it below. If you don't know this just leave it blank and we will apply the Orkney average:",
-                    "input": {
-                        "type": "numbers",
-                        "items": [
-                            {
-                                "name": "emissionFactorElectricitySupply",
-                                "label": "Emission factor for your electricity supply",
-                                "type": "Kg CO<sub>2</sub>e per kWh"
-                            }
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "title": "Diet",
-            "questions": [
-                {
-                    "label": "For each person in the household select the age group and diet:",
-                    "input": {
-                        "type": "custom",
-                        "groups": [
-                            {
-                                "group": "Age group"
-                            },
-                            {
-                                "group": "Diet"
-                            }
-                        ],
-                        "items": [
-                            {
-                                "label": "Person 1",
-                                "select": [
-                                    {
-                                        "group": "Age group",
-                                        "options": [
-                                            {
-                                                "value": "",
-                                                "option": "- Select -"
-                                            },
-                                            {
-                                                "value": "1",
-                                                "option": "Option Option Option 1"
-                                            },
-                                            {
-                                                "value": "2",
-                                                "option": "Option 2"
-                                            },
-                                            {
-                                                "value": "3",
-                                                "option": "Option 3"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "group": "Diet",
-                                        "options": [
-                                            {
-                                                "value": "",
-                                                "option": "- Select -"
-                                            },
-                                            {
-                                                "value": "1",
-                                                "option": "Option 1"
-                                            },
-                                            {
-                                                "value": "2",
-                                                "option": "Option 2"
-                                            },
-                                            {
-                                                "value": "3",
-                                                "option": "Option 3"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "label": "Person 2",
-                                "select": [
-                                    {
-                                        "group": "Age group",
-                                        "options": [
-                                            {
-                                                "value": "",
-                                                "option": "- Select -"
-                                            },
-                                            {
-                                                "value": "1",
-                                                "option": "Option 1"
-                                            },
-                                            {
-                                                "value": "2",
-                                                "option": "Option 2"
-                                            },
-                                            {
-                                                "value": "3",
-                                                "option": "Option 3"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "group": "Diet",
-                                        "options": [
-                                            {
-                                                "value": "",
-                                                "option": "- Select -"
-                                            },
-                                            {
-                                                "value": "1",
-                                                "option": "Option 1"
-                                            },
-                                            {
-                                                "value": "2",
-                                                "option": "Option 2"
-                                            },
-                                            {
-                                                "value": "3",
-                                                "option": "Option 3"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "label": "Person 3",
-                                "select": [
-                                    {
-                                        "group": "Age group",
-                                        "options": [
-                                            {
-                                                "value": "",
-                                                "option": "- Select -"
-                                            },
-                                            {
-                                                "value": "1",
-                                                "option": "Option 1"
-                                            },
-                                            {
-                                                "value": "2",
-                                                "option": "Option 2"
-                                            },
-                                            {
-                                                "value": "3",
-                                                "option": "Option 3"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "group": "Diet",
-                                        "options": [
-                                            {
-                                                "value": "",
-                                                "option": "- Select -"
-                                            },
-                                            {
-                                                "value": "1",
-                                                "option": "Option 1"
-                                            },
-                                            {
-                                                "value": "2",
-                                                "option": "Option 2"
-                                            },
-                                            {
-                                                "value": "3",
-                                                "option": "Option 3"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "title": "Personal transport",
-            "questions": [
-                {
-                    "label": "Which modes of personal transport do you use?",
-                    "input": {
-                        "type": "custom",
-                        "items": [
-                            {
-                                "label": "What modes of transport do you use?",
-                                "options": [
-                                    {
-                                        "value": "1",
-                                        "option": "Car"
-                                    },
-                                    {
-                                        "value": "2",
-                                        "option": "Option 2"
-                                    },
-                                    {
-                                        "value": "3",
-                                        "option": "Option 3"
-                                    },
-                                    {
-                                        "value": "4",
-                                        "option": "Option 4"
-                                    }
-                                ]
-                            },
-                            {
-                                "label": "Vehicle type",
-                                "options": [
-                                    {
-                                        "value": "1",
-                                        "option": "Battery electric vehicles"
-                                    },
-                                    {
-                                        "value": "2",
-                                        "option": "Option 2"
-                                    },
-                                    {
-                                        "value": "3",
-                                        "option": "Option 3"
-                                    },
-                                    {
-                                        "value": "4",
-                                        "option": "Option 4"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "select",
-                                "label": "Vehicle size",
-                                "options": [
-                                    {
-                                        "value": "",
-                                        "option": "- Select -"
-                                    },
-                                    {
-                                        "value": "2",
-                                        "option": "Option 2"
-                                    },
-                                    {
-                                        "value": "3",
-                                        "option": "Option 3"
-                                    },
-                                    {
-                                        "value": "4",
-                                        "option": "Option 4"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "title": "Personal transport",
-            "questions": [
-                {
-                    "label": "If you know the emission factor* for your / your households vehicle(s) then you can enter them below:",
-                    "input": {
-                        "type": "custom"
-                    },
-                    "notes": "If you don't know this then just leave this question blank we will estimate your vehicle emissions based on fuel type and size on the previous slide."
-                }
-            ]
-        },
-        {
-            "title": "Personal transport",
-            "questions": [
-                {
-                    "label": "Do you use any fuels for recreational activities (such as an off-road vehicle, recreational boat use, private flying craft). If so please add the total amount that you use per year.",
-                    "input": {
-                        "type": "numbers",
-                        "items": [
-                            {
-                                "name": "petrol",
-                                "label": "Petrol",
-                                "type": "litres"
-                            },
-                            {
-                                "name": "diesel",
-                                "label": "Diesel",
-                                "type": "litres"
-                            },
-                            {
-                                "name": "gasOilRedDiesel",
-                                "label": "Gas oil/red diesel",
-                                "type": "litres"
-                            },
-                            {
-                                "name": "marineGasOil",
-                                "label": "Marine gas oil",
-                                "type": "litres"
-                            },
-                            {
-                                "name": "aviationFuelAvGas",
-                                "label": "Aviation fuel/AV gas",
-                                "type": "litres"
-                            }
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "title": "Public transport - Land",
-            "questions": [
-                {
-                    "label": "Which modes of personal transport do you use?",
-                    "input": {
-                        "type": "custom"
-                    }
+                    "title": "Business info",
+                    "completed": true
                 },
                 {
-                    "label": "Input the average mileage or time spent per year/month/week on each mode of transport?",
-                    "input": {
-                        "type": "custom"
-                    }
+                    "title": "Owner info",
+                    "completed": true
+                },
+                {
+                    "title": "Confirmation",
+                    "completed": true
+                },
+                {
+                    "title": "Payment",
+                    "optional": true,
+                    "completed": true
+                },
+                {
+                    "title": "Set Up Account",
+                    "optional": true,
+                    "active": true
                 }
             ]
         },
         {
-            "title": "Public transport - Air",
+            "title": "Set your account at Thyme Acconutants",
             "questions": [
                 {
-                    "label": "Do you want a more accurate answer based on the flight length?"
+                    "type": "setup-account"
                 }
-            ]
-        },
-        {
-            "title": "Public transport - Air",
-            "questions": [
+            ],
+            "steps": [
                 {
-                    "label": "How many hours on each type of flight have you spent over the last year?"
-                }
-            ]
-        },
-        {
-            "title": "Public transport - Sea",
-            "questions": [
+                    "title": "Basic Info",
+                    "completed": true
+                },
                 {
-                    "label": "How many hours have you spent on a ferry as a foot or car passenger in the last 12 months?"
-                }
-            ]
-        },
-        {
-            "page": "last",
-            "questions": [
+                    "title": "Business info",
+                    "completed": true
+                },
                 {
-                    "label": "Are you a ReFLEX member?"
+                    "title": "Owner info",
+                    "completed": true
+                },
+                {
+                    "title": "Confirmation",
+                    "completed": true
+                },
+                {
+                    "title": "Payment",
+                    "optional": true,
+                    "completed": true
+                },
+                {
+                    "title": "Set Up Account",
+                    "optional": true,
+                    "completed": true
                 }
             ]
         }

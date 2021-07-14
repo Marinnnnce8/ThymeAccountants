@@ -1,4 +1,4 @@
-.signup-page {
+.signup {
 
 	.tooltip {
 		.uk-svg {
@@ -77,29 +77,6 @@
 		}
 	}
 
-	.add-button-wrap {
-		margin-top: 25px;
-
-		button {
-			padding-right: 35px;
-			color: $secondary;
-			font-size: 16px;
-
-			@include hover {
-				opacity: .7;
-			}
-
-			svg {
-				margin-left: 15px;
-				width: 16px;
-			}
-		}
-	}
-
-	.unselectable {
-		user-select: none;
-	}
-
 	.page-enquiry {
 
 		*+.uk-grid-margin,
@@ -121,17 +98,8 @@
 		}
 
 		.page {
-			top: 50px;
 			min-height: 570px;
 			padding: 40px 60px 167px;
-
-			&-content {
-				padding-bottom: 50px;
-
-				>.uk-flex {
-					flex-direction: row-reverse;
-				}
-			}
 
 			>.uk-position-bottom {
 				padding: 45px 60px;
@@ -142,30 +110,6 @@
 	@media (min-width: 1280px) {
 		.page {
 			max-width: 1200px;
-		}
-	}
-
-	// @media (max-width: $breakpoint-small-max) {
-
-	// 	.page {
-	// 		&-content {
-	// 			>.uk-flex {
-	// 				flex-direction: column;
-	// 				align-items: center;
-	// 			}
-	// 		}
-	// 	}
-	// }
-
-	@media (max-width: $breakpoint-xsmall-max) {
-		.page {
-			// &-content {
-			// 	text-align: center;
-			// }
-
-			&.page-last {
-				padding-bottom: 150px;
-			}
 		}
 	}
 }
