@@ -1,0 +1,27 @@
+.confirm-progress {
+    padding: 35px 20px 20px;
+    border-radius: 10px;
+    @include blue-card-flower;
+
+    svg {
+        width: 63px;
+        height: 63px;
+    }
+
+    @media (min-width: $breakpoint-medium) {
+        padding: 57px 63px 63px;
+
+        svg {
+            margin-right: 50px;
+        }
+    }
+
+    @media (max-width: $breakpoint-small-max) {
+        flex-direction: column;
+        justify-content: center;
+
+        svg {
+            margin-bottom: 20px;
+        }
+    }
+}

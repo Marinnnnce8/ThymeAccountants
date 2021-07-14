@@ -59,7 +59,7 @@
 									{{/ukGrid}}									
 								{{/if}}		
 
-								{{#if (eq type "business-info")}}
+								{{!-- {{#if (eq type "business-info")}}
 									{{#> ukGrid class=(default class "uk-child-width-1-2@m")}}
 										{{#*inline "cells"}}
 											<div>
@@ -122,6 +122,11 @@
 
 								{{#if (eq type "signup-confirm")}}
 									{{>signupConfirm}}										
+								{{/if}} --}}
+
+								{{#if (eq type "confirmation-progress")}}
+									<p>By clicking confirm button we sent you a copy of the documents via email with details on how to complete the sign-up process with Direct Debit payment system.</p>
+									{{>confirmProgress}}										
 								{{/if}}
 								
 								{{#with input}}

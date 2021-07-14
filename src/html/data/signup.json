@@ -14,44 +14,10 @@
     },
     "questions": [
         {
-            "title": "Let’s start with basic information",
-            "questions": [
-                {
-                    "type": "basic-info"
-                }
-            ],
-            "saveDetails": true
-        },
-        {
-            "title": "Next, tell us about your business",
-            "questions": [
-                {
-                    "type": "business-info"
-                }
-            ]
-        },
-        {
-            "title": "A few information about the owner(s)",
-            "questions": [
-                {
-                    "type": "owners-info"
-                }
-            ]
-        },
-        {
-            "title": "Just to confirm your initial set up...",
-            "questions": [
-                {
-                    "type": "signup-confirm"
-                }
-            ]
-        },
-        {
             "title": "Confirmation in progress...",
             "questions": [
                 {
-                    "label": "Would you like a more accurate estimate of the carbon emissions of your household fuel usage based on your annual energy bills",
-                    "description": "For this you will need to have copies of your energy bills to hand."
+                    "type": "confirmation-progress"
                 }
             ]
         },
