@@ -36,7 +36,9 @@
 									</ul>
 									{{!-- <span class="uk-text-small">{{step @index}}/17</span> --}}
 								</div>
-								<div class="uk-h1 uk-margin-bottom">{{title}}</div>
+								{{#if title}}
+									<div class="uk-h1 uk-margin-bottom">{{title}}</div>
+								{{/if}}
 							</div>
 
 							<div class="page-enquiry">
@@ -59,7 +61,7 @@
 									{{/ukGrid}}									
 								{{/if}}		
 
-								{{!-- {{#if (eq type "business-info")}}
+								{{#if (eq type "business-info")}}
 									{{#> ukGrid class=(default class "uk-child-width-1-2@m")}}
 										{{#*inline "cells"}}
 											<div>
@@ -122,11 +124,17 @@
 
 								{{#if (eq type "signup-confirm")}}
 									{{>signupConfirm}}										
-								{{/if}} --}}
+								{{/if}}
 
 								{{#if (eq type "confirmation-progress")}}
 									<p>By clicking confirm button we sent you a copy of the documents via email with details on how to complete the sign-up process with Direct Debit payment system.</p>
 									{{>confirmProgress}}										
+								{{/if}}
+
+								{{#if (eq type "signup-payment")}}
+									<p class="uk-alert uk-flex uk-flex-middle uk-alert-success uk-margin-medium-top uk-margin-remove-bottom">{{> renderIcon name="alert-success"}} This text is providing a positive message to the user</p>
+									<div class="uk-h1 uk-margin-bottom">How do you want to complete the sign-up?</div>
+									<p>You can complete the sign-up with the Direct Debit now, or you can complete it later via the link we sent to your email.</p>
 								{{/if}}
 								
 								{{#with input}}

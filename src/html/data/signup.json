@@ -14,10 +14,50 @@
     },
     "questions": [
         {
+            "title": "Let’s start with basic information",
+            "questions": [
+                {
+                    "type": "basic-info"
+                }
+            ],
+            "saveDetails": true
+        },
+        {
+            "title": "Next, tell us about your business",
+            "questions": [
+                {
+                    "type": "business-info"
+                }
+            ]
+        },
+        {
+            "title": "A few information about the owner(s)",
+            "questions": [
+                {
+                    "type": "owners-info"
+                }
+            ]
+        },
+        {
+            "title": "Just to confirm your initial set up...",
+            "questions": [
+                {
+                    "type": "signup-confirm"
+                }
+            ]
+        },
+        {
             "title": "Confirmation in progress...",
             "questions": [
                 {
                     "type": "confirmation-progress"
+                }
+            ]
+        },
+        {
+            "questions": [
+                {
+                    "type": "signup-payment"
                 }
             ]
         },
@@ -67,7 +107,6 @@
                             {
                                 "label": "Electricity",
                                 "name": "electricity",
-                                "tooltip": "Whatever should be in the info box",
                                 "type": "KWh"
                             }
                         ]
@@ -101,7 +140,6 @@
             "questions": [
                 {
                     "label": "For each person in the household select the age group and diet:",
-                    "tooltip": "Whatever should go in the info box",
                     "input": {
                         "type": "custom",
                         "groups": [
@@ -109,8 +147,7 @@
                                 "group": "Age group"
                             },
                             {
-                                "group": "Diet",
-                                "tooltip": "Whatever should be in the info box"
+                                "group": "Diet"
                             }
                         ],
                         "items": [
@@ -140,7 +177,6 @@
                                     },
                                     {
                                         "group": "Diet",
-                                        "tooltip": "Whatever should be in the info box",
                                         "options": [
                                             {
                                                 "value": "",
@@ -188,7 +224,6 @@
                                     },
                                     {
                                         "group": "Diet",
-                                        "tooltip": "Whatever should be in the info box",
                                         "options": [
                                             {
                                                 "value": "",
@@ -236,7 +271,6 @@
                                     },
                                     {
                                         "group": "Diet",
-                                        "tooltip": "Whatever should be in the info box",
                                         "options": [
                                             {
                                                 "value": "",
