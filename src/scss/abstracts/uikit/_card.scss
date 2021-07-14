@@ -1,7 +1,11 @@
-@mixin hook-card-default {
+@mixin hook-card {
     border-radius: 10px;
-    padding-bottom: 85px;
     filter: drop-shadow(0 10px 40px rgba($secondary, .1));
+    background-color: $white;
+}
+
+@mixin hook-card-default {
+    padding-bottom: 85px;
 
     .uk-button-text {
 

@@ -1,0 +1,40 @@
+.signup-confirm {
+    .uk-h6 {
+        text-transform: none;
+    }
+
+    p {
+        font-size: 16px;
+        color: $grey-dark;
+    }
+
+    .uk-button-text {
+        font-weight: $normal;
+
+        &::before,
+        &::after {
+            display: none;
+        }
+    }
+
+    .uk-card {
+        padding: 30px 25px 45px;
+        margin-top: 25px;
+
+        .uk-button {
+            border-color: $primary;
+            color: $primary;
+
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    @media (min-width: $breakpoint-medium) {
+        .signup-infos {
+            margin-right: 40px;
+        }
+    }
+}

@@ -118,8 +118,12 @@
 										{{/inline}}
 									{{/ukGrid}}
 									{{> nbInput label="Tax reference" name="tax-reference" title="Please enter tax reference" tooltip="Style of the information message"}}										
-								{{/if}}													
+								{{/if}}
 
+								{{#if (eq type "signup-confirm")}}
+									{{>signupConfirm}}										
+								{{/if}}
+								
 								{{#with input}}
 
 								{{#if (eq type "text")}}

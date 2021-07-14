@@ -27,7 +27,7 @@
 		}
 	}
 
-	.uk-button-text {
+	.uk-position-bottom .uk-button-text {
 		margin-right: 20px;
 
 		&::before,
@@ -102,10 +102,13 @@
 		user-select: none;
 	}
 
-	*+.uk-grid-margin,
-	.uk-grid+.uk-grid,
-	.uk-grid>.uk-grid-margin {
-		margin-top: 0;
+	.page-enquiry {
+
+		*+.uk-grid-margin,
+		.uk-grid+.uk-grid,
+		.uk-grid>.uk-grid-margin {
+			margin-top: 0;
+		}
 	}
 
 	.uk-form-label {
@@ -115,7 +118,7 @@
 	}
 
 	@media (min-width: $breakpoint-medium) {
-		.uk-button-text {
+		.uk-position-bottom .uk-button-text {
 			margin-right: 50px;
 		}
 
@@ -158,9 +161,9 @@
 
 	@media (max-width: $breakpoint-xsmall-max) {
 		.page {
-			&-content {
-				text-align: center;
-			}
+			// &-content {
+			// 	text-align: center;
+			// }
 
 			&.page-last {
 				padding-bottom: 150px;

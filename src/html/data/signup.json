@@ -39,6 +39,14 @@
             ]
         },
         {
+            "title": "Just to confirm your initial set up...",
+            "questions": [
+                {
+                    "type": "signup-confirm"
+                }
+            ]
+        },
+        {
             "title": "Confirmation in progress...",
             "questions": [
                 {
