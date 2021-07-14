@@ -10,6 +10,7 @@
     border-radius: 10px;
     font-size: 17px;
     padding: 7px 28px;
+    min-height: 55px;
 
     &::placeholder {
         font-size: 16px;
@@ -47,6 +48,7 @@
         font-size: 17px;
         color: rgba($grey-dark, .5);
         padding: 12px 28px;
+        min-height: 55px;
 
         .uk-svg {
             width: 11px;

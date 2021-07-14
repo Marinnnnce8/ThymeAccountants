@@ -1,0 +1,23 @@
+.direct-debit {
+
+    .uk-button-primary {
+        margin-top: 55px;
+    }
+
+    .uk-button-text {
+        font-weight: $normal;
+
+        &::before,
+        &::after {
+            display: none;
+        }
+    }
+
+    &-bottom {
+        p,
+        p>* {
+            line-height: 1.7;
+            font-size: 14px;
+        }
+    }
+}

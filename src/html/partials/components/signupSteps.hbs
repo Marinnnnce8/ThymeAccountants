@@ -1,0 +1,15 @@
+<div class="signup-steps">
+    <ul class="uk-list uk-flex uk-flex-middle uk-flex-between uk-flex-wrap uk-margin-remove-bottom">
+        {{#each steps}}
+            {{#with this}}
+                    <li class="uk-border-rounded uk-text-uppercase uk-position-relative{{#if active}} signup-step-active{{else if completed}} signup-step-completed{{/if}}{{#if @first}} uk-margin-small-top{{/if}}" role="presentation">
+                    <span class="tick uk-flex-inline uk-flex-center uk-flex-middle uk-border-circle uk-margin-small-right">{{>renderIcon name="tick-signup"}}</span>{{title}}
+                    {{#if optional}}
+                        <span> Optional</span>
+                    {{/if}}
+                </li>
+            {{/with}}
+        {{/each}}										
+    </ul>
+    {{!-- <span class="uk-text-small">{{step @index}}/17</span> --}}
+</div>

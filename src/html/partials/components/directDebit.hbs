@@ -1,62 +1,67 @@
-<p>Set up a Direct Debit with Thyme Accountants Ltd.</p>
-<div class="Inputfield nb-form-required uk-first-column" id="wrap_nb-form-styleguide_select">
+<div class="direct-debit">
+    <p>Set up a Direct Debit with Thyme Accountants Ltd.</p>
+    <div class="Inputfield nb-form-required uk-first-column" id="wrap_nb-form-styleguide_select">
 
-    <label class="uk-form-label" for="nb-form-styleguide_select">Country <span>*</span></label>
+        <label class="uk-form-label" for="nb-form-styleguide_select">Country <span>*</span></label>
 
-    <div class="nb-form-content">
-        <div role="alert"></div>
+        <div class="nb-form-content">
+            <div role="alert"></div>
 
-        <div data-uk-form-custom="target: > * > span:first-child" class="uk-width-1-1">
-            <select class="uk-select" id="form-stacked-select">
-                <option value="">--- Select ---</option>
-                <option>Option 01</option>
-                <option>Option 02</option>
-            </select>
-            <button class="uk-flex uk-flex-middle uk-flex-between uk-width-1-1" type="button">
-                <span></span>
-                {{> renderIcon name="chevron-down"}}
-            </button>						
+            <div data-uk-form-custom="target: > * > span:first-child" class="uk-width-1-1">
+                <select class="uk-select" id="form-stacked-select">
+                    <option value="">--- Select ---</option>
+                    <option>Option 01</option>
+                    <option>Option 02</option>
+                </select>
+                <button class="uk-flex uk-flex-middle uk-flex-between uk-width-1-1" type="button">
+                    <span></span>
+                    {{> renderIcon name="chevron-down"}}
+                </button>						
+            </div>
+
         </div>
-
     </div>
-</div>
-{{#> ukGrid class=(default class "uk-child-width-1-2@m")}}
-    {{#*inline "cells"}}
-        <div>
-            {{> nbInput label="First Name" name="first-name" title="Please enter your first name"}}
-        </div>
-        <div>
-            {{> nbInput label="Last Name" name="last-name" title="Please enter your last name"}}
-        </div>
-    {{/inline}}
-{{/ukGrid}}		
-{{#> ukGrid class=(default class "uk-child-width-1-2@m")}}
-    {{#*inline "cells"}}
-        <div>
-            {{> nbInput label="Your sort code" name="sort-code" title="Please enter your sort code" placeholder="e.g. 10-20-30"}}
-        </div>
-        <div>
-            {{> nbInput label="Your account number" name="account-number" title="Please enter your account number" placeholder="e.g. 12345678"}}
-        </div>
-    {{/inline}}
-{{/ukGrid}}
-{{> nbInput label="Post code" name="post-code" title="Please enter your post code" placeholder="Start typing your post code and choose from the list"}}
-{{> nbInput label="Your email" name="email" title="Please enter your email" type="email"}}
-<div class="uk-flex uk-flex-center">
-    {{>ukButton size="large" style="primary" label="Set up Direct Debit" icon="lock" pull="left"}}
-</div>
-<div class="uk-flex uk-flex-between uk-flex-bottom uk-margin-bottom">
-    <div>
-        <span class="uk-text-small uk-text-uppercase uk-display-block"><strong>Go</strong> Cardless</span>
-        {{>ukButton link="mailto:accounts@thymeaccountants.co.uk" style="text" label="accounts@thymeaccountants.co.uk"}}
+    {{#> ukGrid class=(default class "uk-child-width-1-2@m")}}
+        {{#*inline "cells"}}
+            <div>
+                {{> nbInput label="First Name" name="first-name" title="Please enter your first name"}}
+            </div>
+            <div>
+                {{> nbInput label="Last Name" name="last-name" title="Please enter your last name"}}
+            </div>
+        {{/inline}}
+    {{/ukGrid}}		
+    {{#> ukGrid class=(default class "uk-child-width-1-2@m")}}
+        {{#*inline "cells"}}
+            <div>
+                {{> nbInput label="Your sort code" name="sort-code" title="Please enter your sort code" placeholder="e.g. 10-20-30"}}
+            </div>
+            <div>
+                {{> nbInput label="Your account number" name="account-number" title="Please enter your account number" placeholder="e.g. 12345678"}}
+            </div>
+        {{/inline}}
+    {{/ukGrid}}
+    {{> nbInput label="Post code" name="post-code" title="Please enter your post code" placeholder="Start typing your post code and choose from the list"}}
+    {{> nbInput label="Your email" name="email" title="Please enter your email" type="email"}}
+    <div class="uk-flex uk-flex-center">
+        {{>ukButton size="large" style="primary" label="Set up Direct Debit" icon="lock" pull="left" class="signup-button-next"}}
     </div>
-    <div>
-        <img src="./img/direct-debit.png" loading="lazy" width="147" height="83" alt="Direct Debit">
+
+    <div class="direct-debit-bottom">
+        <div class="uk-flex uk-flex-between">
+            <div class="uk-flex uk-flex-column uk-flex-center">
+                <span class="uk-text-small uk-text-uppercase uk-display-block"><strong>Go</strong> Cardless</span>
+                {{>ukButton link="mailto:accounts@thymeaccountants.co.uk" style="text" label="accounts@thymeaccountants.co.uk"}}
+            </div>
+            <div class="uk-flex uk-flex-bottom">
+                <img src="./img/direct-debit.png" loading="lazy" width="147" height="83" alt="Direct Debit" class="uk-margin-top">
+            </div>
+        </div>
+        <div class="uk-width-1-2@m uk-margin-bottom">
+            <p>By confirming you are agreeing to our {{>ukButton link="#" label="Website Terms of Use" style="text"}}. GoCardless uses personal data as described in our {{>ukButton link="#" label="Privacy Notice" style="text"}}. We use analytics {{>ukButton link="#" label="cookies" style="text"}}.</p>
+        </div>
+        <div class="uk-width-1-2@m">
+            <p>Your payments are protected by the {{>ukButton link="#" label="Direct Debit Guarantee" style="text"}}.</p>
+        </div>
     </div>
-</div>
-<div class="uk-width-1-2@m uk-margin-bottom">
-    <p>By confirming you are agreeing to our {{>ukButton link="#" label="Website Terms of Use" style="text"}}. GoCardless uses personal data as described in our {{>ukButton link="#" label="Privacy Notice" style="text"}}. We use analytics {{>ukButton link="#" label="cookies" style="text"}}.</p>
-</div>
-<div class="uk-width-1-2@m uk-margin-medium-bottom">
-    <p>Your payments are protected by the {{>ukButton link="#" label="Direct Debit Guarantee" style="text"}}.</p>
 </div>

@@ -1,0 +1,32 @@
+    {{#> ukGrid class=(default class "uk-child-width-1-2@m")}}
+        {{#*inline "cells"}}
+            <div>
+                {{> nbInput label="Business Name" name="business-name" title="Please enter your business name"}}
+            </div>
+            <div>
+                {{> nbInput label="Email Address" name="name" title="Please enter email address"}}
+            </div>
+        {{/inline}}
+    {{/ukGrid}}	
+
+    {{> nbInput label="About the business" name="about-the-business" type="textarea" title="Please enter your business"}}
+
+    <h3>Details about existing accountant</h3>
+
+    {{#> ukGrid class=(default class "uk-child-width-1-2@m")}}
+        {{#*inline "cells"}}
+            <div>
+                {{> nbInput label="Accountant Company Name" name="accountant-company-name" title="Please enter accountant company name"}}
+            </div>
+            <div>
+                {{> nbInput label="Accountant Full Name" name="accountant-full-name" title="Please enter accountant full name"}}
+            </div>
+            <div>
+                {{> nbInput label="Accountant Email" name="accountant-email" title="Please enter accountant email" type="email"}}
+            </div>
+            <div>
+                {{> nbInput label="Accountant Telephone" name="accountant-telephone" title="Please enter accountant telephone" type="tel"}}
+            </div>
+        {{/inline}}
+    {{/ukGrid}}
+    {{> nbInput label="Accountant Address" name="accountant-address" title="Please enter accountant address"}}	

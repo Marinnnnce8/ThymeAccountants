@@ -7,165 +7,60 @@
 
 			{{#each page.questions}}
 				{{#with this}}
-				<div class="page uk-overflow-hidden uk-margin-medium-bottom{{#if @first}} page-active{{/if}}">
-					<div class="page-content">
+				<div class="page uk-flex uk-flex-column uk-flex-between uk-overflow-hidden uk-margin-medium-bottom{{#if @first}} page-active{{/if}}{{#if directDebit}} uk-margin-large-top{{/if}}">
+					<div class="page-content uk-margin-medium-bottom">
 						<div class="page-info">
-							<div class="signup-steps">
-								<ul class="uk-list uk-flex uk-flex-middle uk-flex-between uk-flex-wrap uk-margin-remove-bottom">
-									{{#each steps}}
-										{{#with this}}
-												<li class="uk-border-rounded uk-text-uppercase uk-position-relative{{#if active}} signup-step-active{{else if completed}} signup-step-completed{{/if}}{{#if @first}} uk-margin-small-top{{/if}}" role="presentation">
-												<span class="tick uk-flex-inline uk-flex-center uk-flex-middle uk-border-circle uk-margin-small-right">{{>renderIcon name="tick-signup"}}</span>{{title}}
-												{{#if optional}}
-													<span> Optional</span>
-												{{/if}}
-											</li>
-										{{/with}}
-									{{/each}}										
-								</ul>
-								{{!-- <span class="uk-text-small">{{step @index}}/17</span> --}}
-							</div>
+							{{>signupSteps}}
 							{{#if title}}
 								<div class="uk-h1 uk-margin-bottom">{{title}}</div>
 							{{/if}}
 						</div>
 
 						<div class="page-enquiry">
-						{{#each questions}}
-							{{#with this}}
+							{{#each questions}}
+								{{#with this}}
 
-							{{!-- {{#if (eq type "basic-info")}}
-								{{#> ukGrid class=(default class "uk-child-width-1-2@m")}}
-									{{#*inline "cells"}}
-										<div>
-											{{> nbInput label="Full Name" name="full-name" title="Please enter your full name"}}
-										</div>
-										<div>
-											{{> nbInput label="Email Address" name="name" title="Please enter email address" type="email"}}
-										</div>
-									{{/inline}}
-								{{/ukGrid}}									
-							{{/if}}		
+								{{#if (eq pageType "basic-info")}}
+									{{>basicInfo}}
+								{{/if}}		
 
-							{{#if (eq type "business-info")}}
-								{{#> ukGrid class=(default class "uk-child-width-1-2@m")}}
-									{{#*inline "cells"}}
-										<div>
-											{{> nbInput label="Business Name" name="business-name" title="Please enter your business name"}}
-										</div>
-										<div>
-											{{> nbInput label="Email Address" name="name" title="Please enter email address"}}
-										</div>
-									{{/inline}}
-								{{/ukGrid}}	
+								{{#if (eq pageType "business-info")}}
+									{{>businessInfo}}									
+								{{/if}}															
 
-								{{> nbInput label="About the business" name="about-the-business" type="textarea" title="Please enter your business"}}
-
-								<h3>Details about existing accountant</h3>
-
-								{{#> ukGrid class=(default class "uk-child-width-1-2@m")}}
-									{{#*inline "cells"}}
-										<div>
-											{{> nbInput label="Accountant Company Name" name="accountant-company-name" title="Please enter accountant company name"}}
-										</div>
-										<div>
-											{{> nbInput label="Accountant Full Name" name="accountant-full-name" title="Please enter accountant full name"}}
-										</div>
-										<div>
-											{{> nbInput label="Accountant Email" name="accountant-email" title="Please enter accountant email" type="email"}}
-										</div>
-										<div>
-											{{> nbInput label="Accountant Telephone" name="accountant-telephone" title="Please enter accountant telephone" type="tel"}}
-										</div>
-									{{/inline}}
-								{{/ukGrid}}
-								{{> nbInput label="Accountant Address" name="accountant-address" title="Please enter accountant address"}}										
-							{{/if}}															
-
-							{{#if (eq type "owner-info")}}
-								{{#> ukGrid class=(default class "uk-child-width-1-2@m uk-flex-bottom")}}
-									{{#*inline "cells"}}
-										<div>
-											{{> nbRadio titleLabel="Is there more than one owner" label="Yes" name="more-owners" title="Please enter is there more than one owner"}}
-										</div>
-										<div>
-											{{> nbRadio label="No" name="one-owner" title="Please enter is there more than one owner"}}
-										</div>
-										<div>
-											{{> nbInput label="Owner Full Name" name="owner-full-name" title="Please enter owner full name"}}
-										</div>
-										<div>
-											{{> nbInput label="Owner Email Address" name="owner-email-address" title="Please enter owner email address" type="email"}}
-										</div>
-										<div>
-											{{> nbInput label="Date of Birth (dd/mm/yyyy)" name="date-of-birth" title="Please enter date of birth (dd/mm/yyyy)" type="date" tooltip="Style of the information message"}}
-										</div>
-										<div>
-											{{> nbInput label="National Insurance number" name="national-insurance-number" title="Please enter national insurance number"}}
-										</div>
-									{{/inline}}
-								{{/ukGrid}}
-								{{> nbInput label="Tax reference" name="tax-reference" title="Please enter tax reference" tooltip="Style of the information message"}}										
-							{{/if}}
-
-							{{#if (eq type "signup-confirm")}}
-								{{>signupConfirm}}			
-							{{/if}}
-
-							{{#if (eq type "confirmation-progress")}}
-								<p>By clicking confirm button we sent you a copy of the documents via email with details on how to complete the sign-up process with Direct Debit payment system.</p>
-								{{>confirmProgress}}								
-							{{/if}}
-
-							{{#if (eq type "signup-payment")}}
-								<p class="uk-alert uk-flex uk-flex-middle uk-alert-success uk-margin-medium-top uk-margin-remove-bottom">{{> renderIcon name="alert-success"}} This text is providing a positive message to the user</p>
-								<div class="uk-h1 uk-margin-bottom">How do you want to complete the sign-up?</div>
-								<p>You can complete the sign-up with the Direct Debit now, or you can complete it later via the link we sent to your email.</p>
-							{{/if}} --}}
-
-							{{#if (eq type "direct-debit")}}
-								{{>directDebit}}
-							{{/if}}
-
-							{{#if (eq type "setup-account")}}
-								<p>Informative page to tell the customer about the client area that they will have with Thyme.</p>
-								<p>On screen they will also be told that they will have received an email with details to set up their client account.</p>
-							{{/if}}
-
-							{{/with}}
-						{{/each}}
-						</div>
-
-					</div>
-					{{#if (neq type "direct-debit")}}
-					<div class="uk-position-bottom">
-						<div class="uk-flex uk-flex-middle uk-flex-between uk-flex-wrap">
-							{{#if @first}}
-								{{> ukButton icon="arrow-left" pull="left" label="Back" size="large" link="#"}}
-							{{else}}
-								{{> ukButton icon="arrow-left" pull="left" label="Back" size="large" class="signup-button-back"}}
-							{{/if}}
-							<div>
-								{{#if signupPayment}}
-									{{> ukButton icon="arrow-right" label="Direct Debit Now" size="large" style="primary" class="signup-button"}}
-								{{else}}
-									{{#if saveDetails}}
-									{{> ukButton icon="save" pull="left" label="Save your details for later" size="large" style="text"}}
-									{{/if}}
-									{{#if @last}}
-										{{> ukButton icon="arrow-right" label="Save your details for later" size="large" style="primary"}}
-									{{else}}
-										{{#if confirmButton}}
-											{{> ukButton icon="arrow-right" label="Confirm" size="large" style="primary" class="signup-button"}}
-										{{else}}
-											{{> ukButton icon="arrow-right" label="Continue" size="large" style="primary" class="signup-button"}}
-										{{/if}}
-									{{/if}}
+								{{#if (eq pageType "owner-info")}}
+									{{>ownerInfo}}	
 								{{/if}}
-							</div>
+
+								{{#if (eq pageType "signup-confirm")}}
+									{{>signupConfirm}}			
+								{{/if}}
+
+								{{#if (eq pageType "confirmation-progress")}}
+									{{>confirmProgress}}								
+								{{/if}}
+
+								{{#if (eq pageType "signup-payment")}}
+									{{>signupPayment}}
+								{{/if}}
+
+								{{#if (eq pageType "direct-debit")}}
+									{{>directDebit}}
+								{{/if}}
+
+								{{#if (eq pageType "setup-account")}}
+									<p>Informative page to tell the customer about the client area that they will have with Thyme.</p>
+									<p>On screen they will also be told that they will have received an email with details to set up their client account.</p>
+								{{/if}}
+
+								{{/with}}
+							{{/each}}
 						</div>
 					</div>
-					{{/if}}
+					
+					{{#unless directDebit}}
+						{{>signupBottom}}
+					{{/unless}}
 				</div>
 				{{/with}}
 			{{/each}}

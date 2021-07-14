@@ -25,24 +25,32 @@
 		}
 	}
 
-	.uk-position-bottom .uk-button-text {
-		margin-right: 20px;
+	.page-bottom {
+		left: -20px;
+		width: calc(100% + 40px);
+		box-shadow: 0 10px 40px rgba($secondary, .1);
+		padding: 20px 20px 10px;
 
-		&::before,
-		&::after {
-			display: none;
-		}
+		.uk-button-text {
+			margin-left: 20px;
+			margin-right: 20px;
 
-		svg {
-			width: 20px;
-			height: 20px;
-		}
-
-		@include hover {
-			color: $grey-dark;
+			&::before,
+			&::after {
+				display: none;
+			}
 
 			svg {
+				width: 20px;
+				height: 20px;
+			}
+
+			@include hover {
 				color: $grey-dark;
+
+				svg {
+					color: $grey-dark;
+				}
 			}
 		}
 	}
@@ -54,22 +62,13 @@
 	.page {
 		filter: drop-shadow(0 10px 40px rgba($secondary, .1));
 		background-color: $white;
-		padding: 20px 15px 80px;
+		padding: 20px 15px 0;
 		margin-top: 15px;
 		z-index: 1;
 		border-radius: 10px;
 
 		&:not(.page-active) {
 			display: none;
-		}
-
-		&-content {
-			padding-bottom: 10px;
-		}
-
-		>.uk-position-bottom {
-			box-shadow: 0 10px 40px rgba($secondary, .1);
-			padding: 8px 10px 7px;
 		}
 
 		.uk-text-meta {
@@ -93,23 +92,26 @@
 	}
 
 	@media (min-width: $breakpoint-medium) {
-		.uk-position-bottom .uk-button-text {
-			margin-right: 50px;
+		.page-bottom {
+			left: -60px;
+			width: calc(100% + 120px);
+			padding: 45px 60px;
+
+			.uk-button-text {
+				margin-right: 50px;
+			}
 		}
 
 		.page {
-			min-height: 570px;
-			padding: 40px 60px 167px;
-
-			>.uk-position-bottom {
-				padding: 45px 60px;
-			}
+			padding: 40px 60px 0;
 		}
 	}
 
-	@media (min-width: 1280px) {
-		.page {
-			max-width: 1200px;
+	@media (max-width: $breakpoint-small-max) {
+		.page-bottom {
+			.uk-button {
+				margin-bottom: 20px;
+			}
 		}
 	}
 }

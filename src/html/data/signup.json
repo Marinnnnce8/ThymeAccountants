@@ -1,6 +1,6 @@
 {
     "h1": "Sign",
-    "underlined": "&nbspUp",
+    "underlined": "&nbsp;Up",
     "banner": {
         "textLead": "A short description text should gently catch the user's eye, initiating the reading of the page content.",
         "texts": [
@@ -14,10 +14,216 @@
     },
     "questions": [
         {
-            "title": "Direct Debit Payment",
+            "title": "Let’s start with basic information",
             "questions": [
                 {
-                    "type": "direct-debit"
+                    "pageType": "basic-info"
+                }
+            ],
+            "saveDetails": true,
+            "steps": [
+                {
+                    "title": "Basic Info",
+                    "active": true
+                },
+                {
+                    "title": "Business info"
+                },
+                {
+                    "title": "Owner info"
+                },
+                {
+                    "title": "Confirmation"
+                },
+                {
+                    "title": "Payment",
+                    "optional": true
+                },
+                {
+                    "title": "Set Up Account",
+                    "optional": true
+                }
+            ]
+        },
+        {
+            "title": "Next, tell us about your business",
+            "questions": [
+                {
+                    "pageType": "business-info"
+                }
+            ],
+            "saveDetails": true,
+            "steps": [
+                {
+                    "title": "Basic Info",
+                    "completed": true
+                },
+                {
+                    "title": "Business info",
+                    "active": true
+                },
+                {
+                    "title": "Owner info"
+                },
+                {
+                    "title": "Confirmation"
+                },
+                {
+                    "title": "Payment",
+                    "optional": true
+                },
+                {
+                    "title": "Set Up Account",
+                    "optional": true
+                }
+            ]
+        },
+        {
+            "title": "A few information about the owner(s)",
+            "questions": [
+                {
+                    "pageType": "owner-info"
+                }
+            ],
+            "saveDetails": true,
+            "steps": [
+                {
+                    "title": "Basic Info",
+                    "completed": true
+                },
+                {
+                    "title": "Business info",
+                    "completed": true
+                },
+                {
+                    "title": "Owner info",
+                    "active": true
+                },
+                {
+                    "title": "Confirmation"
+                },
+                {
+                    "title": "Payment",
+                    "optional": true
+                },
+                {
+                    "title": "Set Up Account",
+                    "optional": true
+                }
+            ]
+        },
+        {
+            "title": "Just to confirm your initial set up...",
+            "confirmButton": true,
+            "questions": [
+                {
+                    "pageType": "signup-confirm",
+                    "confirmButton": true
+                }
+            ],
+            "saveDetails": true,
+            "steps": [
+                {
+                    "title": "Basic Info",
+                    "completed": true
+                },
+                {
+                    "title": "Business info",
+                    "completed": true
+                },
+                {
+                    "title": "Owner info",
+                    "completed": true
+                },
+                {
+                    "title": "Confirmation",
+                    "active": true
+                },
+                {
+                    "title": "Payment",
+                    "optional": true
+                },
+                {
+                    "title": "Set Up Account",
+                    "optional": true
+                }
+            ]
+        },
+        {
+            "title": "Confirmation in progress...",
+            "questions": [
+                {
+                    "pageType": "confirmation-progress"
+                }
+            ],
+            "steps": [
+                {
+                    "title": "Basic Info",
+                    "completed": true
+                },
+                {
+                    "title": "Business info",
+                    "completed": true
+                },
+                {
+                    "title": "Owner info",
+                    "completed": true
+                },
+                {
+                    "title": "Confirmation",
+                    "active": true
+                },
+                {
+                    "title": "Payment",
+                    "optional": true
+                },
+                {
+                    "title": "Set Up Account",
+                    "optional": true
+                }
+            ]
+        },
+        {
+            "signupPayment": true,
+            "questions": [
+                {
+                    "pageType": "signup-payment"
+                }
+            ],
+            "steps": [
+                {
+                    "title": "Basic Info",
+                    "completed": true
+                },
+                {
+                    "title": "Business info",
+                    "completed": true
+                },
+                {
+                    "title": "Owner info",
+                    "completed": true
+                },
+                {
+                    "title": "Confirmation",
+                    "completed": true
+                },
+                {
+                    "title": "Payment",
+                    "optional": true,
+                    "active": true
+                },
+                {
+                    "title": "Set Up Account",
+                    "optional": true
+                }
+            ]
+        },
+        {
+            "title": "Direct Debit Payment",
+            "directDebit": true,
+            "questions": [
+                {
+                    "pageType": "direct-debit"
                 }
             ],
             "steps": [
@@ -52,7 +258,7 @@
             "title": "Set your account at Thyme Acconutants",
             "questions": [
                 {
-                    "type": "setup-account"
+                    "pageType": "setup-account"
                 }
             ],
             "steps": [

@@ -4,7 +4,7 @@ var signup = {
 
 		// var inputTexts = document.querySelectorAll('input[type="text"]');
 		// var isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0);
-		var btnNext = document.querySelectorAll('.signup-button');
+		var btnNext = document.querySelectorAll('.signup-button-next');
 		var btnPrev = document.querySelectorAll('.signup-button-back');
 
 		// if (isTouchDevice && inputTexts.length) {
@@ -30,7 +30,7 @@ var signup = {
 
 	goToNextPage: function () {
 		var pages = document.querySelectorAll('.page');
-		var btnNext = document.querySelectorAll('.signup-button');
+		var btnNext = document.querySelectorAll('.signup-button-next');
 		var btnIndex = [...btnNext].indexOf(this);
 
 		var pageParent = this.closest('.page');
