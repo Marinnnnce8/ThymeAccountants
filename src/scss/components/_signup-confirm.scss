@@ -32,9 +32,29 @@
         }
     }
 
+    .signup-confirm-help {
+        max-width: 100%;
+    }
+
+    .uk-card-media-top {
+        min-height: 0;
+    }
+
+    @media (min-width: $breakpoint-small) {
+        .signup-confirm-help {
+            max-width: 320px;
+        }
+    }
+
     @media (min-width: $breakpoint-medium) {
         .signup-infos {
             margin-right: 40px;
+        }
+    }
+
+    @media (max-width: $breakpoint-medium-max) {
+        .signup-confirm-wrap {
+            flex-direction: column;
         }
     }
 }

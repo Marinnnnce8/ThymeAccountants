@@ -12,15 +12,19 @@
         }
     }
 
-    @media (min-width: $breakpoint-medium) {
+    @media (min-width: 1400px) {
         &-text {
-            >div:first-of-type {
-                padding-right: 90px;
-            }
+            padding-right: 90px;
         }
 
         &-image {
             left: 60px;
+        }
+    }
+
+    @media (min-width: $breakpoint-medium) {
+        &-text {
+            padding-right: 40px;
         }
 
         &-home {
@@ -29,6 +33,12 @@
             .checked-list {
                 margin-left: 10px;
             }
+        }
+    }
+
+    @media (max-width: $breakpoint-small-max) {
+        .uk-container>.uk-flex {
+            flex-direction: column;
         }
     }
 }

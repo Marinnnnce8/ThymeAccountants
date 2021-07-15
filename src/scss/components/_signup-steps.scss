@@ -54,4 +54,20 @@
             }
         }
     }
+
+    @media (min-width: $breakpoint-mobile + 1) {
+        li:not(:last-of-type) {
+            margin-right: 20px;
+        }
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        .uk-list {
+            flex-direction: column;
+
+            li {
+                width: 100%;
+            }
+        }
+    }
 }

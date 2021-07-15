@@ -43,18 +43,20 @@
     {{/ukGrid}}
     {{> nbInput label="Post code" name="post-code" title="Please enter your post code" placeholder="Start typing your post code and choose from the list"}}
     {{> nbInput label="Your email" name="email" title="Please enter your email" type="email"}}
-    <div class="uk-flex uk-flex-center">
+    <div class="uk-flex uk-flex-center uk-margin-bottom">
         {{>ukButton size="large" style="primary" label="Set up Direct Debit" icon="lock" pull="left" class="signup-button-next"}}
     </div>
 {{#unless completeOrder}}
     <div class="direct-debit-bottom">
-        <div class="uk-flex uk-flex-between">
-            <div class="uk-flex uk-flex-column uk-flex-center">
+        <div class="uk-flex uk-flex-between uk-flex-wrap">
+            <div class="uk-flex uk-flex-column uk-flex-center uk-margin-right">
                 <span class="uk-text-small uk-text-uppercase uk-display-block"><strong>Go</strong> Cardless</span>
                 {{>ukButton link="mailto:accounts@thymeaccountants.co.uk" style="text" label="accounts@thymeaccountants.co.uk"}}
             </div>
             <div class="uk-flex uk-flex-bottom">
-                <img src="./img/direct-debit.png" loading="lazy" width="147" height="83" alt="Direct Debit" class="uk-margin-top">
+                <a href="#">
+                    <img src="./img/direct-debit.png" loading="lazy" width="147" height="83" alt="Direct Debit" class="uk-margin-top">
+                </a>
             </div>
         </div>
         <div class="uk-width-1-2@m uk-margin-bottom">
