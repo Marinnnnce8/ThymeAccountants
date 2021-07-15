@@ -1,23 +1,23 @@
-    {{#> ukGrid class=(default class "uk-child-width-1-2@m uk-flex-bottom")}}
-        {{#*inline "cells"}}
-            <div>
-                {{> nbRadio titleLabel="Is there more than one owner" label="Yes" name="more-owners" title="Please enter is there more than one owner"}}
-            </div>
-            <div>
-                {{> nbRadio label="No" name="one-owner" title="Please enter is there more than one owner"}}
-            </div>
-            <div>
-                {{> nbInput label="Owner Full Name" name="owner-full-name" title="Please enter owner full name"}}
-            </div>
-            <div>
-                {{> nbInput label="Owner Email Address" name="owner-email-address" title="Please enter owner email address" type="email"}}
-            </div>
-            <div>
-                {{> nbInput label="Date of Birth (dd/mm/yyyy)" name="date-of-birth" title="Please enter date of birth (dd/mm/yyyy)" type="date" tooltip="Style of the information message"}}
-            </div>
-            <div>
-                {{> nbInput label="National Insurance number" name="national-insurance-number" title="Please enter national insurance number"}}
-            </div>
-        {{/inline}}
-    {{/ukGrid}}
-    {{> nbInput label="Tax reference" name="tax-reference" title="Please enter tax reference" tooltip="Style of the information message"}}
+{{#> ukGrid class=(default class "uk-child-width-1-2@m uk-flex-bottom")}}
+    {{#*inline "cells"}}
+        <div>
+            {{> nbRadio titleLabel="Is there more than one owner" label="Yes" name="more-owners" title="Please enter is there more than one owner"}}
+        </div>
+        <div>
+            {{> nbRadio label="No" name="one-owner" title="Please enter is there more than one owner"}}
+        </div>
+        <div>
+            {{> nbInput label="Owner Full Name" name="owner-full-name" title="Please enter owner full name"}}
+        </div>
+        <div>
+            {{> nbInput label="Owner Email Address" name="owner-email-address" title="Please enter owner email address" type="email"}}
+        </div>
+        <div>
+            {{> nbInput label="Date of Birth (dd/mm/yyyy)" name="date-of-birth" title="Please enter date of birth (dd/mm/yyyy)" type="date" tooltip="Style of the information message"}}
+        </div>
+        <div>
+            {{> nbInput label="National Insurance number" name="national-insurance-number" title="Please enter national insurance number"}}
+        </div>
+    {{/inline}}
+{{/ukGrid}}
+{{> nbInput label="Tax reference" name="tax-reference" title="Please enter tax reference" tooltip="Style of the information message"}}

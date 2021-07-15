@@ -1,6 +1,7 @@
 {
     "h1": "Fee",
     "underlined": "&nbsp;Calculator",
+    "hasMorePages": true,
     "banner": {
         "img": "fee-calculator.png",
         "textLead": "Thyme Accountants and its predecessor firms have been helping contractors and freelancers since 1998.",
@@ -15,11 +16,20 @@
     },
     "questions": [
         {
-            "title": "Questionnaire",
+            "title": "Results",
             "isQuestionnaire": true,
             "questions": [
                 {
-                    "pageType": "questionnaire"
+                    "pageType": "questionnaire-results"
+                }
+            ],
+            "calculatorSteps": [
+                {
+                    "title": "Questionnaire"
+                },
+                {
+                    "title": "Results",
+                    "active": true
                 }
             ]
         }

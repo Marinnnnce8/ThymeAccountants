@@ -1,3 +1,7 @@
 @mixin hook-breadcrumb-item {
     transition: $transition;
 }
+
+@mixin hook-breadcrumb-item-hover {
+    color: $primary;
+}

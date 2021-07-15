@@ -1,6 +1,18 @@
 .footer {
 	padding-bottom: 30px;
 
+	a {
+
+		&::before,
+		&::after {
+			display: none;
+		}
+
+		@include hover {
+			color: $grey-dark;
+		}
+	}
+
 	.share a {
 		width: 48px;
 		height: 48px;
@@ -61,11 +73,6 @@
 
 	a:not([href^='mailto']):not([href^='tel']):not(.whatsapp) {
 		color: $grey;
-
-		&::before,
-		&::after {
-			display: none;
-		}
 
 		@include hover {
 			color: $primary;

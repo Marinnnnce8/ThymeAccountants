@@ -1,0 +1,7 @@
+<ul class="uk-list uk-flex uk-flex-middle uk-flex-wrap uk-margin-remove-bottom questionnaire-steps">
+    {{#each calculatorSteps}}
+        {{#with this}}
+            <li class="uk-text-uppercase uk-flex uk-flex-middle uk-margin-top{{#if active}} calculator-step-active{{/if}}"><span class="uk-border-circle uk-flex-inline uk-flex-center uk-flex-middle uk-margin-small-right">{{@index}}</span>{{title}}</li>
+        {{/with}}
+    {{/each}}										
+</ul>

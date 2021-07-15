@@ -23,7 +23,6 @@
 @import 'components/notification.scss';
 @import 'components/reviews.scss';
 @import 'components/slider.scss';
-@import 'components/updates.scss';
 @import 'components/responsive-scroll';
 @import 'components/menu';
 @import 'components/radio-group';
@@ -39,7 +38,9 @@
 @import 'components/nb/form';
 
 @import 'pages/home';
+@import 'pages/signup';
 @import 'pages/complete-your-order';
+@import 'pages/fee-calculator';
 
 @import 'utils/browser';
 @import 'utils/print';
