@@ -1,0 +1,27 @@
+{
+    "h1": "Fee",
+    "underlined": "&nbsp;Calculator",
+    "banner": {
+        "img": "fee-calculator.png",
+        "textLead": "Thyme Accountants and its predecessor firms have been helping contractors and freelancers since 1998.",
+        "texts": [
+            {
+                "text": "We don't make use of any tax avoidance schemes and pride ourselves on over two decades of providing contractors with straight forward tax efficient services and advice."
+            },
+            {
+                "text": "Take 2 minutes to complete the following questionnaire and we will let you know what we can do for you and also provide you with a quote:"
+            }
+        ]
+    },
+    "questions": [
+        {
+            "title": "Questionnaire",
+            "isQuestionnaire": true,
+            "questions": [
+                {
+                    "pageType": "questionnaire"
+                }
+            ]
+        }
+    ]
+}

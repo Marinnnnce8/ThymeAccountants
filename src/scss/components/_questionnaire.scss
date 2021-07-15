@@ -1,0 +1,113 @@
+.questionnaire {
+    .page {
+        margin-top: 65px;
+    }
+
+    .questionnaire-wrap {
+        >div {
+            margin-top: 40px;
+            padding-left: 40px;
+            counter-increment: number-counter 1;
+
+            &:last-of-type {
+                margin-bottom: 30px;
+            }
+
+            &::before {
+                position: absolute;
+                left: 0;
+                top: -3px;
+                width: 30px;
+                height: 30px;
+                content: counter(number-counter);
+                background-color: $blue-light;
+                color: $secondary;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: $medium;
+                font-size: 18px;
+                line-height: 1.5;
+            }
+        }
+    }
+
+    li {
+        font-size: 12px;
+        letter-spacing: .1em;
+        font-weight: $medium;
+        line-height: 1.5;
+
+        &:not(.step-active) {
+            color: $grey;
+
+            >span {
+                background-color: $light-grey;
+                color: inherit;
+            }
+        }
+
+        &.step-active {
+            color: $black;
+
+            >span {
+                background-color: $secondary;
+                color: $white;
+            }
+        }
+
+        >span {
+            height: 40px;
+            width: 40px;
+            font-size: 18px;
+        }
+
+        &:not(:last-of-type) {
+            margin-right: 30px;
+        }
+    }
+
+    .uk-button-primary {
+        background-image: none;
+        background-color: $light-grey;
+        box-shadow: 0 10px 40px rgba($secondary, .1);
+        max-width: 307px;
+        width: 100%;
+        color: $grey;
+
+        @include hover {
+            color: $white;
+        }
+    }
+
+    @media (min-width: $breakpoint-small) {
+        .questionnaire-wrap>div {
+            padding-left: 95px;
+
+            &::before {
+                font-size: 26px;
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+
+    @media (min-width: $breakpoint-medium) {
+        .questionnaire-wrap>div {
+            margin-top: 55px;
+        }
+    }
+
+    @media (max-width: $breakpoint-small-max) {
+        .page-info {
+            flex-direction: column;
+        }
+    }
+
+    @media (max-width: $breakpoint-xsmall-max) {
+        .uk-h3 {
+            font-size: 16px;
+        }
+    }
+}

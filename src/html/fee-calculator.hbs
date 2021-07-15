@@ -1,0 +1,49 @@
+{{#> main}}
+	{{#*inline "main"}}
+
+	<div class="signup questionnaire">
+
+		<div class="uk-container uk-position-relative signup-container">
+
+			{{#each page.questions}}
+				{{#with this}}
+				<div class="page uk-flex uk-flex-column uk-flex-between uk-overflow-hidden uk-margin-medium-bottom{{#if @first}} page-active{{/if}}{{#if directDebit}} uk-margin-large-top{{/if}}">
+					<div class="page-content uk-margin-medium-bottom">
+						<div class="page-info uk-flex uk-flex-between">
+							{{#if title}}
+								<div class="uk-h1 uk-margin-top uk-margin-right uk-margin-remove-bottom">{{title}}</div>
+							{{/if}}
+							<ul class="uk-list uk-flex uk-flex-wrap">
+								<li class="uk-text-uppercase uk-flex uk-flex-middle uk-margin-top step-active"><span class="uk-border-circle uk-flex-inline uk-flex-center uk-flex-middle uk-margin-small-right">1</span>Questionnaire</li>
+								<li class="uk-text-uppercase uk-flex uk-flex-middle"><span class="uk-border-circle uk-flex-inline uk-flex-center uk-flex-middle uk-margin-small-right">2</span>Results</li>
+							</ul>
+						</div>
+
+						<div class="page-enquiry">
+							{{#each questions}}
+								{{#with this}}
+
+								{{#if (eq pageType "questionnaire")}}
+									{{>questionnaire}}
+								{{/if}}
+
+								{{/with}}
+							{{/each}}
+						</div>
+					</div>
+					
+					{{#unless noSignupBottom}}
+						{{>signupBottom}}
+					{{/unless}}
+				</div>
+				{{/with}}
+			{{/each}}
+		</div>
+	</div>
+
+	{{>signupBanner}}
+
+	{{>services items=items.services}}
+
+	{{/inline}}
+{{/main}}

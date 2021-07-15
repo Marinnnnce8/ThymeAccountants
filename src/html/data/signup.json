@@ -2,6 +2,7 @@
     "h1": "Sign",
     "underlined": "&nbsp;Up",
     "banner": {
+        "img": "signup-header.png",
         "textLead": "A short description text should gently catch the user's eye, initiating the reading of the page content.",
         "texts": [
             {

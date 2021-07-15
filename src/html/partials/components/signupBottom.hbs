@@ -1,27 +1,33 @@
 <div class="page-bottom uk-position-relative">
-    <div class="uk-flex uk-flex-middle uk-flex-between uk-flex-wrap">
-        {{#if @first}}
-            {{> ukButton icon="arrow-left" pull="left" label="Back" size="large" link="#"}}
-        {{else}}
-            {{> ukButton icon="arrow-left" pull="left" label="Back" size="large" class="signup-button-back uk-margin-right"}}
-        {{/if}}
-        <div>
-            {{#if signupPayment}}
-                {{> ukButton icon="arrow-right" label="Direct Debit Now" size="large" style="primary" class="signup-button-next"}}
+    {{#if isQuestionnaire}}
+        <div class="uk-flex uk-flex-middle uk-flex-center uk-flex-wrap">
+            {{> ukButton icon="arrow-right" label="View Results" size="large" style="primary"}}
+        </div>
+    {{else}}
+        <div class="uk-flex uk-flex-middle uk-flex-between uk-flex-wrap">
+            {{#if @first}}
+                {{> ukButton icon="arrow-left" pull="left" label="Back" size="large" link="#"}}
             {{else}}
-                {{#if saveDetails}}
-                {{> ukButton icon="save" pull="left" label="Save your details for later" size="large" style="text" class="uk-text-left"}}
-                {{/if}}
-                {{#if @last}}
-                    {{> ukButton icon="arrow-right" label="Save your details for later" size="large" style="primary"}}
+                {{> ukButton icon="arrow-left" pull="left" label="Back" size="large" class="signup-button-back uk-margin-right"}}
+            {{/if}}
+            <div>
+                {{#if signupPayment}}
+                    {{> ukButton icon="arrow-right" label="Direct Debit Now" size="large" style="primary" class="signup-button-next"}}
                 {{else}}
-                    {{#if confirmButton}}
-                        {{> ukButton icon="arrow-right" label="Confirm" size="large" style="primary" class="signup-button-next"}}
+                    {{#if saveDetails}}
+                    {{> ukButton icon="save" pull="left" label="Save your details for later" size="large" style="text" class="uk-text-left"}}
+                    {{/if}}
+                    {{#if @last}}
+                        {{> ukButton icon="arrow-right" label="Save your details for later" size="large" style="primary"}}
                     {{else}}
-                        {{> ukButton icon="arrow-right" label="Continue" size="large" style="primary" class="signup-button-next"}}
+                        {{#if confirmButton}}
+                            {{> ukButton icon="arrow-right" label="Confirm" size="large" style="primary" class="signup-button-next"}}
+                        {{else}}
+                            {{> ukButton icon="arrow-right" label="Continue" size="large" style="primary" class="signup-button-next"}}
+                        {{/if}}
                     {{/if}}
                 {{/if}}
-            {{/if}}
+            </div>
         </div>
-    </div>
+    {{/if}}
 </div>
