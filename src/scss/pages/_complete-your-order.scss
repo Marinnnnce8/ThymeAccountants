@@ -1,0 +1,21 @@
+.template-complete-your-order {
+
+    .uk-text-small,
+    .uk-button-text {
+        color: $blue;
+    }
+
+    .uk-container-small {
+        max-width: 665px;
+    }
+
+    @media (min-width: $breakpoint-large) {
+        .uk-grid {
+            margin-left: -20px;
+
+            >* {
+                padding-left: 20px;
+            }
+        }
+    }
+}

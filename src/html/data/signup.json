@@ -221,6 +221,7 @@
         {
             "title": "Direct Debit Payment",
             "directDebit": true,
+            "noSignupBottom": true,
             "questions": [
                 {
                     "pageType": "direct-debit"
@@ -256,6 +257,7 @@
         },
         {
             "title": "Set your account at Thyme Acconutants",
+            "noSignupBottom": true,
             "questions": [
                 {
                     "pageType": "setup-account"

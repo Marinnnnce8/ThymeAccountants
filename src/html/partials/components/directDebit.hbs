@@ -46,7 +46,7 @@
     <div class="uk-flex uk-flex-center">
         {{>ukButton size="large" style="primary" label="Set up Direct Debit" icon="lock" pull="left" class="signup-button-next"}}
     </div>
-
+{{#unless completeOrder}}
     <div class="direct-debit-bottom">
         <div class="uk-flex uk-flex-between">
             <div class="uk-flex uk-flex-column uk-flex-center">
@@ -64,4 +64,5 @@
             <p>Your payments are protected by the {{>ukButton link="#" label="Direct Debit Guarantee" style="text"}}.</p>
         </div>
     </div>
+{{/unless}}    
 </div>

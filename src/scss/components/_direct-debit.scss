@@ -1,9 +1,14 @@
 .direct-debit {
+    >p:first-of-type {
+        font-size: 16px;
+    }
 
     .uk-button-primary {
         margin-top: 55px;
     }
+}
 
+.direct-debit-bottom {
     .uk-button-text {
         font-weight: $normal;
 
@@ -13,11 +18,9 @@
         }
     }
 
-    &-bottom {
-        p,
-        p>* {
-            line-height: 1.7;
-            font-size: 14px;
-        }
+    p,
+    p>* {
+        line-height: 1.7;
+        font-size: 14px;
     }
 }
