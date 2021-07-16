@@ -1,7 +1,18 @@
 <div class="page-bottom uk-position-relative">
-    {{#if isQuestionnaire}}
+    {{#if isCalculator}}
         <div class="uk-flex uk-flex-middle uk-flex-center uk-flex-wrap">
             {{> ukButton icon="arrow-right" label="View Results" size="large" style="primary" class="signup-button-next"}}
+        </div>
+    {{else if isCalculatorResults}}
+        <div class="uk-flex uk-flex-middle uk-flex-between uk-flex-wrap">
+            <div class="uk-flex uk-flex-wrap">
+                {{> ukButton icon="save" label="Save Answers" size="large" style="text" pull="left"}}
+                {{> ukButton icon="telephone" label="Request a call back" size="large" style="text" pull="left"}}
+                {{> ukButton icon="retake" label="Retake the quiz" size="large" style="text" pull="left"}}
+            </div>
+            <div>
+                 {{> ukButton icon="signup" label="Sign Up" size="large" style="primary"}}
+            </div>
         </div>
     {{else}}
         <div class="uk-flex uk-flex-middle uk-flex-between uk-flex-wrap">

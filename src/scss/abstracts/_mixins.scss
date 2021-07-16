@@ -172,10 +172,10 @@
 	}
 }
 
-@mixin blue-card-flower {
+@mixin blue-card-flower($background) {
 	position: relative;
     overflow: hidden;
-	background-color: $blue-light;
+	background-color: $background;
     filter: drop-shadow(0 10px 40px rgba($black, .1));
 
     &::before {

@@ -17,10 +17,10 @@
     "questions": [
         {
             "title": "Results",
-            "isQuestionnaire": true,
+            "isCalculatorResults": true,
             "questions": [
                 {
-                    "pageType": "questionnaire-results"
+                    "pageType": "calculator-results"
                 }
             ],
             "calculatorSteps": [

@@ -13,7 +13,7 @@
     padding: 30px 20px;
     font-style: normal;
     border-radius: 40px;
-    @include blue-card-flower;
+    @include blue-card-flower($blue-light);
 
     @media (min-width: $breakpoint-medium) {
         padding: 55px 138px 60px 63px;

@@ -1,7 +1,7 @@
 .confirm-progress {
     padding: 35px 20px 20px;
     border-radius: 10px;
-    @include blue-card-flower;
+    @include blue-card-flower($blue-light);
 
     svg {
         width: 63px;

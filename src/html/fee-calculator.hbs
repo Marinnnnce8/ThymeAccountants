@@ -1,7 +1,7 @@
 {{#> main}}
 	{{#*inline "main"}}
 
-	<div class="signup questionnaire">
+	<div class="signup calculator">
 
 		<div class="uk-container uk-position-relative signup-container">
 
@@ -20,12 +20,12 @@
 							{{#each questions}}
 								{{#with this}}
 
-								{{!-- {{#if (eq pageType "questionnaire")}}
-									{{>questionnaire}}
+								{{!-- {{#if (eq pageType "calculator-questionnaire")}}
+									{{>calculatorQuestionnaire}}
 								{{/if}} --}}
 
-								{{#if (eq pageType "questionnaire-results")}}
-									{{>questionnaireResults}}
+								{{#if (eq pageType "calculator-results")}}
+									{{>calculatorResults}}
 								{{/if}}
 
 								{{/with}}
