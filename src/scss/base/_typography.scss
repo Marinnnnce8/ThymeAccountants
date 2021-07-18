@@ -1,5 +1,6 @@
 p>a,
-li>a {
+ul:not(.uk-navbar-nav) li>a,
+ol:not(.uk-navbar-nav) li>a {
     position: relative;
 
     &::before,

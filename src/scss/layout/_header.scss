@@ -9,10 +9,14 @@
 	}
 
 	@media (min-width: $breakpoint-medium) {
-		padding: 10px 60px 0;
+		padding: 10px 40px 0 10px;
 
 		.uk-logo img {
 			width: 137px;
 		}
+	}
+
+	@media (min-width: $breakpoint-large) {
+		padding: 10px 60px 0 30px;
 	}
 }

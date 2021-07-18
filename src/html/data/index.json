@@ -88,20 +88,6 @@
 					"title": "Child"
 				}
 			]
-		},
-		{
-			"name": "client-login",
-			"title": "Client login",
-			"iconLeft": true,
-			"icon": "login",
-			"class": "login"
-		},
-		{
-			"name": "contact",
-			"title": "Contact",
-			"iconRight": true,
-			"icon": "arrow-right",
-			"navClass": "uk-button uk-button-primary"
 		}
 	],
 	"social": [

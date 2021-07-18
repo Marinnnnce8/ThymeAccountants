@@ -36,9 +36,16 @@
 				</div>
 
 				<div class="uk-navbar-right">
-					<div id="nav" class="uk-visible@m">
+					<div id="nav" class="uk-visible@m uk-flex uk-flex-middle">
 						{{> renderNavigation items=menu active=page.name}}
+						{{> ukButton link="#" label="Client login" icon="login" pull="left" style="text"}}
+						<div class="uk-margin-medium-left">
+							{{> ukButton link="#" icon="arrow-right" label="Contact" style="primary"}}
+						</div>
 					</div>
+					<a href="#" aria-label="Visit Login page" class="uk-hidden@m uk-flex uk-flex-middle uk-flex-center login-button">
+						{{> renderIcon name="login"}}
+					</a>
 					<a href="#mmenu" class="uk-navbar-toggle uk-hidden@m" aria-label="Toggle Navigation">
 						<span data-uk-navbar-toggle-icon></span>
 						<span class="uk-hidden" data-uk-close></span>

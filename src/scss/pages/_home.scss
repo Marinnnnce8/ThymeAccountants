@@ -1,7 +1,10 @@
 .template-home {
-    @media (min-width: $breakpoint-medium) {
-        .header .uk-logo {
-            margin-left: 140px;
+    @media (min-width: 1599px) {
+        .header {
+
+            .uk-logo {
+                margin-left: 155px;
+            }
         }
     }
 }

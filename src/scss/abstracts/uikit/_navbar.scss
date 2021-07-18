@@ -1,7 +1,92 @@
-.uk-navbar-nav {
+.uk-navbar-right {
+    .uk-button-text {
+        margin-left: 30px;
+
+        &::before,
+        &::after {
+            display: none;
+        }
+    }
+
+    .login-button {
+        svg {
+            width: 20px;
+            height: 20px;
+            color: $primary;
+        }
+
+        @include hover {
+            svg {
+                color: $grey-dark;
+            }
+        }
+    }
+}
+
+@mixin hook-navbar-nav-item {
+    text-transform: none;
+
     .uk-svg {
         width: 10px;
         height: 10px;
+        margin-left: 10px;
         color: $grey;
+    }
+
+    @media (min-width: $breakpoint-large) {
+        padding: 0 30px;
+    }
+}
+
+@mixin hook-navbar-nav-item-hover {
+    svg {
+        color: $secondary;
+    }
+}
+
+@mixin hook-navbar-dropdown {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    ul {
+        padding: 15px 24px 30px 20px;
+        background-color: $blue-light-2;
+        box-shadow: 0 10px 40px rgba($secondary, .1);
+        border-radius: 20px;
+        min-width: 278px;
+    }
+}
+
+@mixin hook-navbar-dropdown-nav-item {
+    transition: $transition;
+    padding: 8px 8px 8px 15px;
+    border-radius: 6px;
+    font-size: 17px;
+
+    &::before,
+    &::after {
+        display: none;
+    }
+}
+
+@mixin hook-navbar-dropdown-nav-item-hover {
+    background-color: $blue-3;
+}
+
+@mixin hook-navbar-dropdown-nav-item-active {
+    background-color: $blue-3;
+}
+
+.uk-navbar-toggle {
+    svg {
+        color: $primary;
+
+        rect {
+            width: 28px;
+
+            &:last-of-type {
+                width: 19px;
+            }
+        }
     }
 }

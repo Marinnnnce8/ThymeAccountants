@@ -222,7 +222,14 @@ $button-text-hover-color: $grey-dark;
 // Navbar
 //
 $navbar-nav-item-height: 0;
-
+$navbar-nav-item-font-size: 19px;
+$navbar-nav-item-color: $grey-dark;
+$navbar-nav-item-hover-color: $secondary;
+$navbar-nav-item-onclick-color: $secondary;
+$navbar-nav-item-active-color: $secondary;
+$navbar-nav-item-padding-horizontal: 15px;
+$navbar-dropdown-background: transparent;
+$navbar-dropdown-nav-item-color: $black;
 
 //
 // Overlay
