@@ -1,5 +1,5 @@
 p>a,
-ul:not(.uk-navbar-nav) li>a,
+ul:not(.uk-navbar-nav):not(.mm-listview) li>a,
 ol:not(.uk-navbar-nav) li>a {
     position: relative;
 

@@ -65,7 +65,12 @@ const main = {
 					'border-full',
 					'fullscreen',
 					'position-front',
+					'multiline',
+					"position-top",
+					"position-back"
 				],
+				autoHeight: true,
+				slidingSubmenus: true,
 			},
 			{
 				classNames: {

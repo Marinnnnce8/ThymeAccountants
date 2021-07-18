@@ -10,8 +10,6 @@
 			"name": "sectors",
 			"title": "Sectors",
 			"url": "sectors.html",
-			"iconRight": true,
-			"icon": "chevron-down",
 			"children": [
 				{
 					"name": "smes",
@@ -68,8 +66,6 @@
 		{
 			"name": "about",
 			"title": "About",
-			"iconRight": true,
-			"icon": "chevron-down",
 			"children": [
 				{
 					"name": "child",
@@ -80,8 +76,6 @@
 		{
 			"name": "resources",
 			"title": "Resources",
-			"iconRight": true,
-			"icon": "chevron-down",
 			"children": [
 				{
 					"name": "child",

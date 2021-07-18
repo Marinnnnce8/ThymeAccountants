@@ -1,0 +1,126 @@
+$itemsCounts: 10;
+
+.mm-menu {
+    box-shadow: 0 20px 60px rgba($secondary, .2);
+    padding: 33px 20px 0;
+
+    &::after {
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        height: 130px;
+        border-radius: 50%;
+        transform: translate(-50%, -83%);
+        background-color: $blue-light-2;
+        content: '';
+        width: 140%;
+    }
+}
+
+.mm-listview {
+
+    li {
+        a {
+            opacity: 0;
+            transition-duration: .6s;
+            transform: translateY(1rem);
+            transition: transform .3s .3s, opacity .3s;
+        }
+
+        &:first-of-type a {
+            transition-delay: 1.5s !important;
+        }
+
+        &:nth-of-type(2) a {
+            transition-delay: 1.55s !important;
+        }
+
+        &:nth-of-type(3) a {
+            transition-delay: 1.6s !important;
+        }
+
+        &:nth-of-type(4) a {
+            transition-delay: 1.65s !important;
+        }
+
+        &:last-of-type::after,
+        &:nth-last-child(2)::after {
+            display: none;
+        }
+    }
+}
+
+.mm-wrapper_opened {
+    .header {
+        background-color: $blue-light-2;
+    }
+
+    .mm-listview li a {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mm-panels {
+    padding-top: 40px;
+}
+
+.mm-panel::after {
+    height: 30px;
+
+    @media (min-width: $breakpoint-small) {
+        height: 40px;
+    }
+}
+
+.mm-listitem {
+    justify-content: center;
+    letter-spacing: .02em;
+
+    .uk-button-primary {
+        color: $white !important;
+        font-size: 16px;
+        letter-spacing: 0;
+        max-width: 280px;
+
+        svg {
+            color: $white !important;
+            margin-left: 20px;
+        }
+    }
+}
+
+.mm-navbar__title {
+    >span {
+        text-align: left;
+        width: 100%;
+        font-size: 14px;
+    }
+}
+
+.mm-listitem__text {
+    border-right: 0;
+    padding: 10px;
+
+    @media (min-width: $breakpoint-small) {
+        line-height: 30px;
+        font-size: 24px;
+    }
+}
+
+.mm-listitem__btn:not(.mm-listitem__text) {
+    border-left-width: 0;
+}
+
+.mm-panels .mm-panel:first-of-type .mm-navbar {
+    display: none !important;
+}
+
+.mm-navbar__btn:not(.mm-hidden)+.mm-navbar__title:last-child {
+    padding-right: 0;
+}
+
+.mm-btn_prev::before {
+    width: 7px;
+    height: 7px;
+}
