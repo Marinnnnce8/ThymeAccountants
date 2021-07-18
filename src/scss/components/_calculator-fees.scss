@@ -40,13 +40,13 @@
             padding-left: 38px;
             padding-right: 38px;
             z-index: 2;
-            max-width: 195px;
             width: 100%;
 
             &.uk-background-default {
                 padding-top: 18px;
                 padding-bottom: 18px;
                 font-size: 26px;
+                max-width: 200px;
             }
 
             &:not(.uk-background-default) {
@@ -60,13 +60,13 @@
             }
 
             &.yearly {
-                background-color: $primary-light-2;
 
                 &.uk-background-default {
                     border-color: $primary;
                 }
 
                 &:not(.uk-background-default) {
+                    background-color: $primary-light-2;
                     border-color: $grey;
                     color: $grey;
                 }
@@ -75,6 +75,14 @@
 
         .uk-h3 {
             margin-bottom: 27px;
+        }
+    }
+
+    @media (min-width: $breakpoint-large) {
+        margin-left: -60px;
+
+        >* {
+            padding-left: 60px;
         }
     }
 }

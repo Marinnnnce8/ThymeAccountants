@@ -16,6 +16,24 @@
     },
     "questions": [
         {
+            "title": "Questionnaire",
+            "isCalculator": true,
+            "questions": [
+                {
+                    "pageType": "calculator-questionnaire"
+                }
+            ],
+            "calculatorSteps": [
+                {
+                    "title": "Questionnaire",
+                    "active": true
+                },
+                {
+                    "title": "Results"
+                }
+            ]
+        },
+        {
             "title": "Results",
             "isCalculatorResults": true,
             "questions": [

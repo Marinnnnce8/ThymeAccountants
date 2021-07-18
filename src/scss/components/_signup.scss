@@ -76,7 +76,7 @@
 		}
 	}
 
-	.page-enquiry {
+	&:not(.calculator) .page-enquiry {
 
 		*+.uk-grid-margin,
 		.uk-grid+.uk-grid,
@@ -91,7 +91,7 @@
 		display: block;
 	}
 
-	@media (min-width: $breakpoint-medium) {
+	@media (min-width: $breakpoint-large) {
 		.page-bottom {
 			left: -60px;
 			width: calc(100% + 120px);

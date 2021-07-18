@@ -3,6 +3,14 @@
         margin-top: 65px;
     }
 
+    a {
+        transition: $transition;
+
+        svg {
+            transition: inherit;
+        }
+    }
+
     .calculator-list {
         &:not(.checked)>li {
             counter-increment: number-counter 1;
@@ -20,15 +28,6 @@
                     background-position: center;
                 }
             }
-
-            &:not(.list-within)::before {
-                transform: translateY(-50%);
-                top: 50%;
-            }
-
-            &.list-within>li::before {
-                top: 0;
-            }
         }
 
         >li {
@@ -42,7 +41,6 @@
             &::before {
                 position: absolute;
                 left: 0;
-                top: -3px;
                 width: 30px;
                 height: 30px;
                 background-color: $blue-light;
@@ -54,6 +52,14 @@
                 font-weight: $medium;
                 font-size: 18px;
                 line-height: 1.5;
+            }
+
+            &:not(.list-within)::before {
+                top: 2px;
+            }
+
+            &.list-within::before {
+                top: -3px;
             }
         }
     }
@@ -93,7 +99,7 @@
         }
     }
 
-    .uk-button-primary {
+    .uk-button-primary.button-grey {
         background-image: none;
         background-color: $light-grey;
         box-shadow: 0 10px 40px rgba($secondary, .1);
@@ -113,6 +119,11 @@
                 &::before {
                     font-size: 26px;
                 }
+            }
+
+            >li:not(.list-within)::before {
+                transform: translateY(-50%);
+                top: 50%;
             }
 
             >li {
@@ -143,6 +154,22 @@
     @media (max-width: $breakpoint-xsmall-max) {
         .uk-h3 {
             font-size: 16px;
+        }
+
+        .calculator-list {
+
+            &.checked {
+                >li {
+                    &::before {
+                        background-size: 11px;
+                    }
+                }
+            }
+        }
+
+        .checked-list li::before {
+            width: 35px;
+            background-size: 10px;
         }
     }
 }
