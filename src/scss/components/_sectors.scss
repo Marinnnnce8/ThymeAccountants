@@ -1,4 +1,31 @@
 .sectors {
+
+    .uk-card-default {
+        .uk-card-media-top::before {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $primary-light-2;
+            width: 30px;
+            height: 30px;
+            content: '';
+            display: block;
+            border-radius: 50%;
+            transition: .5s ease;
+            transform-origin: center center;
+            z-index: -1;
+        }
+
+        @include hover {
+            // filter: drop-shadow(0 10px 40px rgba($secondary, .3));
+
+            .uk-card-media-top::before {
+                transform: scale(18);
+            }
+        }
+    }
+
     .uk-button-text {
         font-size: 18px;
 

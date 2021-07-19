@@ -2,6 +2,7 @@
     border-radius: 10px;
     filter: drop-shadow(0 10px 40px rgba($secondary, .1));
     background-color: $white;
+    transition: $transition;
 }
 
 @mixin hook-card-default {
@@ -36,7 +37,6 @@
 
     @include hover {
 
-        // height: 570px;
         .uk-button-text {
             color: $grey-dark;
 

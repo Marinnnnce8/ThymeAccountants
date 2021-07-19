@@ -4,15 +4,20 @@ Vars
 const $menu = document.querySelector('.menu')
 const $items = document.querySelectorAll('.menu-item')
 let menuHeight = $menu.clientHeight
+let menuWidth = $menu.clientWidth
+let menuWidthHalf = $menu.clientWidth
 let itemHeight = $items[0].clientHeight
 let wrapHeight = $items.length * itemHeight
+let itemWidth = $items[0].clientWidth
+let wrapWidth = $items.length * itemWidth
 
 let scrollSpeed = 0
 let oldScrollY = 0
 let scrollY = 0
 let y = 0
-
-console.log(menuHeight);
+let oldScrollX = 0
+let scrollX = 0
+let x = 0
 
 
 /*--------------------
@@ -23,17 +28,6 @@ const lerp = (v0, v1, t) => {
 }
 
 
-// /*--------------------
-// Opacity
-// --------------------*/
-// const opacity = (menuHeight, $items) => {
-//   $items.opacity = 0;
-//   for (var i = 0; i < $items.length; i++) {
-
-//   }
-// }
-
-
 /*--------------------
 Dispose
 --------------------*/
@@ -42,11 +36,37 @@ const dispose = (scroll) => {
     y: (i) => {
       return i * itemHeight + scroll
     },
+    x: (i) => {
+      if ((menuWidth / 2) + (i * 33) <= menuWidth) {
+        return (menuWidth / 2) - (i * 33);
+      } else {
+        return (menuWidth / 2) + (i * 33);
+      }
+    },
+    opacity: (i) => {
+      if ((menuWidth / 2) + (i * 33) <= menuWidth) {
+        return  .4 + i / 10;
+      } else {
+        return  .4 - i / 10;
+      }
+    },
+    scale: (i) => {
+      if ((menuWidth / 2) + (i * 33) <= menuWidth) {
+        return  .4 + i / 10;
+      } else {
+        return  .4 - i / 10;
+      }
+    },
     modifiers: {
       y: (y) => {
         const s = gsap.utils.wrap(-itemHeight, wrapHeight - itemHeight, parseInt(y))
         return `${s}px`
-      }
+      },
+      // x: (x) => {
+      //   const s = gsap.utils.wrap(-itemWidth, wrapHeight - itemHeight, parseInt(x))
+      //   console.log(s);
+      //   return `${s}px`
+      // }
     }
   })
 }
@@ -58,6 +78,7 @@ Wheel
 --------------------*/
 const handleMouseWheel = (e) => {
   scrollY -= e.deltaY
+  // scrollX -= e.deltaX
 }
 
 
@@ -66,6 +87,7 @@ Touch
 --------------------*/
 let touchStart = 0
 let touchY = 0
+let touchX = 0
 let isDragging = false
 const handleTouchStart = (e) => {
   touchStart = e.clientY || e.touches[0].clientY
@@ -77,6 +99,9 @@ const handleTouchMove = (e) => {
   touchY = e.clientY || e.touches[0].clientY
   scrollY += (touchY - touchStart) * 2.5
   touchStart = touchY
+  // touchX = e.clientX || e.touches[0].clientX
+  scrollX += (touchX - touchStart) * 2.5
+  touchStart = touchX
 }
 const handleTouchEnd = () => {
   isDragging = false
@@ -118,18 +143,19 @@ const render = () => {
   requestAnimationFrame(render)
   y = lerp(y, scrollY, .1)
   dispose(y)
+  // x = lerp(x, scrollX, .1)
+  // dispose(x)
 
   scrollSpeed = y - oldScrollY
   oldScrollY = y
+
+  // scrollSpeed = x - oldScrollX
+  // oldScrollX = x
 
   gsap.to($items, {
     scale: 1 - Math.min(100, Math.abs(scrollSpeed)) * .005,
     rotate: scrollSpeed * 0.2
   })
-
-  ScrollTrigger.defaults({
-    markers: true
-  });
 
   gsap.registerPlugin(ScrollTrigger);
   const items = gsap.utils.toArray('.menu-item');
