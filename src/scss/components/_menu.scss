@@ -1,9 +1,40 @@
 .menu {
+    overflow: hidden;
+    cursor: grab;
+    min-height: 597px;
+
+    &.is-dragging {
+        cursor: grabbing;
+    }
+
+    &-item {
+        counter-increment: count;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    ul {
+        vertical-align: baseline;
+    }
+
+    li {
+        padding: 13px 0;
+    }
+
     // ul {
     //     @include on-circle($item-count: 10, $circle-size: 590px, $item-size: 6em);
     // }
 
+    // &-wrapper {
+    //     min-height: 597px;
+    //     overflow-y: hidden;
+    // }
+
     a {
+        position: relative;
         background-color: $white;
         color: $grey-dark;
         font-weight: $semi-bold;
@@ -13,7 +44,9 @@
         font-size: 12px;
         line-height: 1.5;
         display: inline-flex;
+        user-select: none;
         align-items: center;
+        z-index: 1;
 
         span {
             width: 35px;

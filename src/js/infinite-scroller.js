@@ -12,6 +12,8 @@ let oldScrollY = 0
 let scrollY = 0
 let y = 0
 
+console.log(menuHeight);
+
 
 /*--------------------
 Lerp
@@ -19,6 +21,17 @@ Lerp
 const lerp = (v0, v1, t) => {
   return v0 * (1 - t) + v1 * t
 }
+
+
+// /*--------------------
+// Opacity
+// --------------------*/
+// const opacity = (menuHeight, $items) => {
+//   $items.opacity = 0;
+//   for (var i = 0; i < $items.length; i++) {
+
+//   }
+// }
 
 
 /*--------------------
@@ -113,5 +126,60 @@ const render = () => {
     scale: 1 - Math.min(100, Math.abs(scrollSpeed)) * .005,
     rotate: scrollSpeed * 0.2
   })
+
+  ScrollTrigger.defaults({
+    markers: true
+  });
+
+  gsap.registerPlugin(ScrollTrigger);
+  const items = gsap.utils.toArray('.menu-item');
+
+  // items.forEach(item => {
+  //   gsap.from(item, {
+  //     opacity: 0.2,
+  //     y: 30,
+  //     scrollTrigger: {
+  //       trigger: ('.menu'),
+  //       // start: "0% 0%",
+  //       // end: "0% 20%",
+  //       // scrub: 1,
+  //       markers: true,
+  //     }
+  //   });
+  //   // gsap.to(item, {
+  //   //   opacity: 0,
+  //   //   scrollTrigger: {
+  //   //     trigger: item,
+  //   //     start: "0% 80%",
+  //   //     end: "0% 100%",
+  //   //     scrub: 1,
+  //   //     markers: true,
+  //   //   }
+  //   // });
+  // });
+
+  // document.querySelectorAll('.menu-item').forEach(function (elem) {
+  //   gsap.from(elem, {
+  //     opacity: 1,
+  //     scrollTrigger: {
+  //       trigger: elem,
+  //       start: "0% 0%",
+  //       end: "0% 20%",
+  //       scrub: 1,
+  //       markers: false,
+  //     }
+  //   })
+  //   gsap.to(elem, {
+  //     opacity: 0,
+  //     scrollTrigger: {
+  //       trigger: elem,
+  //       start: "0% 80%",
+  //       end: "0% 100%",
+  //       scrub: 1,
+  //       markers: false,
+  //     }
+  //   });
+
+  // })
 }
 render()

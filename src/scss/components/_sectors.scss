@@ -1,0 +1,10 @@
+.sectors {
+    .uk-button-text {
+        font-size: 18px;
+
+        &::before,
+        &::after {
+            display: none;
+        }
+    }
+}

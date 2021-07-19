@@ -3,6 +3,8 @@
 		{{#*inline "out"}}
 		{{#if heading}}
 			<h2>{{heading}}</h2>
+		{{else if srHeading}}
+			<h2 class="sr-only">{{srHeading}}</h2>		
 		{{/if}}
 		{{#> out id="" class="" heading="" size=""}}{{/out}}
 		{{/inline}}

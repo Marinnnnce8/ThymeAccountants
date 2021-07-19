@@ -62,3 +62,7 @@ body {
 .checked-list {
 	@include checked-list-items;
 }
+
+.sr-only {
+	@include visually-hidden;
+}

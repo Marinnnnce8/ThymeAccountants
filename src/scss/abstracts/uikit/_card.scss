@@ -5,7 +5,11 @@
 }
 
 @mixin hook-card-default {
+
     // padding-bottom: 85px;
+    >a {
+        z-index: 2;
+    }
 
     .uk-button-text {
 
@@ -17,7 +21,6 @@
 
     p {
         color: $grey;
-        display: none;
     }
 
     .uk-text-small {
@@ -32,7 +35,15 @@
     }
 
     @include hover {
-        height: 570px;
+
+        // height: 570px;
+        .uk-button-text {
+            color: $grey-dark;
+
+            svg {
+                color: $grey-dark;
+            }
+        }
     }
 
     @media (max-width: $breakpoint-small-max) {
@@ -43,7 +54,7 @@
 }
 
 @mixin hook-card-media-top {
-    padding: 28px 23px 60px;
+    padding: 28px 23px 20px;
     min-height: 290px;
 }
 
@@ -77,7 +88,7 @@
 }
 
 .uk-card-body {
-    padding: 5px 33px 30px;
+    padding: 5px 33px 25px;
     min-height: 0;
 }
 

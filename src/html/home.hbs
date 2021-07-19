@@ -3,13 +3,25 @@
 
 	{{> homeBanner}}
 
-	{{#> ukSection size="large" ukScrollspy="cls: uk-animation-slide-bottom; target: .uk-card; delay: 350;"}}
-		{{#*inline "out"}}
-		{{> nbItems items=items.children}}
-		{{/inline}}
-	{{/ukSection}}
+	<section data-uk-scrollspy="cls: uk-animation-slide-bottom; target: .uk-card; delay: 350;" id="sectors-section" class="sectors uk-section">
+		<div class="uk-container">
+			{{#> ukGrid class="uk-grid-small uk-child-width-1-2@m uk-flex-wrap uk-flex-bottom uk-margin-medium-bottom"}}
+				{{#*inline "cells"}}
+					<div>
+						<h2>No matter what business you’re in, <span class="underlined uk-text-secondary">we can help you.</span></h2>
+					</div>
+					<div class="uk-text-right@m">
+						{{>ukButton link="#" style="text" size="large" label="View all sectors" icon="arrow-right"}}
+					</div>
+				{{/inline}}
+			{{/ukGrid}}		
+		</div>
+		<div class="uk-container uk-container-large">	
+			{{> nbItems items=items.children}}
+		</div>
+	</section>
 	
-	{{#> ukSection}}
+	{{#> ukSection id="find-out-more-section"}}
 		{{#*inline "out"}}
 			<div class="uk-border-rounded find-out-more left uk-text-center uk-position-relative uk-flex uk-flex-middle uk-overlow-hidden" data-uk-parallax="opacity: 0,1; y: 100,0; viewport: 0.5">
 				<a href="#" class="uk-position-cover" aria-label="Contact us"></a>
@@ -20,11 +32,11 @@
 		{{/inline}}
 	{{/ukSection}}
 
-	{{>notification}}
+	{{>notification id="notification-section"}}
 
-	{{>reviews}}
+	{{>reviews id="reviews-section"}}
 		
-	{{#> ukSection}}
+	{{#> ukSection id="find-out-more-call-section"}}
 		{{#*inline "out"}}
 			<div class="uk-border-rounded find-out-more right uk-text-center uk-position-relative uk-flex uk-flex-middle uk-overlow-hidden" data-uk-parallax="opacity: 0,1; y: 100,0; viewport: 0.5">
 				<a href="#" class="uk-position-cover" aria-label="Contact us"></a>
@@ -35,7 +47,7 @@
 		{{/inline}}
 	{{/ukSection}}
 
-	{{>updates}}
+	{{>updates id="updates-section"}}
 
 	{{>signupBanner}}
 

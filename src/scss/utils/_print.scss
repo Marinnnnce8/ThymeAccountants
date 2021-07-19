@@ -6,7 +6,49 @@
 	.uk-breadcrumb,
 	.uk-pagination,
 	.uk-modal,
+	.uk-card-media-top,
+	.find-out-more,
+	.notification,
+	.reviews,
+	.updates,
+	.services,
+	.uk-card-footer,
+	.signup-banner-box>svg,
+	.signup,
+	figure,
+	.gallery,
+	.slideshow,
+	.lightbox,
+	.share,
+	.uk-alert svg,
+	.banner-home .uk-grid>div:last-of-type,
+	.banner .uk-flex>div:last-of-type,
 	.nb-form {
 		display: none !important;
+	}
+
+	.banner-home,
+	.banner,
+	.uk-section,
+	.signup-banner-box {
+		padding: 20px 0;
+	}
+
+	.banner-home {
+
+		.uk-grid>div:first-of-type {
+			width: 100% !important;
+		}
+	}
+
+	.banner {
+
+		.uk-flex>div:first-of-type {
+			width: 100% !important;
+		}
+	}
+
+	.uk-text-secondary {
+		color: $black !important;
 	}
 }

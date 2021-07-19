@@ -1,0 +1,14 @@
+.banner-slider {
+    &-wrap {
+        min-height: 597px;
+        overflow: hidden;
+    }
+
+    a {
+
+        &::after,
+        &::before {
+            display: none;
+        }
+    }
+}

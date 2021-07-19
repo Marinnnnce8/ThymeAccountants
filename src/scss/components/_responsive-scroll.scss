@@ -2,7 +2,6 @@
     position: absolute;
     top: 50%;
     left: -50px;
-    // left: 0;
     transform: translateY(-50%);
     width: 18px;
 
@@ -101,7 +100,7 @@
         transform: translatex(6px) rotate(-45deg);
         transform-origin: top left;
         animation: responsive-scroll-rwd infinite 2.25s;
-        transition: 4.5s ease;
+        // transition: 4.5s ease;
     }
 
     &.is-notTouch {

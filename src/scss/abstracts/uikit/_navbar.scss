@@ -81,8 +81,6 @@
 
 @mixin hook-navbar-dropdown-nav-item-hover {
     background-color: $blue-3;
-
-
 }
 
 @mixin hook-navbar-dropdown-nav-item-active {
@@ -102,7 +100,6 @@
         }
     }
 }
-
 
 @mixin hook-navbar-toggle {
     margin-left: 13px;
