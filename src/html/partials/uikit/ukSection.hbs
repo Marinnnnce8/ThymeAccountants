@@ -1,4 +1,4 @@
-<section class="uk-section{{#if sectionClass}} {{sectionClass}}{{/if}}" id="{{#if id}}{{ida id}}{{else}}section-{{page.name}}{{/if}}">
+<section class="uk-section{{#if sectionClass}} {{sectionClass}}{{/if}}" id="{{#if id}}{{ida id}}{{else}}section-{{page.name}}{{/if}}"{{#if ukScrollspy}} data-uk-scrollspy="{{ukScrollspy}}"{{/if}}>
 	{{#> ukContainer size=(default size ukContainer) class=(default class "")}}
 		{{#*inline "out"}}
 		{{#if heading}}

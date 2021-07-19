@@ -15,9 +15,16 @@
 			display: block;
 			height: auto;
 			border-radius: 10px;
+			transition: $transition;
 
 			@media (max-width: $breakpoint-mobile) {
 				width: 100%;
+			}
+		}
+
+		@include hover {
+			img {
+				transform: scale3d(.95, .95, 1);
 			}
 		}
 	}

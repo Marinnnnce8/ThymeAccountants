@@ -5,7 +5,7 @@
 }
 
 @mixin hook-card-default {
-    padding-bottom: 85px;
+    // padding-bottom: 85px;
 
     .uk-button-text {
 
@@ -17,6 +17,7 @@
 
     p {
         color: $grey;
+        display: none;
     }
 
     .uk-text-small {
@@ -30,9 +31,9 @@
         margin-bottom: 22px;
     }
 
-    // @include hover {
-    //     height: 570px;
-    // }
+    @include hover {
+        height: 570px;
+    }
 
     @media (max-width: $breakpoint-small-max) {
         p {

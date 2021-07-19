@@ -3,7 +3,7 @@
 
 	{{> homeBanner}}
 
-	{{#> ukSection heading="Internal Pages" size="large"}}
+	{{#> ukSection size="large" ukScrollspy="cls: uk-animation-slide-bottom; target: .uk-card; delay: 350;"}}
 		{{#*inline "out"}}
 		{{> nbItems items=items.children}}
 		{{/inline}}
@@ -11,7 +11,7 @@
 	
 	{{#> ukSection}}
 		{{#*inline "out"}}
-			<div class="uk-border-rounded find-out-more left uk-text-center uk-position-relative uk-flex uk-flex-middle uk-overlow-hidden">
+			<div class="uk-border-rounded find-out-more left uk-text-center uk-position-relative uk-flex uk-flex-middle uk-overlow-hidden" data-uk-parallax="opacity: 0,1; y: 100,0; viewport: 0.5">
 				<a href="#" class="uk-position-cover" aria-label="Contact us"></a>
 				<img src="./img/lets-talk-mob.png" width="173" height="189" alt="Let's talk" loading="lazy">
 				<h2 class="uk-margin-remove">Want to find out more? <span class="underlined">Let’s talk</span>.</h2>
@@ -26,7 +26,7 @@
 		
 	{{#> ukSection}}
 		{{#*inline "out"}}
-			<div class="uk-border-rounded find-out-more right uk-text-center uk-position-relative uk-flex uk-flex-middle uk-overlow-hidden">
+			<div class="uk-border-rounded find-out-more right uk-text-center uk-position-relative uk-flex uk-flex-middle uk-overlow-hidden" data-uk-parallax="opacity: 0,1; y: 100,0; viewport: 0.5">
 				<a href="#" class="uk-position-cover" aria-label="Contact us"></a>
 				<img src="./img/lets-talk-mob-2.png" width="173" height="189" alt="Let's talk" loading="lazy">
 				<h2 class="uk-h3 uk-margin-remove">Give us a call and we can chat through your requirements. <span class="underlined">Let’s talk</span>.</h2>
