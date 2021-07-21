@@ -3,8 +3,8 @@ Vars
 --------------------*/
 const $isFF = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
 if (!$isFF) {
-  const $menu = document.querySelector('.menu')
-  const $items = document.querySelectorAll('.menu-item')
+  const $menu = document.querySelector('.banner-menu')
+  const $items = document.querySelectorAll('.banner-menu-item')
   let itemHeight = $items[0].clientHeight
   let wrapHeight = $items.length * itemHeight
 
@@ -163,8 +163,8 @@ if (!$isFF) {
     })
 
     gsap.registerPlugin(ScrollTrigger);
-    const menu = document.querySelectorAll('.menu')[0];
-    const menuItems = gsap.utils.toArray('.menu-items');
+    const menu = document.querySelectorAll('.banner-menu')[0];
+    const menuItems = gsap.utils.toArray('.banner-menu-items');
 
     menuItems.forEach((item) => {
       gsap.to(item, {
