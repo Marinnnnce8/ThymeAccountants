@@ -60,7 +60,7 @@
 	}
 
 	.page {
-		filter: drop-shadow(0 10px 40px rgba($secondary, .1));
+		box-shadow: 0 10px 40px rgba($secondary, .2);
 		background-color: $white;
 		padding: 20px 15px 0;
 		margin-top: 15px;

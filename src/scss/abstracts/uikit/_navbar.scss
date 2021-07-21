@@ -1,3 +1,7 @@
+@mixin hook-navbar {
+    z-index: 11;
+}
+
 .uk-navbar-right {
     .uk-button-text {
         margin-left: 30px;
@@ -116,7 +120,7 @@
         height: 1.6px;
         background-color: $primary;
         width: 28px;
-        border-radius: 50%;
+        border-radius: 2px;
 
         &::before,
         &::after {
@@ -125,6 +129,7 @@
             height: 1.6px;
             background-color: $primary;
             left: 0;
+            transition: $transition;
         }
 
         &::before {
@@ -144,13 +149,17 @@
 
     &.uk-open {
 
-        span::before,
-        span::after {
-            opacity: 0;
-        }
-
         >span {
             background-color: transparent;
+
+            &::after {
+                transform: rotate(-45deg) translate(15%, -250%);
+                width: 28px;
+            }
+
+            &::before {
+                transform: rotate(45deg) translate(19%, 205%);
+            }
         }
     }
 

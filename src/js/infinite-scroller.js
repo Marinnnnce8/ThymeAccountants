@@ -36,27 +36,23 @@ const dispose = (scroll) => {
     y: (i) => {
       return i * itemHeight + scroll
     },
-    x: (i) => {
-      if ((menuWidth / 2) + (i * 33) <= menuWidth) {
-        return (menuWidth / 2) - (i * 33);
-      } else {
-        return (menuWidth / 2) + (i * 33);
-      }
-    },
-    opacity: (i) => {
-      if ((menuWidth / 2) + (i * 33) <= menuWidth) {
-        return  .4 + i / 10;
-      } else {
-        return  .4 - i / 10;
-      }
-    },
-    scale: (i) => {
-      if ((menuWidth / 2) + (i * 33) <= menuWidth) {
-        return  .4 + i / 10;
-      } else {
-        return  .4 - i / 10;
-      }
-    },
+    // x: (i) => {
+    //   return (menuWidth / 2) - (i * 25);
+    // },
+    // opacity: (i) => {
+    //   if ((menuWidth / 2) + (i * 25) <= menuWidth) {
+    //     return .4 + i / 10;
+    //   } else {
+    //     return .4 - i / 10;
+    //   }
+    // },
+    // scale: (i) => {
+    //   if ((menuWidth / 2) + (i * 25) <= menuWidth) {
+    //     return .4 + i / 10;
+    //   } else {
+    //     return .4 - i / 10;
+    //   }
+    // },
     modifiers: {
       y: (y) => {
         const s = gsap.utils.wrap(-itemHeight, wrapHeight - itemHeight, parseInt(y))
@@ -78,7 +74,7 @@ Wheel
 --------------------*/
 const handleMouseWheel = (e) => {
   scrollY -= e.deltaY
-  // scrollX -= e.deltaX
+  scrollX -= e.deltaX
 }
 
 
@@ -100,8 +96,8 @@ const handleTouchMove = (e) => {
   scrollY += (touchY - touchStart) * 2.5
   touchStart = touchY
   // touchX = e.clientX || e.touches[0].clientX
-  scrollX += (touchX - touchStart) * 2.5
-  touchStart = touchX
+  // scrollX += (touchX - touchStart) * 2.5
+  // touchStart = touchX
 }
 const handleTouchEnd = () => {
   isDragging = false
@@ -143,14 +139,12 @@ const render = () => {
   requestAnimationFrame(render)
   y = lerp(y, scrollY, .1)
   dispose(y)
-  // x = lerp(x, scrollX, .1)
+  // console.log(y);
+  // x = changeDirection(x, menuWidth)
   // dispose(x)
 
   scrollSpeed = y - oldScrollY
   oldScrollY = y
-
-  // scrollSpeed = x - oldScrollX
-  // oldScrollX = x
 
   gsap.to($items, {
     scale: 1 - Math.min(100, Math.abs(scrollSpeed)) * .005,
@@ -158,53 +152,36 @@ const render = () => {
   })
 
   gsap.registerPlugin(ScrollTrigger);
-  const items = gsap.utils.toArray('.menu-item');
+  const menu = document.querySelectorAll('.menu')[0];
+  const menuItems = document.querySelectorAll('.menu-items');
 
-  // items.forEach(item => {
-  //   gsap.from(item, {
-  //     opacity: 0.2,
-  //     y: 30,
-  //     scrollTrigger: {
-  //       trigger: ('.menu'),
-  //       // start: "0% 0%",
-  //       // end: "0% 20%",
-  //       // scrub: 1,
-  //       markers: true,
-  //     }
-  //   });
-  //   // gsap.to(item, {
-  //   //   opacity: 0,
-  //   //   scrollTrigger: {
-  //   //     trigger: item,
-  //   //     start: "0% 80%",
-  //   //     end: "0% 100%",
-  //   //     scrub: 1,
-  //   //     markers: true,
-  //   //   }
-  //   // });
-  // });
+  // document.querySelectorAll('.menu-item').forEach((item) => {
+    for (var i = 0; i < menuItems.length; i++) {
 
-  // document.querySelectorAll('.menu-item').forEach(function (elem) {
-  //   gsap.from(elem, {
-  //     opacity: 1,
-  //     scrollTrigger: {
-  //       trigger: elem,
-  //       start: "0% 0%",
-  //       end: "0% 20%",
-  //       scrub: 1,
-  //       markers: false,
-  //     }
-  //   })
-  //   gsap.to(elem, {
-  //     opacity: 0,
-  //     scrollTrigger: {
-  //       trigger: elem,
-  //       start: "0% 80%",
-  //       end: "0% 100%",
-  //       scrub: 1,
-  //       markers: false,
-  //     }
-  //   });
+      gsap.to(item[i], {
+        scrollTrigger: {
+          trigger: item,
+          x: menuWidth / 2 - i * 30,
+          scrub: false,
+          markers: false
+        },
+        duration: 0.8,
+        opacity: 1,
+        // immediateRender: false,
+      })
+
+      gsap.to(item[i], {
+        scrollTrigger: {
+          trigger: menu,
+          x: 0,
+          scrub: false,
+          markers: false,
+        },
+        duration: 0.8,
+        opacity: 0.2,
+        // immediateRender: false,
+      })
+    }
 
   // })
 }

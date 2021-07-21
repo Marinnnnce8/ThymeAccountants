@@ -46,7 +46,13 @@ body {
 		right: 20px;
 	}
 
-	@media (min-width: $breakpoint-medium) {
+	@media (min-width: $breakpoint-small) and (max-width: 1400px) {
+		&.scroll-up {
+			bottom: 125px;
+		}
+	}
+
+	@media (min-width: 1401px) {
 		&.scroll-up {
 			bottom: 56px;
 			right: 34px;
