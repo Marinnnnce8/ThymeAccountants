@@ -34,18 +34,12 @@
 		padding: 20px 0;
 	}
 
-	.banner-home {
-
-		.uk-grid>div:first-of-type {
-			width: 100% !important;
-		}
+	.banner-home .uk-grid>div:first-of-type {
+		width: 100% !important;
 	}
 
-	.banner {
-
-		.uk-flex>div:first-of-type {
-			width: 100% !important;
-		}
+	.banner .uk-flex>div:first-of-type {
+		width: 100% !important;
 	}
 
 	.uk-text-secondary {

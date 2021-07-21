@@ -1,11 +1,9 @@
 .services {
-
     li:not(:last-of-type) {
         margin-right: 2px;
     }
 
     @media (min-width: $breakpoint-medium) {
-
         li:not(:last-of-type) {
             margin-right: 80px;
         }

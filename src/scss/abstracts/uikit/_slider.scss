@@ -3,7 +3,7 @@
     blockquote {
         background-color: transparent;
         border-radius: 0;
-        filter: none;
+        box-shadow: none;
         overflow: visible;
 
         &::before {

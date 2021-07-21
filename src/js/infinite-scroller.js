@@ -161,38 +161,6 @@ if (!$isFF) {
       scale: 1 - Math.min(100, Math.abs(scrollSpeed)) * .005,
       rotate: scrollSpeed * 0.2
     })
-
-    gsap.registerPlugin(ScrollTrigger);
-    const menu = document.querySelectorAll('.banner-menu')[0];
-    const menuItems = gsap.utils.toArray('.banner-menu-items');
-
-    menuItems.forEach((item) => {
-      gsap.to(item, {
-        scrollTrigger: {
-          trigger: menu,
-          start: "20% 50%",
-          end: "20% 50%",
-          scrub: false,
-          markers: true
-        },
-        duration: 0.8,
-        opacity: 1,
-        immediateRender: false,
-      })
-
-      gsap.to(item, {
-        scrollTrigger: {
-          trigger: menu,
-          start: "20% 50%",
-          end: "20% 50%",
-          scrub: false,
-          markers: true,
-        },
-        duration: 0.8,
-        opacity: 0.2,
-        immediateRender: false,
-      })
-    })
   }
   render()
 }

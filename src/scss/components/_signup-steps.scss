@@ -27,11 +27,8 @@
             line-height: 1.5;
         }
 
-        &:not(.signup-step-completed) {
-
-            svg {
-                opacity: 0;
-            }
+        &:not(.signup-step-completed) svg {
+            opacity: 0;
         }
 
         &:not(.signup-step-active) {
@@ -48,10 +45,8 @@
             }
         }
 
-        &.signup-step-completed {
-            svg {
-                opacity: 1;
-            }
+        &.signup-step-completed svg {
+            opacity: 1;
         }
     }
 

@@ -11,10 +11,8 @@
     }
 }
 
-.mm-btn_next {
-    &::after {
-        right: 13px;
-    }
+.mm-btn_next::after {
+    right: 13px;
 }
 
 .mm-btn_prev {
@@ -75,7 +73,7 @@ html:not(.show-menu) .mmenu-overlay {
 }
 
 .uk-navbar-item {
-    transition: color 0.3s;
+    transition: color .3s;
 }
 
 .mm-navbar_sticky {
@@ -113,13 +111,8 @@ html:not(.show-menu) .mmenu-overlay {
     border-left-width: 0;
 }
 
-.mm-panels {
-
-    >div:first-child {
-        >.mm-navbar_sticky {
-            display: none;
-        }
-    }
+.mm-panels>div:first-child>.mm-navbar_sticky {
+    display: none;
 }
 
 .mm-panel {

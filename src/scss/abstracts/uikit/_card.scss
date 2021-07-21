@@ -1,13 +1,11 @@
 @mixin hook-card {
     border-radius: 10px;
-    filter: drop-shadow(0 10px 40px rgba($secondary, .1));
+    box-shadow: 0 10px 40px rgba($secondary, .1);
     background-color: $white;
     transition: $transition;
 }
 
 @mixin hook-card-default {
-
-    // padding-bottom: 85px;
     >a {
         z-index: 2;
     }
@@ -85,14 +83,17 @@
 
 @mixin hook-card-default-header {
     padding: 10px 26px 5px 33px;
+    position: relative;
 }
 
 .uk-card-body {
     padding: 5px 33px 25px;
     min-height: 0;
+    position: relative;
 }
 
 @mixin hook-card-default-footer {
+    position: relative;
     padding: 5px 33px 40px;
 }
 

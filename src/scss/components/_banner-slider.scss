@@ -50,6 +50,20 @@
     @media (min-width: $breakpoint-medium) {
         &-wrap {
             min-height: 597px;
+
+            &::after {
+                background-image: linear-gradient(to top, transparent, rgba($blue-light, .5), rgba($blue-light, .6), rgba($blue-light, .7), rgba($blue-light, .8));
+                height: 75px;
+                position: absolute;
+                left: 0;
+                width: 100%;
+                content: '';
+                background-color: transparent;
+                display: block;
+                pointer-events: none;
+                z-index: 1;
+                top: 0;
+            }
         }
 
         &-images {

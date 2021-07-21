@@ -1,5 +1,4 @@
 .sectors {
-
     .uk-card-default {
         .uk-card-media-top::before {
             position: absolute;
@@ -14,11 +13,11 @@
             border-radius: 50%;
             transition: .5s ease;
             transform-origin: center center;
-            z-index: -1;
+            z-index: 0;
         }
 
         @include hover {
-            filter: drop-shadow(0 10px 40px rgba($secondary, .2));
+            box-shadow: 0 10px 40px rgba($secondary, .2);
 
             .uk-card-media-top::before {
                 transform: scale(18);
