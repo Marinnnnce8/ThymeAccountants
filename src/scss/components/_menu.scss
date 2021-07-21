@@ -21,17 +21,8 @@
     }
 
     li {
-        padding: 13px 0;
+        padding: 7px 25px;
     }
-
-    // ul {
-    //     @include on-circle($item-count: 10, $circle-size: 590px, $item-size: 6em);
-    // }
-
-    // &-wrapper {
-    //     min-height: 597px;
-    //     overflow-y: hidden;
-    // }
 
     a {
         position: relative;
@@ -67,7 +58,7 @@
         }
     }
 
-    @media (min-width: $breakpoint-small) {
+    @media (min-width: $breakpoint-medium) {
         min-height: 597px;
     }
 }

@@ -1,0 +1,15 @@
+// Firefox only
+@-moz-document url-prefix() {
+    .menu {
+        overflow-y: visible;
+
+        ul {
+            overflow-y: visible;
+            height: 100%;
+        }
+
+        &-item {
+            position: relative;
+        }
+    }
+}

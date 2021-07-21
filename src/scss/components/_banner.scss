@@ -5,7 +5,7 @@
     }
 
     &-home {
-        padding: 12px 0 100px;
+        padding: 12px 0 30px;
 
         h1>span {
             font-weight: $semi-bold;
@@ -28,7 +28,11 @@
         }
 
         &-home {
-            padding: 73px 0 115px;
+            padding: 73px 0 45px;
+
+            h1 {
+                padding-right: 50px;
+            }
 
             .checked-list {
                 margin-left: 10px;

@@ -1,7 +1,7 @@
 .responsive-scroll {
     position: absolute;
-    top: 50px;
-    left: 20px;
+    top: -45px;
+    left: 0;
     transform: translateY(-50%);
     width: 18px;
 
@@ -105,8 +105,17 @@
         }
     }
 
+    @media (min-width: $breakpoint-small) {
+        left: 30px;
+        top: 5%;
+    }
+
     @media (min-width: $breakpoint-medium) {
         left: -50px;
+        top: 15%;
+    }
+
+    @media (min-width: $breakpoint-large) {
         top: 50%;
     }
 }

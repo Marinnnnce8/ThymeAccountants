@@ -1,8 +1,13 @@
 .template-complete-your-order {
 
-    .uk-text-small,
-    .uk-button-text {
+
+    .signup .uk-text-small,
+    .signup .uk-button-text {
         color: $blue;
+
+        @include hover {
+            color: $primary;
+        }
     }
 
     .uk-container-small {

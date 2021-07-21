@@ -168,6 +168,7 @@
         }
 
         .checked-list li::before {
+            min-width: 35px;
             width: 35px;
             background-size: 10px;
         }
