@@ -1,7 +1,22 @@
 .banner-slider {
     &-wrap {
-        min-height: 597px;
+        min-height: 470px;
         overflow: hidden;
+    }
+
+    &-images {
+        position: absolute;
+        bottom: 133px;
+        right: -28px;
+
+        img {
+            max-width: 115px;
+
+            &:last-of-type {
+                top: -30px;
+                right: 33px;
+            }
+        }
     }
 
     a {
@@ -10,5 +25,59 @@
         &::before {
             display: none;
         }
+    }
+
+    @media (min-width: $breakpoint-mobile) {
+        &-images {
+
+            img {
+                max-width: 250px;
+            }
+        }
+    }
+
+    @media (min-width: $breakpoint-small) {
+        &-wrap {
+            min-height: 597px;
+        }
+
+        &-images {
+            bottom: 65px;
+
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+
+    @media (min-width: $breakpoint-medium) {
+        &-images {
+            right: -37px;
+        }
+    }
+
+    @media (min-width: 1400px) {
+        &-images {
+            right: -90px;
+        }
+    }
+
+    @media (max-width: $breakpoint-small-max) {
+        &-wrap {
+            width: 100vw;
+            left: -20px;
+            max-width: 465px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        // img.uk-position-cover {
+        //     top: 50%;
+        //     transform: translate(-50%, -50%);
+        //     bottom: auto;
+        //     max-width: 465px;
+        //     left: 50%;
+        //     right: auto;
+        // }
     }
 }

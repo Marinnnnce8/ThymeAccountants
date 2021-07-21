@@ -1,0 +1,33 @@
+@keyframes responsive-scroll {
+    0% {
+        margin-top: 25%;
+        opacity: 0;
+    }
+
+    33% {
+        margin-top: 36.55%;
+        opacity: 1;
+    }
+
+    100% {
+        margin-top: 60%;
+        opacity: 0;
+    }
+}
+
+@keyframes responsive-scroll-rwd {
+    0% {
+        margin-top: 75%;
+        opacity: 0;
+    }
+
+    33% {
+        margin-top: 58.5%;
+        opacity: 1;
+    }
+
+    100% {
+        margin-top: 25%;
+        opacity: 0;
+    }
+}

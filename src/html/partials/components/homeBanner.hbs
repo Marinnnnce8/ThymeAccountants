@@ -19,11 +19,15 @@
         </div>
         <div>
             <div class="banner-slider uk-position-relative">
-                <div class="responsive-scroll-box uk-text-secondary">
-                    <div class="responsive-scroll">
+                <div class="responsive-scroll uk-text-secondary">
+                    <div class="responsive-scroll-box">
                         <span class="scroll"></span>
                     </div>
                     {{> renderIcon name="chevron-down" class="uk-position-bottom-center"}}
+                </div>
+                <div class="uk-flex uk-flex-column uk-flex-bottom uk-position-z-index banner-slider-images">
+                    <img src="./img/accountancy-software.png" loading="lazy" width="359" height="338" alt="Accountancy Software">
+                    <img class="uk-position-relative uk-visible@m" src="./img/client-review.png" loading="lazy" width="265" height="123" alt="Client Review">
                 </div>
                 <div class="banner-slider-wrap uk-position-relative">
                     <img src="./img/banner-slider.png" loading="lazy" width="582" height="579" alt="Accountancy Services" class="uk-position-cover">
@@ -111,21 +115,22 @@
                             </li> --}}
                         </ul>
                     </div>
-                    <ul class="uk-list checked-list uk-margin-remove-top uk-margin-remove-bottom uk-hidden@m">
-                        <li>Low, fixed monthly fees</li>
-                        <li>No hidden charges</li>
-                        <li>Secure and simple accountancy software</li>
-                        <li>Friendly and experienced team</li>
-                        <li>Live tax calculation – no surprises!</li>
-                    </ul>
-                    <div class="uk-hidden@m uk-margin-medium-top">
-                        {{> ukButton icon="arrow-right" label="Get an instant quote" style="primary" size="large"}}
-                    </div>
                 </div>
             </div>
         </div>
         {{/inline}}
         {{/ukGrid}}
+        <ul class="uk-list checked-list uk-margin-remove-top uk-margin-remove-bottom uk-hidden@m">
+            <li>Low, fixed monthly fees</li>
+            <li>No hidden charges</li>
+            <li>Secure and simple accountancy software</li>
+            <li>Friendly and experienced team</li>
+            <li>Live tax calculation – no surprises!</li>
+        </ul>
+        <img class="uk-hidden@m uk-margin-medium-top" src="./img/client-review.png" loading="lazy" width="265" height="123" alt="Client Review">
+        <div class="uk-hidden@m uk-margin-medium-top">
+            {{> ukButton icon="arrow-right" label="Get an instant quote" style="primary" size="large"}}
+        </div>
     {{/inline}}
     {{/ukContainer}}
 </div>

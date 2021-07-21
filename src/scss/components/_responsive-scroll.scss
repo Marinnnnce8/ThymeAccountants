@@ -1,7 +1,7 @@
-.responsive-scroll-box {
+.responsive-scroll {
     position: absolute;
-    top: 50%;
-    left: -50px;
+    top: 50px;
+    left: 20px;
     transform: translateY(-50%);
     width: 18px;
 
@@ -10,115 +10,103 @@
         height: 10px;
         top: calc(100% + 5px);
     }
-}
 
-.responsive-scroll {
-    @keyframes responsive-scroll {
-        0% {
-            margin-top: 25%;
-            opacity: 0;
-        }
-
-        33% {
-            margin-top: 36.55%;
-            opacity: 1;
-        }
-
-        100% {
-            margin-top: 60%;
-            opacity: 0;
-        }
-    }
-
-    @keyframes responsive-scroll-rwd {
-        0% {
-            margin-top: 75%;
-            opacity: 0;
-        }
-
-        33% {
-            margin-top: 58.5%;
-            opacity: 1;
-        }
-
-        100% {
-            margin-top: 25%;
-            opacity: 0;
-        }
-    }
-
-    $rs_bg: $secondary;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    width: 18px;
-    height: 31px;
-    border: $rs_bg 2px solid;
-    border-radius: 10px;
-    transition: .45s ease;
-
-    &::before {
-        content: '';
-        position: absolute;
-        display: block;
-        width: 40%;
-        height: 3px;
-        max-height: 3px;
-        border-bottom-left-radius: 50%;
-        border-bottom-right-radius: 50%;
-        background-color: $rs_bg;
+    &-box {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 16px;
+        height: 24px;
+        border: $secondary 2px solid;
+        border-radius: 3px;
         transition: .45s ease;
-    }
-
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: 5px;
-        display: block;
-        width: 55%;
-        height: 2px;
-        max-height: 2px;
-        border-radius: 50%;
-        background-color: $rs_bg;
-        opacity: .1;
-        transition: .95s ease;
-    }
-
-    @include hover {
-        &::after {
-            opacity: 1;
-        }
-    }
-
-    .scroll {
-        display: block;
-        width: 4px;
-        height: 35px;
-        margin-top: 65%;
-        border-radius: 50px 50px 3px 3px;
-        background-color: $rs_bg;
-        transform: translatex(6px) rotate(-45deg);
-        transform-origin: top left;
-        animation: responsive-scroll-rwd infinite 2.25s;
-        // transition: 4.5s ease;
-    }
-
-    &.is-notTouch {
-        border: $rs_bg 2px solid;
-        border-radius: 25px;
 
         &::before,
         &::after {
-            max-height: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: $secondary;
+            content: '';
+            position: absolute;
+            display: block;
+        }
+
+        &::before {
+            width: 6.5px;
+            height: 6.5px;
+            max-height: 1.85px;
+            border-bottom-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+            transition: .45s ease;
+        }
+
+        &::after {
+            bottom: 2px;
+            width: 55%;
+            height: .6px;
+            max-height: .6px;
+            border-radius: 50%;
+            opacity: 1;
+            transition: .95s ease;
+        }
+
+        @include hover {
+            &::after {
+                opacity: 1;
+            }
         }
 
         .scroll {
-            height: 4px;
-            margin-top: 25%;
-            border-radius: 50px;
-            background-color: $rs_bg;
-            transform: translatex(0) rotate(0);
-            animation: responsive-scroll infinite 2.25s;
+            display: block;
+            width: 2px;
+            height: 12px;
+            margin-top: 65%;
+            border-radius: 50px 50px 3px 3px;
+            background-color: $secondary;
+            transform: translatex(2px) rotate(-45deg);
+            transform-origin: top left;
+            animation: responsive-scroll-rwd infinite 2.25s;
         }
+
+        &:not(.is-not-touch) {
+            ~.uk-svg {
+                display: none;
+            }
+        }
+
+        &.is-not-touch {
+            border: $secondary 2px solid;
+            border-radius: 25px;
+            width: 18px;
+            height: 31px;
+
+            &::before {
+                height: 3px;
+                max-height: 3px;
+            }
+
+            &::after {
+                opacity: 0;
+            }
+
+            &::before,
+            &::after {
+                max-height: 0;
+            }
+
+            .scroll {
+                height: 4px;
+                width: 4px;
+                margin-top: 25%;
+                border-radius: 50px;
+                transform: translatex(0) rotate(0);
+                animation: responsive-scroll infinite 2.25s;
+            }
+        }
+    }
+
+    @media (min-width: $breakpoint-medium) {
+        left: -50px;
+        top: 50%;
     }
 }
