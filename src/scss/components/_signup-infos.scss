@@ -3,16 +3,28 @@
         background-color: $blue-light;
         border-radius: 10px;
         margin-top: 25px;
-        padding: 30px 20px 40px;
+        padding: 30px 20px 20px;
+
+        .uk-h6,
+        .uk-h5,
+        p,
+        a {
+            line-height: 1.7;
+        }
 
         .uk-h6 {
             letter-spacing: 0;
+        }
+
+        .uk-h5 {
+            margin-top: 35px;
         }
 
         .uk-button-text[href^='mailto'] {
             color: $grey-dark;
             border-bottom: 1px solid $grey-dark;
             border-radius: 0;
+            top: -4px;
 
             @include hover {
                 color: $primary;
@@ -25,11 +37,15 @@
         .uk-grid>.uk-grid-margin {
             margin-top: 20px;
         }
+
+        .uk-grid>div {
+            margin-bottom: 20px;
+        }
     }
 
     @media (min-width: $breakpoint-medium) {
         .signup-info {
-            padding: 30px 45px 40px;
+            padding: 30px 45px 20px;
         }
     }
 }
