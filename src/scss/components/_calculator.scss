@@ -159,5 +159,13 @@
             width: 35px;
             background-size: 10px;
         }
+
+        *+.uk-grid-margin-small,
+        .uk-grid+.uk-grid-row-small,
+        .uk-grid+.uk-grid-small,
+        .uk-grid-row-small>.uk-grid-margin,
+        .uk-grid-small>.uk-grid-margin {
+            margin-top: 10px;
+        }
     }
 }
