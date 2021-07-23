@@ -1,13 +1,14 @@
+
 <ul class="calculator-list uk-list">
     <li class="uk-position-relative">
         <span class="uk-h3 uk-display-block">Are you already a contractor or freelanceer?</span>
         {{#> ukGrid class=(default class "uk-grid-small uk-child-width-1-2@m")}}
             {{#*inline "cells"}}
                 <div>
-                    {{> nbRadio label="Yes" name="contractor-or-freelanceer-yes" title="Please check if you are already a contractor or freelanceer?"}}
+                    {{> nbRadio radio=true label="Yes" name="contractor-or-freelanceer" checkName="contractor-or-freelanceer-yes" title="Please check if you are already a contractor or freelanceer?"}}
                 </div>
                 <div>
-                    {{> nbRadio label="No" name="contractor-or-freelanceer-no" title="Please check if you are already a contractor or freelanceer?"}}
+                    {{> nbRadio radio=true label="No" name="contractor-or-freelanceer" checkName="contractor-or-freelanceer-no" title="Please check if you are already a contractor or freelanceer?"}}
                 </div>
             {{/inline}}
         {{/ukGrid}}
@@ -17,10 +18,10 @@
         {{#> ukGrid class=(default class "uk-grid-small uk-child-width-1-2@m")}}
             {{#*inline "cells"}}
                 <div>
-                    {{> nbRadio label="Ltd Co" name="ltd-co" title="Please check if you are happy to proceed with forming a limited company within which you can run your contractor or freelance business?"}}
+                    {{> nbRadio radio=true label="Ltd Co" name="ltd-co-sole-trader" checkName="ltd-co" title="Please check if you are happy to proceed with forming a limited company within which you can run your contractor or freelance business?"}}
                 </div>
                 <div>
-                    {{> nbRadio label="Sole Trader" name="sole-trader" title="Please check if you are happy to proceed with forming a limited company within which you can run your contractor or freelance business?"}}
+                    {{> nbRadio radio=true label="Sole Trader" name="ltd-co-sole-trader" checkName="sole-trader" title="Please check if you are happy to proceed with forming a limited company within which you can run your contractor or freelance business?"}}
                 </div>
             {{/inline}}
         {{/ukGrid}}
@@ -30,13 +31,13 @@
         {{#> ukGrid class=(default class "uk-grid-small uk-child-width-1-3@m")}}
             {{#*inline "cells"}}
                 <div>
-                    {{> nbRadio label="Yes" name="natwest-rbs-or-mettle-yes" title="Please check if you are willing to consider using Natwest, RBS or Mettle for your business bank account?"}}
+                    {{> nbRadio radio=true label="Yes" name="natwest-rbs-or-mettle" checkName="natwest-rbs-or-mettle-yes" title="Please check if you are willing to consider using Natwest, RBS or Mettle for your business bank account?"}}
                 </div>
                 <div>
-                    {{> nbRadio label="No" name="natwest-rbs-or-mettle-no" title="Please check if you are willing to consider using Natwest, RBS or Mettle for your business bank account?"}}
+                    {{> nbRadio radio=true label="No" name="natwest-rbs-or-mettle" checkName="natwest-rbs-or-mettle-no" title="Please check if you are willing to consider using Natwest, RBS or Mettle for your business bank account?"}}
                 </div>
                 <div>
-                    {{> nbRadio label="Unsure" name="natwest-rbs-or-mettle-unsure" title="Please check if you are willing to consider using Natwest, RBS or Mettle for your business bank account?"}}
+                    {{> nbRadio radio=true label="Unsure" name="natwest-rbs-or-mettle" checkName="natwest-rbs-or-mettle-unsure" title="Please check if you are willing to consider using Natwest, RBS or Mettle for your business bank account?"}}
                 </div>
             {{/inline}}
         {{/ukGrid}}
@@ -46,13 +47,13 @@
         {{#> ukGrid class=(default class "uk-grid-small uk-child-width-1-3@m")}}
             {{#*inline "cells"}}
                 <div>
-                    {{> nbRadio label="Yes" name="annual-turnover-yes" title="Please check if you are expecting your annual turnover to be more than £85,000?"}}
+                    {{> nbRadio radio=true label="Yes" name="annual-turnover" checkName="annual-turnover-yes" title="Please check if you are expecting your annual turnover to be more than £85,000?"}}
                 </div>
                 <div>
-                    {{> nbRadio label="No" name="annual-turnover-no" title="Please check if you are expecting your annual turnover to be more than £85,000?"}}
+                    {{> nbRadio radio=true label="No" name="annual-turnover" checkName="annual-turnover-no" title="Please check if you are expecting your annual turnover to be more than £85,000?"}}
                 </div>
                 <div>
-                    {{> nbRadio label="Unsure" name="annual-turnover-unsure" title="Please check if you are expecting your annual turnover to be more than £85,000?"}}
+                    {{> nbRadio radio=true label="Unsure" name="annual-turnover" checkName="annual-turnover-unsure" title="Please check if you are expecting your annual turnover to be more than £85,000?"}}
                 </div>
             {{/inline}}
         {{/ukGrid}}

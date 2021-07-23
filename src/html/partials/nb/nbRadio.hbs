@@ -4,8 +4,8 @@
 	<div class="nb-form-content">
         <div role="alert"></div>
         <div class="radio-group">
-            <input id="nb-form-{{page.name}}_{{name}}" class="uk-input" name="{{name}}" type="radio">
-            <label class="uk-form-label uk-margin-remove-top" for="nb-form-{{page.name}}_{{name}}">{{label}}</label>
+            <input id="{{#if radio}}nb-form-{{page.name}}{{checkName}}{{else}}{{name}}{{/if}}" class="uk-input" name="{{name}}" value="{{label}}" type="{{#if radio}}radio{{else}}checkbox{{/if}}">
+            <label class="uk-form-label uk-margin-remove-top" for="{{#if radio}}nb-form-{{page.name}}{{checkName}}{{else}}{{name}}{{/if}}">{{label}}</label>
         </div>
 	</div>
 </div>
