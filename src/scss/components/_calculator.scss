@@ -99,19 +99,6 @@
         }
     }
 
-    .uk-button-primary.button-grey {
-        background-image: none;
-        background-color: $light-grey;
-        box-shadow: 0 10px 40px rgba($secondary, .1);
-        max-width: 307px;
-        width: 100%;
-        color: $grey-soft;
-
-        @include hover {
-            color: $white;
-        }
-    }
-
     @media (min-width: $breakpoint-small) {
         .calculator-list {
             &:not(.checked)>li {
