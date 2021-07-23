@@ -48,19 +48,18 @@
     </div>
 {{#unless completeOrder}}
     <div class="direct-debit-bottom">
-        <div class="uk-flex uk-flex-between uk-flex-wrap">
-            <div class="uk-flex uk-flex-column uk-flex-center uk-margin-right">
-                <span class="uk-text-small uk-text-uppercase uk-display-block"><strong>Go</strong> Cardless</span>
+        <div class="uk-flex uk-flex-between uk-flex-middle uk-flex-wrap">
+            <div class="uk-margin-right">
                 {{>ukButton link="mailto:accounts@thymeaccountants.co.uk" style="text" label="accounts@thymeaccountants.co.uk"}}
             </div>
-            <div class="uk-flex uk-flex-bottom">
-                <a href="#">
-                    <img src="./img/direct-debit.png" loading="lazy" width="147" height="83" alt="Direct Debit" class="uk-margin-top">
+            <div>
+                <a href="#" class="uk-display-inline-block">
+                    <img src="./img/direct-debit.png" loading="lazy" width="147" height="83" alt="Direct Debit" class="uk-margin-small-top">
                 </a>
             </div>
         </div>
         <div class="uk-width-1-2@m uk-margin-bottom">
-            <p>By confirming you are agreeing to our {{>ukButton link="#" label="Website Terms of Use" style="text"}}. GoCardless uses personal data as described in our {{>ukButton link="#" label="Privacy Notice" style="text"}}. We use analytics {{>ukButton link="#" label="cookies" style="text"}}.</p>
+            <p>By confirming you are agreeing to our {{>ukButton link="#" label="Website Terms of Use" style="text"}}. Chargebee uses personal data as described in our {{>ukButton link="#" label="Privacy Notice" style="text"}}. We use analytics {{>ukButton link="#" label="cookies" style="text"}}.</p>
         </div>
         <div class="uk-width-1-2@m">
             <p>Your payments are protected by the {{>ukButton link="#" label="Direct Debit Guarantee" style="text"}}.</p>
