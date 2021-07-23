@@ -152,31 +152,19 @@
         >span {
             background-color: transparent;
 
+            &::after,
+            &::before {
+                background-color: $grey-dark;
+            }
+
             &::after {
                 transform: rotate(-45deg) translate(15%, -250%);
                 width: 28px;
             }
 
             &::before {
-                transform: rotate(45deg) translate(19%, 205%);
+                transform: rotate(45deg) translate(18%, 211%);
             }
         }
-    }
-
-    .uk-close {
-        color: $primary;
-        display: inline-flex;
-        justify-content: center;
-
-        svg {
-            width: 20px;
-            height: 20px;
-        }
-    }
-
-    line {
-        stroke-width: 1.3px;
-        color: $grey-dark;
-        stroke-linecap: round;
     }
 }
