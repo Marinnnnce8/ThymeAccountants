@@ -221,6 +221,15 @@
             ]
         },
         {
+            "title": "Thank You!",
+            "pageThankYou": true,
+            "questions": [
+                {
+                    "pageType": "signup-thank-you"
+                }
+            ]
+        },
+        {
             "title": "Direct Debit Payment",
             "directDebit": true,
             "noSignupBottom": true,

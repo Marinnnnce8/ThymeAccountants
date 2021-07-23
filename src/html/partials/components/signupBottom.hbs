@@ -15,12 +15,17 @@
             </div>
         </div>
     {{else}}
-        <div class="uk-flex uk-flex-middle {{#if @first}}uk-flex-right{{else}}uk-flex-between{{/if}} uk-flex-wrap">
+        <div class="uk-flex uk-flex-middle {{#if @first}}uk-flex-right{{else if pageThankYou}}uk-flex-right{{else}}uk-flex-between{{/if}} uk-flex-wrap">
             {{#unless @first}}
+            {{#unless pageThankYou}}
                 {{> ukButton icon="arrow-left" pull="left" label="Back" size="large" class="signup-button-back uk-margin-right"}}
+            {{/unless}}
             {{/unless}}
             <div>
                 {{#if signupPayment}}
+                    {{> ukButton label="Finish Sign Up Later" size="large" style="text" class="signup-button-later"}}
+                    {{> ukButton icon="arrow-right" label="Direct Debit Now" size="large" style="primary" class="signup-button-next"}}
+                {{else if pageThankYou}}
                     {{> ukButton icon="arrow-right" label="Direct Debit Now" size="large" style="primary" class="signup-button-next"}}
                 {{else}}
                     {{#if saveDetails}}

@@ -7,7 +7,7 @@
 
 			{{#each page.questions}}
 				{{#with this}}
-				<div class="page uk-flex uk-flex-column uk-flex-between uk-overflow-hidden uk-margin-medium-bottom{{#if @first}} page-active{{/if}}{{#if directDebit}} uk-margin-large-top{{/if}}">
+				<div class="page uk-flex uk-flex-column uk-flex-between uk-overflow-hidden uk-margin-medium-bottom{{#if @first}} page-active{{/if}}{{#if directDebit}} uk-margin-large-top{{/if}}{{#if pageThankYou}} page-thank-you{{/if}}">
 					<div class="page-content uk-margin-medium-bottom">
 						<div class="page-info">
 							{{>signupSteps}}
@@ -42,6 +42,10 @@
 
 								{{#if (eq pageType "signup-payment")}}
 									{{>signupPayment}}
+								{{/if}}
+
+								{{#if (eq pageType "signup-thank-you")}}
+									{{>signupThankYou}}
 								{{/if}}
 
 								{{#if (eq pageType "direct-debit")}}
